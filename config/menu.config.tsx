@@ -209,8 +209,8 @@ export const MENU_SIDEBAR: MenuConfig = [
     // Information system and must not be nested under it.
     //
     // Gated on ONE permission, SPM.Read, carried by this group and by every one
-    // of its 15 children. SuperAdmin holds it, so only SuperAdmin sees the
-    // section.
+    // of its 15 children. The section is visible only to users who hold
+    // SPM.Read.
     //
     // The per-screen codes that used to be listed here — SPM.Request.*,
     // SPM.Order.*, SPM.Settlement.* and the rest — were a DECISION NOT TO
@@ -318,7 +318,7 @@ export const MENU_SIDEBAR: MenuConfig = [
     ],
   },
   {
-    // Gated on Dms.Read, which nobody holds until it is granted per person; SuperAdmin deliberately does not hold it.
+    // Gated on Dms.Read; SuperAdmin deliberately does not hold it.
     title: 'Dredging Management',
     icon: Briefcase,
     path: '/dms',
