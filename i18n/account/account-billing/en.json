@@ -1,0 +1,243 @@
+{
+  "accountBillingBasic": {
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "orderHistory": "Order History"
+    },
+    "highlightedPosts": {
+      "planSelection": {
+        "title": "Tailor-Made Plans Selection and Efficient Billing Systems",
+        "summary": "Select the perfect plan for your needs, complemented by an efficient, user-friendly billing system for convenience."
+      },
+      "customizedPlans": {
+        "title": "Customized Plans and Simple Billing Solutions",
+        "summary": "Offering an array of plans to suit diverse requirements, paired with straightforward, hassle-free billing processes."
+      },
+      "comprehensivePlans": {
+        "title": "Comprehensive Plan Options with Streamlined Billing",
+        "summary": "Our plans are crafted to cater to various user demands, accompanied by streamlined billing for maximum efficiency and clarity."
+      }
+    },
+    "plan": {
+      "basicPlan": "Basic Plan",
+      "monthly": "Monthly",
+      "description": "Essential Features for Startups and Individuals",
+      "annualTotal": "Annual Total",
+      "nextBillAmount": "Next Bill Amount",
+      "nextBillingDate": "Next Billing Date",
+      "cancelPlan": "Cancel Plan",
+      "upgradePlan": "Upgrade Plan",
+      "usage": "Usage ({{current}} of {{total}} users)"
+    },
+    "paymentMethods": {
+      "title": "Payment Methods",
+      "primary": "Primary",
+      "addNew": "Add New"
+    },
+    "details": {
+      "title": "Billing Details",
+      "editBilling": "Edit Billing",
+      "companyName": "Company Name",
+      "address": "Address",
+      "contact": "Contact",
+      "vatId": "VAT ID"
+    },
+    "invoicing": {
+      "title": "Billing and Invoicing",
+      "downloadAll": "Download All",
+      "tableHeaders": {
+        "invoice": "Invoice",
+        "status": "Status",
+        "date": "Date",
+        "amount": "Amount"
+      },
+      "status": {
+        "upcoming": "Upcoming",
+        "paid": "Paid",
+        "declined": "Declined"
+      },
+      "viewAllPayments": "View all Payments"
+    }
+  },
+  "accountBillingEnterprise": {
+    "toolbar": {
+      "description": "Advanced Billing Solutions for Large Businesses",
+      "orderHistory": "Order History"
+    },
+    "upgrade": {
+      "title": "Upgrade your Components.io to Enterprise",
+      "trialExpires": "Trial expires in 29 days",
+      "description": "Enterprise Components.io is a website offering high-quality, advanced UI components designed for developers, enhancing efficiency and aesthetics in web and mobile app development.",
+      "cancelTrial": "Cancel Trial",
+      "upgradeNow": "Upgrade Now"
+    },
+    "companyProfile": {
+      "planName": "Cloud One Enterprise",
+      "monthlyPlan": "Monthly Plan",
+      "description": "Essential Features for Startups and Individuals",
+      "status": "Status",
+      "statusValue": "Trial",
+      "queryRuns": "Query runs",
+      "unlimited": "Unlimited",
+      "apiCalls": "API calls",
+      "price": "Price",
+      "nextBillDate": "Next bill date",
+      "cancelPlan": "Cancel Plan",
+      "upgradePlan": "Upgrade Plan",
+      "queryRunsUsage": "UQuery runs: {{used}} of {{total}} used",
+      "seats": "Seats: {{used}} of {{total}} used"
+    },
+    "latestPayment": {
+      "title": "Latest Payment",
+      "downloadPDF": "Download PDF",
+      "typeOfPlan": "Typ of Plan",
+      "paymentDate": "Payment Date",
+      "cardUsed": "Card used to pay:",
+      "totalPayment": "Total Payment:"
+    },
+    "nextPayment": {
+      "title": "Next Payment",
+      "date": "on 17 Aug, 2024",
+      "dueDate": "Due date",
+      "managePayment": "Manage Payment"
+    },
+    "billingInvoicing": {
+      "title": "Billing and Invoicing",
+      "downloadAll": "Download All",
+      "tableHeaders": {
+        "invoice": "Invoice",
+        "status": "Status",
+        "date": "Date",
+        "amount": "Amount"
+      },
+      "status": {
+        "upcoming": "Upcoming",
+        "paid": "Paid",
+        "declined": "Declined"
+      },
+      "viewAllPayments": "View all Payments"
+    }
+  },
+  "accountBillingHistory": {
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "billing": "Billing"
+    },
+    "title": "Billing and Invoicing",
+    "filter": "Filter...",
+    "download": "Download",
+    "downloadPdf": "Download PDF",
+    "columns": "Columns",
+    "columnHeaders": {
+      "member": "Member",
+      "status": "Status",
+      "date": "Date",
+      "dueDate": "Due Date",
+      "amount": "Amount"
+    },
+    "status": {
+      "upcoming": "Upcoming",
+      "paid": "Paid",
+      "declined": "Declined"
+    }
+  },
+  "accountBillingPlans": {
+    "toolbar": {
+      "title": "Plans",
+      "description": "Central Hub for Personal Customization",
+      "viewBilling": "View Billing"
+    },
+    "annualBilling": "Annual Billing",
+    "currentPlan": "Current Plan",
+    "free": "Free",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "switchToTeam": "Switch to Team",
+    "upgrade": "Upgrade",
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "description": "Essential features for startups individuals"
+      },
+      "pro": {
+        "title": "Pro",
+        "description": "Advanced tools for growing businesses"
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Comprehensive suite for large-scale operations"
+      },
+      "enterprise": {
+        "title": "Enterprise",
+        "description": "Tailored solutions for enterprise needs"
+      }
+    },
+    "features": {
+      "userAccounts": {
+        "title": "User Accounts",
+        "basic": "Up to 5",
+        "pro": "Up to 20",
+        "premium": "Up to 50",
+        "enterprise": "Unlimited"
+      },
+      "dataStorage": {
+        "title": "Data Storage",
+        "basic": "10 GB",
+        "pro": "50 GB",
+        "premium": "200 GB",
+        "enterprise": "Custom"
+      },
+      "capiCalls": {
+        "title": "CAPI Calls",
+        "basic": "1,000/month",
+        "pro": "10,000/month",
+        "premium": "50,000/month",
+        "enterprise": "Unlimited"
+      },
+      "support": {
+        "title": "Support",
+        "basic": "Email",
+        "pro": "Email + Chat",
+        "premium": "Priority",
+        "enterprise": "24/7 Live Support"
+      },
+      "dataBackup": {
+        "title": "Data Backup",
+        "basic": "Weekly",
+        "pro": "Daily",
+        "premium": "Hourly",
+        "enterprise": "Real-time"
+      },
+      "analyticsTools": {
+        "title": "Analytics Tools",
+        "basic": "Basic",
+        "pro": "Advanced",
+        "premium": "Comprehensive",
+        "enterprise": "Custom"
+      },
+      "integrationOptions": {
+        "title": "Integration Options",
+        "basic": "Limited",
+        "pro": "Standard",
+        "premium": "Extended",
+        "enterprise": "Full Suite"
+      },
+      "uptimeGuarantee": {
+        "title": "Uptime Guarantee",
+        "basic": "99%",
+        "pro": "99.9%",
+        "premium": "99.99%",
+        "enterprise": "99.999%"
+      },
+      "customReports": {
+        "title": "Custom Reports"
+      },
+      "mobileAccess": {
+        "title": "Mobile Access"
+      },
+      "customBranding": {
+        "title": "Custom Branding"
+      }
+    }
+  }
+}

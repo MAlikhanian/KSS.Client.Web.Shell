@@ -1,0 +1,44 @@
+[
+  {
+    "id": "tehran_exchange_hall_branch",
+    "name": "شعبه در تالار شرکت بورس تهران",
+    "code": "TEH",
+    "isActive": true
+  },
+  {
+    "id": "regional_hall_branch",
+    "name": "شعبه در تالار مناطق",
+    "code": "REG",
+    "isActive": true
+  },
+  {
+    "id": "trading_office",
+    "name": "دفتر معاملات",
+    "code": "TRD",
+    "isActive": true
+  },
+  {
+    "id": "private_trading_hall",
+    "name": "تالار اختصاصی معاملات",
+    "code": "PTH",
+    "isActive": true
+  },
+  {
+    "id": "reception_office",
+    "name": "دفتر پذیرش",
+    "code": "REC",
+    "isActive": true
+  },
+  {
+    "id": "domestic_representative",
+    "name": "نمایندگی داخل کشور",
+    "code": "DOM",
+    "isActive": true
+  },
+  {
+    "id": "foreign_representative",
+    "name": "نمایندگی خارج از کشور",
+    "code": "FOR",
+    "isActive": true
+  }
+]

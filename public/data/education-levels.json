@@ -1,0 +1,32 @@
+[
+  {
+    "id": "phd",
+    "name": "دکتری",
+    "code": "PHD",
+    "isActive": true
+  },
+  {
+    "id": "masters",
+    "name": "کارشناسی ارشد",
+    "code": "MS",
+    "isActive": true
+  },
+  {
+    "id": "bachelors",
+    "name": "کارشناسی",
+    "code": "BS",
+    "isActive": true
+  },
+  {
+    "id": "associates",
+    "name": "کاردانی",
+    "code": "AS",
+    "isActive": true
+  },
+  {
+    "id": "diploma_and_below",
+    "name": "دیپلم و زیر دیپلم",
+    "code": "DIP",
+    "isActive": true
+  }
+]

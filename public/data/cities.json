@@ -1,0 +1,159 @@
+[
+  {
+    "id": "TEH-TEH",
+    "name": "تهران",
+    "nameEn": "Tehran",
+    "provinceId": "TEH"
+  },
+  {
+    "id": "TEH-KAR",
+    "name": "کرج",
+    "nameEn": "Karaj",
+    "provinceId": "ALB"
+  },
+  {
+    "id": "ISF-ISF",
+    "name": "اصفهان",
+    "nameEn": "Isfahan",
+    "provinceId": "ISF"
+  },
+  {
+    "id": "ISF-KAS",
+    "name": "کاشان",
+    "nameEn": "Kashan",
+    "provinceId": "ISF"
+  },
+  {
+    "id": "ISF-NAJ",
+    "name": "نجف‌آباد",
+    "nameEn": "Najafabad",
+    "provinceId": "ISF"
+  },
+  {
+    "id": "FAR-SHI",
+    "name": "شیراز",
+    "nameEn": "Shiraz",
+    "provinceId": "FAR"
+  },
+  {
+    "id": "FAR-MAR",
+    "name": "مرودشت",
+    "nameEn": "Marvdasht",
+    "provinceId": "FAR"
+  },
+  {
+    "id": "KHO-AHV",
+    "name": "اهواز",
+    "nameEn": "Ahvaz",
+    "provinceId": "KHO"
+  },
+  {
+    "id": "KHO-ABD",
+    "name": "آبادان",
+    "nameEn": "Abadan",
+    "provinceId": "KHO"
+  },
+  {
+    "id": "KHR-MAS",
+    "name": "مشهد",
+    "nameEn": "Mashhad",
+    "provinceId": "KHR"
+  },
+  {
+    "id": "KHR-NIS",
+    "name": "نیشابور",
+    "nameEn": "Nishapur",
+    "provinceId": "KHR"
+  },
+  {
+    "id": "MAZ-SAR",
+    "name": "ساری",
+    "nameEn": "Sari",
+    "provinceId": "MAZ"
+  },
+  {
+    "id": "MAZ-BAB",
+    "name": "بابل",
+    "nameEn": "Babol",
+    "provinceId": "MAZ"
+  },
+  {
+    "id": "MAZ-AML",
+    "name": "آمل",
+    "nameEn": "Amol",
+    "provinceId": "MAZ"
+  },
+  {
+    "id": "AZE-TAB",
+    "name": "تبریز",
+    "nameEn": "Tabriz",
+    "provinceId": "AZE"
+  },
+  {
+    "id": "AZE-MAR",
+    "name": "مراغه",
+    "nameEn": "Maragheh",
+    "provinceId": "AZE"
+  },
+  {
+    "id": "KER-KER",
+    "name": "کرمان",
+    "nameEn": "Kerman",
+    "provinceId": "KER"
+  },
+  {
+    "id": "KER-RAF",
+    "name": "رفسنجان",
+    "nameEn": "Rafsanjan",
+    "provinceId": "KER"
+  },
+  {
+    "id": "GIL-RAS",
+    "name": "رشت",
+    "nameEn": "Rasht",
+    "provinceId": "GIL"
+  },
+  {
+    "id": "GIL-BAN",
+    "name": "بندر انزلی",
+    "nameEn": "Bandar Anzali",
+    "provinceId": "GIL"
+  },
+  {
+    "id": "QOM-QOM",
+    "name": "قم",
+    "nameEn": "Qom",
+    "provinceId": "QOM"
+  },
+  {
+    "id": "QAZ-QAZ",
+    "name": "قزوین",
+    "nameEn": "Qazvin",
+    "provinceId": "QAZ"
+  },
+  {
+    "id": "YAZ-YAZ",
+    "name": "یزد",
+    "nameEn": "Yazd",
+    "provinceId": "YAZ"
+  },
+  {
+    "id": "KER2-KER2",
+    "name": "کرمانشاه",
+    "nameEn": "Kermanshah",
+    "provinceId": "KER2"
+  },
+  {
+    "id": "TEH-SHA",
+    "name": "شهریار",
+    "nameEn": "Shahriar",
+    "provinceId": "TEH"
+  },
+  {
+    "id": "TEH-VAR",
+    "name": "ورامین",
+    "nameEn": "Varamin",
+    "provinceId": "TEH"
+  }
+]
+

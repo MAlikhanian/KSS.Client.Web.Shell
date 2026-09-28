@@ -1,0 +1,57 @@
+{
+  "pageTitle": "مدیریت دسترسی‌ها",
+  "pageDescription": "افزودن، ویرایش و حذف مجوزها، نقش‌ها و انتساب مجوز به نقش",
+
+  "tabPermissions": "مجوزها",
+  "tabRoles": "نقش‌ها",
+  "tabRolePermissions": "نقش-مجوز",
+
+  "permission": "مجوز",
+  "permissions": "مجوزها",
+  "addPermission": "افزودن مجوز",
+  "editPermission": "ویرایش مجوز",
+  "deletePermission": "حذف مجوز",
+  "code": "کد",
+  "name": "نام",
+  "description": "توضیحات",
+  "group": "گروه",
+  "isActive": "فعال",
+
+  "role": "نقش",
+  "roles": "نقش‌ها",
+  "addRole": "افزودن نقش",
+  "editRole": "ویرایش نقش",
+  "deleteRole": "حذف نقش",
+  "selectRole": "انتخاب نقش",
+
+  "rolePermissions": "مجوزهای نقش",
+  "saveRolePermissions": "ذخیره مجوزهای نقش",
+  "noRoleSelected": "لطفاً یک نقش انتخاب کنید",
+  "permissionsAssigned": "مجوزها ذخیره شد",
+
+  "save": "ذخیره",
+  "cancel": "انصراف",
+  "delete": "حذف",
+  "edit": "ویرایش",
+  "add": "افزودن",
+  "confirm": "تأیید",
+  "confirmDelete": "آیا از حذف مطمئن هستید؟ این عمل غیرقابل بازگشت است.",
+
+  "created": "ایجاد شد",
+  "updated": "به‌روزرسانی شد",
+  "deleted": "حذف شد",
+  "nameRequired": "نام الزامی است",
+
+  "module": "ماژول",
+  "modules": "ماژول‌ها",
+  "allModules": "همه ماژول‌ها",
+  "selectModule": "انتخاب ماژول",
+  "resource": "منبع",
+  "resources": "منابع",
+  "allResources": "همه منابع",
+  "selectResource": "انتخاب منبع",
+  "globalRole": "نقش سراسری",
+  "includeGlobalRoles": "شامل نقش‌های سراسری",
+  "moduleRequired": "ماژول الزامی است",
+  "resourceRequired": "منبع الزامی است"
+}

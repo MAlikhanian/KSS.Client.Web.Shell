@@ -1,0 +1,21 @@
+controller:
+  # Create and use a different ingress class
+  ingressClass: haproxy-saj-erp
+  ingressClassResource:
+    enabled: true
+    name: haproxy-private-saj
+    default: false
+
+  # Run as DaemonSet like your current one
+  kind: DaemonSet
+
+  # IMPORTANT: prevent this controller from processing ingresses
+  # that don't explicitly set ingressClassName
+  watchIngressWithoutClass: false
+
+  service:
+    type: LoadBalancer
+    externalTrafficPolicy: Local
+    annotations:
+      metallb.universe.tf/loadBalancerIPs: "10.10.210.30"
+      metallb.universe.tf/ip-address-pool: first-pool

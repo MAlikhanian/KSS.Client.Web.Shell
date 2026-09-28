@@ -1,0 +1,64 @@
+npm run build
+npm run start
+
+# Step 1: Login to Docker registry
+docker login docker-hosted.sebaoffice.ir
+
+# Step 2: Build the Docker image (pass Turnstile site key so CAPTCHA works in production)
+docker build --build-arg NEXT_PUBLIC_TURNSTILE_SITE_KEY=YOUR_TURNSTILE_SITE_KEY -t docker-hosted.sebaoffice.ir/kss-client-web:latest .
+
+# Alternative: Build and push in one command (if using buildx)
+docker buildx build --push --build-arg NEXT_PUBLIC_TURNSTILE_SITE_KEY=YOUR_TURNSTILE_SITE_KEY -t docker-hosted.sebaoffice.ir/kss-client-web:latest .
+
+# Turnstile: Add production domain (erp.seba.ir) in Cloudflare Dashboard > Turnstile > your widget > Domains.
+# Set TURNSTILE_SECRET_KEY in cluster (required for signup/CAPTCHA). Get Secret key from Cloudflare Dashboard > Turnstile > your widget:
+#   kubectl patch secret kss-client-web-secrets -n kss-client-web -p "{\"data\":{\"turnstile-secret-key\":\"$(echo -n 'YOUR_TURNSTILE_SECRET_KEY' | base64 -w0)\"}}"
+#   kubectl rollout restart deployment/kss-client-web -n kss-client-web
+
+# Step 3: Push the image to registry
+docker push docker-hosted.sebaoffice.ir/kss-client-web:latest
+
+# Step 4: Create secrets (first time only — update with your real values)
+#   kubectl create secret generic kss-client-web-secrets -n kss-client-web \
+#     --from-literal=database-url='postgresql://USER:PASS@HOST:5432/kss-client-web?pgbouncer=true' \
+#     --from-literal=direct-url='postgresql://USER:PASS@HOST:5432/kss-client-web' \
+#     --from-literal=nextauth-secret='YOUR_SECRET' \
+#     --from-literal=turnstile-secret-key='' \
+#     --from-literal=smtp-host='' --from-literal=smtp-port='' \
+#     --from-literal=smtp-user='' --from-literal=smtp-pass='' \
+#     --dry-run=client -o yaml | kubectl apply -f -
+
+# Step 5: Apply manifests (Deployment + ConfigMap + Ingress + etc.)
+kubectl apply -f deployment.yaml
+
+# Step 6: Restart deployment so pods pick up ConfigMap/Secret changes
+kubectl rollout restart deployment/kss-client-web -n kss-client-web
+kubectl rollout status deployment/kss-client-web -n kss-client-web
+
+# Create docker-registry secret (first time only)
+kubectl create secret docker-registry docker-secret \
+  --docker-server=docker-hosted.sebaoffice.ir \
+  --docker-username=<REGISTRY_USERNAME> \
+  --docker-password=<REGISTRY_PASSWORD> \
+  --namespace kss-client-web
+
+# Useful diagnostic commands
+kubectl get pods -n kss-client-web
+kubectl get secrets -n kss-client-web
+kubectl get pvc -n kss-client-web
+kubectl get configmaps -n kss-client-web
+kubectl get ingress -n kss-client-web
+kubectl get svc -n kss-client-web
+kubectl get certificate -n kss-client-web
+kubectl get networkpolicy -n kss-client-web
+kubectl get hpa -n kss-client-web
+
+# Check pod logs
+kubectl logs -n kss-client-web -l app=kss-client-web --tail=50
+
+# Check pod env vars
+kubectl exec -it $(kubectl get pods -n kss-client-web -l app=kss-client-web -o jsonpath='{.items[0].metadata.name}') -n kss-client-web -- env | sort
+
+# Delete resources if needed
+kubectl delete networkpolicy kss-client-web-network-policy -n kss-client-web
+kubectl delete secrets docker-secret -n kss-client-web

@@ -1,0 +1,84 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kss-client-web-config
+  namespace: kss-client-web
+data:
+  api-url: "https://erp.seba.ir/api"
+  captcha-api-base-url: "https://captcha.api.sebaoffice.ir"
+  auth-api-base-url: "https://auth.api.sebaoffice.ir"
+  common-api-base-url: "https://common.api.sebaoffice.ir"
+  person-api-base-url: "https://person.api.sebaoffice.ir"
+  company-api-base-url: "https://company.api.sebaoffice.ir"
+  erp-members-api-base-url: "https://seba.erp.members.api.sebaoffice.ir"
+  report-api-base-url: "https://seba.erp.members.report.api.sebaoffice.ir"
+  credit-rating-api-base-url: "https://seba.erp.creditrating.api.sebaoffice.ir"
+  market-data-api-base-url: "https://marketdata.api.sebaoffice.ir"
+  portfolio-api-base-url: "https://portfolio.api.sebaoffice.ir"
+  file-orchestrator-api-base-url: "https://fileorchestrator.api.sebaoffice.ir"
+  # Recovered from the live cluster 2026-08-27: this key existed in the running
+  # ConfigMap but not in this file, while IMPORT_API_BASE_URL references it
+  # WITHOUT optional:true. Applying the file without it would have deleted the
+  # key and the next restart would have failed with CreateContainerConfigError.
+  # Note the single "-service" — that is the deployed value, not a typo to fix.
+  import-api-base-url: "http://kss-import-service.kss-import-service.svc.cluster.local"
+  cash-advance-api-base-url: "http://kss-cash-advance-service-service.kss-cash-advance-service.svc.cluster.local"
+  project-api-base-url: "http://kss-project-service-service.kss-project-service.svc.cluster.local"
+  mpf-report-api-base-url: "http://kss-mpf-erp-mabna-report-service-service.kss-mpf-erp-mabna-report-service.svc.cluster.local"
+  # Zone routing table, read by middleware.ts. One entry per domain app that is
+  # deployed separately; the first path segment selects it.
+  #
+  # ⚠ A KEY HERE OVERRIDES THE SHELL'S OWN COPY, UNCONDITIONALLY.
+  #   middleware.ts is `const origin = ZONES[segment]; if (origin) rewrite(...)`.
+  #   It routes on whether the KEY EXISTS, never on whether the zone is up. So
+  #   adding a key for a zone that is not yet deployed breaks that path for every
+  #   user IMMEDIATELY — from this config alone, no image rebuild — even though
+  #   the running Shell still contains the page. And there is no failover: a dead
+  #   zone gives 500, never the local copy.
+  #
+  #   ONLY add a key AFTER that zone answers in-cluster. Order:
+  #     build+push image -> apply zone manifest -> docker-secret -> nextauth-secret
+  #     -> pods Ready -> in-cluster /<seg>/api/health = 200 -> THEN add the key here
+  #
+  # ── LIVE: thirteen zones ───────────────────────────────────────────────────
+  # Every key in the value below is deployed to this cluster and routed here.
+  # ⚠ This header read "three zones" until 2026-09-08 while the value already
+  #   carried twelve. The header is what the next reader acts on, so the count
+  #   moves with the value or it is worse than absent. Count it, do not trust it.
+  # The original three (mpf, spm, cash-advance) were added 2026-08-27.
+  # dms added 2026-09-08 — composed, but FRONTEND AND MOCK DATA ONLY: no backend
+  # service and no database. tier stays "internal" in domains.json for that reason.
+  #
+  # cash-advance was the migration: it was served by the Shell's OWN copy until
+  # this key existed, so adding it moved real users onto the zone.
+  #
+  # spm publishes MOCK data — app/components/spm-api.ts returns fixtures and
+  # KSS.Service.SPM does not exist, so every figure on its 13 screens is
+  # invented. Its menu has no permission gate. Added deliberately, with that
+  # understood — remove this key if that is not wanted.
+  #
+  # ⚠ Adding or removing a key does NOTHING until the Shell pods restart. The
+  #   value is read from this ConfigMap once, at container start:
+  #     kubectl rollout restart deployment/kss-client-web -n kss-client-web
+  #   That applies to ROLLBACK too — it is a minute, not seconds.
+  # ⚠ Never set this with `kubectl set env` — the next apply reverts it.
+  # ⚠ There is no failover: a dead zone gives 500, never the Shell's copy.
+  # ⚠ ZONES is GLOBAL. The Shell fronts erp.seba.ir, members.sebaoffice.ir,
+  #   nerp.sajoffice.ir and erp.mpfoffice.ir. Verify on all four.
+  # ───────────────────────────────────────────────────────────────────────────
+  zones: '{"mpf":"http://kss-client-web-mpf-service.kss-client-web-mpf.svc.cluster.local","spm":"http://kss-client-web-spm-service.kss-client-web-spm.svc.cluster.local","dms":"http://kss-client-web-dms-service.kss-client-web-dms.svc.cluster.local","cash-advance":"http://kss-client-web-cash-advance-service.kss-client-web-cash-advance.svc.cluster.local","person":"http://kss-client-web-person-service.kss-client-web-person.svc.cluster.local","members":"http://kss-client-web-members-service.kss-client-web-members.svc.cluster.local","company":"http://kss-client-web-company-service.kss-client-web-company.svc.cluster.local","system":"http://kss-client-web-system-service.kss-client-web-system.svc.cluster.local","market":"http://kss-client-web-market-service.kss-client-web-market.svc.cluster.local","project":"http://kss-client-web-project-service.kss-client-web-project.svc.cluster.local","general-meeting":"http://kss-client-web-general-meeting-service.kss-client-web-general-meeting.svc.cluster.local","credit-rating":"http://kss-client-web-credit-rating-service.kss-client-web-credit-rating.svc.cluster.local","customer-risk":"http://kss-client-web-customer-risk-service.kss-client-web-customer-risk.svc.cluster.local"}'
+  # ───────────────────────────────────────────────────────────────────────────
+  # TENANTS — per-tenant branding, keyed by hostname (no port).
+  #
+  # Safe to set before the image that reads it ships: an unknown host, a
+  # missing field or a malformed value all fall back to the stock artwork,
+  # so this key cannot break sign-in or take a route down. That is the
+  # difference from zones above, which routes on key EXISTENCE alone.
+  #
+  # ⚠ Same restart rule as zones: read once at container start, so a change
+  #   does nothing until the pods restart.
+  #     kubectl rollout restart deployment/kss-client-web -n kss-client-web
+  # ⚠ Asset paths are ROOT-RELATIVE on purpose — they are served by whichever
+  #   host the visitor is on. Never prefix them with a tenant origin.
+  # ───────────────────────────────────────────────────────────────────────────
+  tenants: '{"erp.seba.ir":{"name":"SEBA","logo":"/media/app/default-logo.svg","logoDark":"/media/app/default-logo-dark.svg","logoMini":"/media/app/mini-logo.svg","favicon":"/favicon.ico","banner":"/media/images/2600x1600/1.png","bannerDark":"/media/images/2600x1600/1-dark.png","companyId":"019f317a-12ba-764f-b19b-e064e36b4be8","footer":{"brand":{"label":"SEBA","href":"https://seba.ir"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"Support","fa":"پشتیبانی","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"License","fa":"مجوز","href":""}]}},"members.sebaoffice.ir":{"name":"SEBA","logo":"/media/app/default-logo.svg","logoDark":"/media/app/default-logo-dark.svg","logoMini":"/media/app/mini-logo.svg","favicon":"/favicon.ico","banner":"/media/images/2600x1600/1.png","bannerDark":"/media/images/2600x1600/1-dark.png","companyId":"019f317a-12ba-764f-b19b-e064e36b4be8","footer":{"brand":{"label":"SEBA","href":"https://seba.ir"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"Support","fa":"پشتیبانی","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"License","fa":"مجوز","href":""}]}},"nerp.sajoffice.ir":{"name":"SAJ","logo":"/media/tenants/saj/logo.svg","logoDark":"/media/tenants/saj/logo-dark.svg","logoMini":"/media/tenants/saj/logo-mini.svg","favicon":"/media/tenants/saj/favicon.svg","banner":"/media/tenants/saj/banner.svg","bannerDark":"/media/tenants/saj/banner-dark.svg","companyId":"019f0e6c-9fbc-78cf-9202-fa932a9878f7","footer":{"brand":{"label":"SAJ","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"erp.mpfoffice.ir":{"name":"MPF","logo":"/media/tenants/mpf/logo.svg","logoDark":"/media/tenants/mpf/logo-dark.svg","logoMini":"/media/tenants/mpf/logo-mini.svg","favicon":"/media/tenants/mpf/favicon.svg","banner":"/media/tenants/mpf/banner.svg","bannerDark":"/media/tenants/mpf/banner-dark.svg","companyId":"019f7a3e-1d43-7bcb-a7f3-eb97572e2e02","footer":{"brand":{"label":"MPF","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"spmoffice.ir":{"name":"SPM","logo":"/media/tenants/spm/logo.svg","logoDark":"/media/tenants/spm/logo-dark.svg","logoMini":"/media/tenants/spm/logo-mini.svg","favicon":"/media/tenants/spm/favicon.svg","banner":"/media/tenants/spm/banner.svg","bannerDark":"/media/tenants/spm/banner-dark.svg","companyId":"01a04744-68ae-7aef-b9d0-b5fb31d7a80c","footer":{"brand":{"label":"SPM","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"mkoffice.ir":{"name":"MK","footer":{"brand":{"label":"مشیران کاریز","href":"https://moshirankariz.com"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}}}'

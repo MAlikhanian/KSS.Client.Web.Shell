@@ -1,0 +1,20 @@
+{
+  "accountActivity": {
+    "engage": {
+      "contactSupport": {
+        "contactSupport": "Contact Support",
+        "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+        "title": "Contact Support"
+      },
+      "questions": {
+        "description": "Visit our Help Center for detailed assistance on billing, payments, and subscriptions.",
+        "goToHelpCenter": "Go to Help Center",
+        "title": "Questions"
+      }
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "privacySettings": "Privacy Settings"
+    }
+  }
+}

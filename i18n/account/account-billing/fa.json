@@ -1,0 +1,243 @@
+{
+  "accountBillingBasic": {
+    "toolbar": {
+      "description": "مرکز اصلی برای شخصی‌سازی",
+      "orderHistory": "تاریخچه سفارش"
+    },
+    "highlightedPosts": {
+      "planSelection": {
+        "title": "انتخاب پلن‌های سفارشی و سیستم‌های صورتحساب کارآمد",
+        "summary": "پلن مناسب برای نیازهای خود را انتخاب کنید، همراه با یک سیستم صورتحساب کارآمد و کاربرپسند برای راحتی."
+      },
+      "customizedPlans": {
+        "title": "پلن‌های سفارشی و راه‌حل‌های صورتحساب ساده",
+        "summary": "ارائه مجموعه‌ای از پلن‌ها برای رفع نیازهای متنوع، همراه با فرآیندهای صورتحساب ساده و بدون دردسر."
+      },
+      "comprehensivePlans": {
+        "title": "گزینه‌های پلن جامع با صورتحساب ساده‌سازی شده",
+        "summary": "پلن‌های ما برای پاسخگویی به نیازهای مختلف کاربران طراحی شده‌اند، همراه با صورتحساب ساده‌سازی شده برای حداکثر کارایی و وضوح."
+      }
+    },
+    "plan": {
+      "basicPlan": "پلن پایه",
+      "monthly": "ماهانه",
+      "description": "ویژگی‌های ضروری برای استارتاپ‌ها و افراد",
+      "annualTotal": "مجموع سالانه",
+      "nextBillAmount": "مبلغ صورتحساب بعدی",
+      "nextBillingDate": "تاریخ صورتحساب بعدی",
+      "cancelPlan": "لغو پلن",
+      "upgradePlan": "ارتقای پلن",
+      "usage": "استفاده ({{current}} از {{total}} کاربر)"
+    },
+    "paymentMethods": {
+      "title": "روش‌های پرداخت",
+      "primary": "اصلی",
+      "addNew": "افزودن جدید"
+    },
+    "details": {
+      "title": "جزئیات صورتحساب",
+      "editBilling": "ویرایش صورتحساب",
+      "companyName": "نام شرکت",
+      "address": "آدرس",
+      "contact": "تماس",
+      "vatId": "شناسه مالیات بر ارزش افزوده"
+    },
+    "invoicing": {
+      "title": "صورتحساب و فاکتور",
+      "downloadAll": "دانلود همه",
+      "tableHeaders": {
+        "invoice": "فاکتور",
+        "status": "وضعیت",
+        "date": "تاریخ",
+        "amount": "مبلغ"
+      },
+      "status": {
+        "upcoming": "در حال آمدن",
+        "paid": "پرداخت شده",
+        "declined": "رد شده"
+      },
+      "viewAllPayments": "مشاهده تمام پرداخت‌ها"
+    }
+  },
+  "accountBillingEnterprise": {
+    "toolbar": {
+      "description": "راه‌حل‌های صورتحساب پیشرفته برای کسب‌وکارهای بزرگ",
+      "orderHistory": "تاریخچه سفارش"
+    },
+    "upgrade": {
+      "title": "ارتقای Components.io شما به Enterprise",
+      "trialExpires": "آزمایش در 29 روز منقضی می‌شود",
+      "description": "Enterprise Components.io یک وب‌سایت است که اجزای UI با کیفیت بالا و پیشرفته طراحی شده برای توسعه‌دهندگان را ارائه می‌دهد و کارایی و زیبایی را در توسعه برنامه‌های وب و موبایل افزایش می‌دهد.",
+      "cancelTrial": "لغو آزمایش",
+      "upgradeNow": "هم اکنون ارتقا دهید"
+    },
+    "companyProfile": {
+      "planName": "Cloud One Enterprise",
+      "monthlyPlan": "پلن ماهانه",
+      "description": "ویژگی‌های ضروری برای استارتاپ‌ها و افراد",
+      "status": "وضعیت",
+      "statusValue": "آزمایش",
+      "queryRuns": "اجرای کوئری",
+      "unlimited": "نامحدود",
+      "apiCalls": "فراخوانی‌های API",
+      "price": "قیمت",
+      "nextBillDate": "تاریخ صورتحساب بعدی",
+      "cancelPlan": "لغو پلن",
+      "upgradePlan": "ارتقای پلن",
+      "queryRunsUsage": "اجرای UQuery: {{used}} از {{total}} استفاده شده",
+      "seats": "صندلی‌ها: {{used}} از {{total}} استفاده شده"
+    },
+    "latestPayment": {
+      "title": "آخرین پرداخت",
+      "downloadPDF": "دانلود PDF",
+      "typeOfPlan": "نوع پلن",
+      "paymentDate": "تاریخ پرداخت",
+      "cardUsed": "کارت استفاده شده برای پرداخت:",
+      "totalPayment": "مجموع پرداخت:"
+    },
+    "nextPayment": {
+      "title": "پرداخت بعدی",
+      "date": "در 17 آگوست، 2024",
+      "dueDate": "تاریخ سررسید",
+      "managePayment": "مدیریت پرداخت"
+    },
+    "billingInvoicing": {
+      "title": "صورتحساب و فاکتور",
+      "downloadAll": "دانلود همه",
+      "tableHeaders": {
+        "invoice": "فاکتور",
+        "status": "وضعیت",
+        "date": "تاریخ",
+        "amount": "مبلغ"
+      },
+      "status": {
+        "upcoming": "در حال آمدن",
+        "paid": "پرداخت شده",
+        "declined": "رد شده"
+      },
+      "viewAllPayments": "مشاهده تمام پرداخت‌ها"
+    }
+  },
+  "accountBillingHistory": {
+    "toolbar": {
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "billing": "صورتحساب"
+    },
+    "title": "صورتحساب و فاکتور",
+    "filter": "فیلتر...",
+    "download": "دانلود",
+    "downloadPdf": "دانلود PDF",
+    "columns": "ستون‌ها",
+    "columnHeaders": {
+      "member": "عضو",
+      "status": "وضعیت",
+      "date": "تاریخ",
+      "dueDate": "تاریخ سررسید",
+      "amount": "مبلغ"
+    },
+    "status": {
+      "upcoming": "در حال آمدن",
+      "paid": "پرداخت شده",
+      "declined": "رد شده"
+    }
+  },
+  "accountBillingPlans": {
+    "toolbar": {
+      "title": "پلن‌ها",
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "viewBilling": "مشاهده صورتحساب"
+    },
+    "annualBilling": "صورتحساب سالانه",
+    "currentPlan": "پلن فعلی",
+    "free": "رایگان",
+    "perMonth": "در ماه",
+    "perYear": "در سال",
+    "switchToTeam": "تغییر به تیم",
+    "upgrade": "ارتقا",
+    "plans": {
+      "basic": {
+        "title": "پایه",
+        "description": "ویژگی‌های ضروری برای استارتاپ‌ها و افراد"
+      },
+      "pro": {
+        "title": "حرفه‌ای",
+        "description": "ابزارهای پیشرفته برای کسب‌وکارهای در حال رشد"
+      },
+      "premium": {
+        "title": "پریمیوم",
+        "description": "مجموعه جامع برای عملیات در مقیاس بزرگ"
+      },
+      "enterprise": {
+        "title": "سازمانی",
+        "description": "راه‌حل‌های سفارشی برای نیازهای سازمانی"
+      }
+    },
+    "features": {
+      "userAccounts": {
+        "title": "حساب‌های کاربری",
+        "basic": "تا 5",
+        "pro": "تا 20",
+        "premium": "تا 50",
+        "enterprise": "نامحدود"
+      },
+      "dataStorage": {
+        "title": "ذخیره‌سازی داده",
+        "basic": "10 گیگابایت",
+        "pro": "50 گیگابایت",
+        "premium": "200 گیگابایت",
+        "enterprise": "سفارشی"
+      },
+      "capiCalls": {
+        "title": "فراخوانی‌های CAPI",
+        "basic": "1,000 در ماه",
+        "pro": "10,000 در ماه",
+        "premium": "50,000 در ماه",
+        "enterprise": "نامحدود"
+      },
+      "support": {
+        "title": "پشتیبانی",
+        "basic": "ایمیل",
+        "pro": "ایمیل + چت",
+        "premium": "اولویت",
+        "enterprise": "پشتیبانی زنده 24/7"
+      },
+      "dataBackup": {
+        "title": "پشتیبان‌گیری داده",
+        "basic": "هفتگی",
+        "pro": "روزانه",
+        "premium": "ساعتی",
+        "enterprise": "بلادرنگ"
+      },
+      "analyticsTools": {
+        "title": "ابزارهای تحلیلی",
+        "basic": "پایه",
+        "pro": "پیشرفته",
+        "premium": "جامع",
+        "enterprise": "سفارشی"
+      },
+      "integrationOptions": {
+        "title": "گزینه‌های یکپارچه‌سازی",
+        "basic": "محدود",
+        "pro": "استاندارد",
+        "premium": "گسترش یافته",
+        "enterprise": "مجموعه کامل"
+      },
+      "uptimeGuarantee": {
+        "title": "ضمانت زمان کار",
+        "basic": "99%",
+        "pro": "99.9%",
+        "premium": "99.99%",
+        "enterprise": "99.999%"
+      },
+      "customReports": {
+        "title": "گزارش‌های سفارشی"
+      },
+      "mobileAccess": {
+        "title": "دسترسی موبایل"
+      },
+      "customBranding": {
+        "title": "برندسازی سفارشی"
+      }
+    }
+  }
+}

@@ -1,0 +1,592 @@
+{
+  "accountCompanyProfile": {
+    "accountSettings": {
+      "email": "ایمیل",
+      "password": "رمز عبور",
+      "passwordLastChanged": "رمز عبور 2 ماه پیش تغییر کرد",
+      "recreate": "بازسازی",
+      "referralLink": "لینک معرفی",
+      "setup": "تنظیم",
+      "signInWith": "ورود با",
+      "socialProfiles": "پروفایل‌های اجتماعی",
+      "teamAccount": "حساب تیمی",
+      "title": "تنظیمات حساب",
+      "toBeSet": "تنظیم نشده"
+    },
+    "branding": {
+      "brandColor": "رنگ برند",
+      "brandingTitle": "برندینگ",
+      "clickOrDragDrop": "کلیک کنید یا بکشید و رها کنید",
+      "companyLogo": "لوگوی شرکت",
+      "comprehensiveImageIdentity": "طراحی هویت تصویری جامع",
+      "detailedRiskAssessment": "ارزیابی ریسک تفصیلی و تأیید انطباق",
+      "electronicMessageCommunication": "ارتباط پیام الکترونیکی",
+      "emails": "ایمیل‌ها",
+      "emblematicCorporateIdentity": "نماد هویت شرکت نمادین",
+      "fileFormats": "SVG، PNG، JPG (حداکثر 800x400)",
+      "publish": "انتشار",
+      "saveChanges": "ذخیره تغییرات",
+      "securityQuestionaries": "پرسشنامه‌های امنیتی",
+      "signaturePalette": "عنصر برندینگ پالت امضا",
+      "supplierPerformance": "ارزیابی عملکرد و قابلیت اطمینان تأمین‌کننده",
+      "title": "برندینگ",
+      "vendorReports": "گزارش‌های فروشنده"
+    },
+    "dataImport": {
+      "continueWithGoogle": "ادامه با گوگل",
+      "description": "آرزوها را تعریف کنید، مسیر را ترسیم کنید. هدفی تعیین کنید تا رویاها را به دستاوردهای قابل اندازه‌گیری تبدیل کنید.",
+      "title": "وارد کردن داده از Google Analytics"
+    },
+    "generalInfo": {
+      "add": "افزودن",
+      "companyName": "نام شرکت",
+      "missingDetails": "جزئیات گمشده",
+      "phoneNumber": "شماره تلفن",
+      "publicProfile": "پروفایل عمومی",
+      "registrationNumber": "شماره ثبت",
+      "remoteCompanyId": "شناسه شرکت از راه دور",
+      "title": "اطلاعات عمومی",
+      "vatNumber": "شماره مالیات بر ارزش افزوده"
+    },
+    "highlightedPosts": {
+      "comprehensiveGuide": {
+        "summary": "راهنمای تفصیلی برای کمک به درک و استفاده از پلتفرم دیجیتال ما برای حداکثر کارایی.",
+        "title": "راهنمای جامع برای پیمایش در پلتفرم دیجیتال ما"
+      },
+      "stayUpdated": {
+        "summary": "از جدیدترین بهبودها و ویژگی‌های پلتفرم ما برای بهبود تجربه کاربری خود آگاه باشید.",
+        "title": "با آخرین ویژگی‌ها و بهبودهای پلتفرم به‌روز بمانید"
+      },
+      "userGuidelines": {
+        "summary": "اهمیت امنیت و احترام در محیط کاری ما را از طریق راهنمای کاربران درک کنید.",
+        "title": "راهنمای کاربران برای محیط کاری امن و محترم"
+      }
+    },
+    "members": {
+      "connections": "اتصالات",
+      "disabled": "غیرفعال",
+      "enabled": "فعال",
+      "enforce2FA": "اجبار احراز هویت دو مرحله‌ای",
+      "joined": "پیوسته",
+      "name": "نام",
+      "role": "نقش",
+      "title": "اعضا",
+      "twoFA": "احراز هویت دو مرحله‌ای",
+      "viewMore": "مشاهده 64 مورد بیشتر"
+    },
+    "toolbar": {
+      "billing": "صورت‌حساب",
+      "description": "مرکز اصلی برای شخصی‌سازی",
+      "publicProfile": "پروفایل عمومی"
+    }
+  },
+  "accountGetStarted": {
+    "activity": {
+      "description": "مرکز اصلی برای شخصی‌سازی.",
+      "title": "فعالیت"
+    },
+    "apiKeys": {
+      "description": "کلیدهای API خود را به‌طور مؤثر و کارآمد امن و مدیریت کنید.",
+      "title": "کلیدهای API"
+    },
+    "appearance": {
+      "description": "حضور آنلاین خود را با ظاهری بی‌نقص متحول کنید.",
+      "title": "ظاهر"
+    },
+    "billingPayments": {
+      "description": "پرداخت‌ها را امروز با فرآیندهای تراکنش امن و کاربرپسند ساده کنید.",
+      "title": "صورت‌حساب و پرداخت"
+    },
+    "brand": {
+      "description": "طراحی‌های برند، هویت‌ها و لوگوهای محبوب.",
+      "title": "برند"
+    },
+    "devices": {
+      "description": "با آخرین اخبار دستگاه‌ها و نوآوری‌ها پیش‌رو باشید",
+      "title": "دستگاه‌ها"
+    },
+    "integrations": {
+      "description": "گردش‌کارها را با یکپارچه‌سازی‌های پیشرفته بهبود دهید.",
+      "title": "یکپارچه‌سازی‌ها"
+    },
+    "loginSecurity": {
+      "description": "محافظت از اطلاعات شما با اقدامات احراز هویت قوی.",
+      "title": "ورود و امنیت"
+    },
+    "membersTeamsRoles": {
+      "description": "مدیریت کارآمد اعضا، تیم‌ها و نقش‌ها.",
+      "title": "اعضا، تیم‌ها و نقش‌ها"
+    },
+    "moreAccountOptions": "گزینه‌های بیشتر حساب",
+    "notifications": {
+      "description": "با اعلان‌ها و یادآوری‌های رویدادهای مهم به‌روز بمانید.",
+      "title": "اعلان‌ها"
+    },
+    "personalInfo": {
+      "description": "ما برای مشارکت‌ها، پست‌های مهمان، بنرهای تبلیغاتی و موارد دیگر آماده‌ایم.",
+      "title": "اطلاعات شخصی"
+    },
+    "personalInfoLink": "اطلاعات شخصی"
+  },
+  "accountSettingsEnterprise": {
+    "account": {
+      "fields": {
+        "add": "افزودن",
+        "availability": "در دسترس بودن",
+        "availableNow": "هم اکنون در دسترس",
+        "email": "ایمیل",
+        "name": "نام",
+        "password": "رمز عبور",
+        "passwordLastChanged": "رمز عبور آخرین بار 2 ماه پیش تغییر کرد",
+        "photo": "عکس",
+        "photoDescription": "تصویر JPEG، PNG با ابعاد 150x150 پیکسل",
+        "recreate": "ایجاد مجدد",
+        "referralLink": "لینک معرف",
+        "signInWith": "ورود با",
+        "socialProfiles": "پروفایل‌های اجتماعی",
+        "teamAccount": "حساب تیمی",
+        "toBeSet": "باید تنظیم شود"
+      },
+      "publicProfile": "پروفایل عمومی",
+      "title": "حساب"
+    },
+    "authTwoFactor": {
+      "items": {
+        "authenticatorApp": {
+          "description": "محافظت را با یک اپلیکیشن احراز هویت برای احراز هویت دو مرحله‌ای ارتقا دهید.",
+          "title": "اپلیکیشن احراز هویت (TOTP)"
+        },
+        "textMessage": {
+          "description": "کدهای فوری برای تأیید امن حساب.",
+          "title": "پیام متنی (SMS)"
+        }
+      },
+      "title": "احراز هویت دو مرحله‌ای (2FA)"
+    },
+    "companyDocuments": {
+      "addFiles": "افزودن فایل‌ها",
+      "browseFiles": "مرور فایل‌ها",
+      "dropFilesHere": "فایل‌ها را اینجا رها کنید یا",
+      "error": "خطا",
+      "files": "فایل‌ها ({{count}})",
+      "maxFileSize": "حداکثر اندازه فایل: {{size}} • حداکثر فایل‌ها: {{count}}",
+      "removeAll": "حذف همه",
+      "tableHeaders": {
+        "actions": "عملیات",
+        "name": "نام",
+        "size": "اندازه",
+        "type": "نوع"
+      },
+      "title": "اسناد شرکت",
+      "uploadError": "خطای(های) آپلود فایل"
+    },
+    "connections": {
+      "connectionsCount": "{{count}} اتصال",
+      "noConnections": "بدون اتصال",
+      "none": "هیچ",
+      "tableHeaders": {
+        "jointLinks": "لینک‌های مشترک",
+        "name": "نام",
+        "status": "وضعیت"
+      },
+      "title": "اتصالات",
+      "viewMore": "مشاهده 64 مورد بیشتر"
+    },
+    "paymentHistory": {
+      "tableHeaders": {
+        "amount": "مبلغ",
+        "date": "تاریخ",
+        "type": "نوع"
+      },
+      "title": "تاریخچه پرداخت",
+      "types": {
+        "annualMaintenance": "نگهداری سالانه",
+        "productPurchase": "خرید محصول",
+        "subscriptionFee": "هزینه اشتراک",
+        "transactionFee": "هزینه تراکنش"
+      },
+      "viewAllPayments": "مشاهده تمام پرداخت‌ها"
+    },
+    "setGoal": {
+      "addGoal": "افزودن هدف",
+      "currentStatus": "دنبال کردن فرصت‌ها، درآمد صفر. رشد فراتر از معیارهای پولی.",
+      "description": "آرزوها را تعریف کنید، مسیر را ترسیم کنید. هدفی تعیین کنید تا رویاها را به دستاوردهای قابل اندازه‌گیری تبدیل کنید.",
+      "title": "تعیین هدف"
+    },
+    "toolbar": {
+      "description": "ابزارهای سفارشی برای مقیاس‌پذیری کسب‌وکار",
+      "myProfile": "پروفایل من",
+      "publicProfile": "پروفایل عمومی"
+    },
+    "upgrade": {
+      "daysLeft": "16 روز باقی مانده",
+      "description": "اطلاعات کسب‌وکار را برای یک پروفایل برجسته ارتقا دهید. از ویژگی‌های پریمیوم استفاده کنید و با جزئیات پیشرفته موفقیت را تضمین کنید.\nهم اکنون برای افزایش دید و تأثیر گسترده‌تر ارتقا دهید.",
+      "skip": "رد کردن",
+      "start": "شروع",
+      "title": "ارتقای اطلاعات کسب‌وکار شما"
+    },
+    "yourCurrentPlan": {
+      "goToBilling": "رفتن به صورتحساب",
+      "items": {
+        "apiIntegration": {
+          "link": "دریافت کلید API",
+          "summary": "سیستم‌های خود را با قابلیت‌های قدرتمند API ما یکپارچه کنید.",
+          "title": "یکپارچه‌سازی API"
+        },
+        "dataEncryption": {
+          "link": "تنظیم رمزگذاری",
+          "summary": "رمزگذاری سرتاسر، محافظت از اطلاعات در برابر دسترسی غیرمجاز",
+          "title": "رمزگذاری داده"
+        },
+        "devOpsIntegration": {
+          "link": "ویژگی‌های DevOps",
+          "summary": "دستیابی به انتشار سریع‌تر، یکپارچه‌سازی و استقرار مداوم",
+          "title": "یکپارچه‌سازی DevOps"
+        }
+      },
+      "premiumPlan": {
+        "changePlan": "تغییر پلن",
+        "description": "از مزایای پریمیوم از طریق پلن پریمیوم انحصاری ما دسترسی پیدا کنید",
+        "title": "پلن پریمیوم"
+      },
+      "title": "پلن فعلی شما"
+    }
+  },
+  "accountSettingsPlain": {
+    "basicSettings": {
+      "fields": {
+        "address": "آدرس",
+        "availabilityDateTime": "تاریخ و زمان در دسترس بودن",
+        "birthDate": "تاریخ تولد",
+        "city": "شهر",
+        "country": "کشور",
+        "dismissalTime": "زمان اخراج",
+        "email": "ایمیل",
+        "name": "نام",
+        "option2": "گزینه 2",
+        "option3": "گزینه 3",
+        "phoneNumber": "شماره تلفن",
+        "phoneNumberPlaceholder": "شماره تلفن",
+        "photo": "عکس",
+        "photoDescription": "تصویر JPEG، PNG با ابعاد 150x150 پیکسل",
+        "pickDate": "انتخاب تاریخ",
+        "pickDateTime": "انتخاب تاریخ و زمان",
+        "postcode": "کد پستی",
+        "select": "انتخاب",
+        "state": "استان",
+        "statePlaceholder": "استان"
+      },
+      "publicProfile": "پروفایل عمومی",
+      "saveChanges": "ذخیره تغییرات",
+      "title": "تنظیمات عمومی"
+    },
+    "filesUpload": {
+      "clearAll": "پاک کردن همه",
+      "completed": "تکمیل شده: {{count}}",
+      "dragAndDrop": "فایل‌ها را اینجا بکشید و رها کنید یا برای مرور کلیک کنید",
+      "failed": "ناموفق: {{count}}",
+      "selectFiles": "انتخاب فایل‌ها",
+      "supportMultipleFiles": "پشتیبانی از انواع فایل تا {{size}} برای هر فایل",
+      "title": "آپلود فایل‌ها",
+      "uploadError": "خطای(های) آپلود فایل",
+      "uploadFailed": "آپلود ناموفق بود. لطفاً دوباره تلاش کنید.",
+      "uploadProgress": "پیشرفت آپلود",
+      "uploadYourFiles": "فایل‌های خود را آپلود کنید",
+      "uploading": "در حال آپلود: {{count}}"
+    },
+    "password": {
+      "confirmNewPassword": "تأیید رمز عبور جدید",
+      "confirmNewPasswordPlaceholder": "تأیید رمز عبور جدید",
+      "currentPassword": "رمز عبور فعلی",
+      "currentPasswordPlaceholder": "رمز عبور فعلی شما",
+      "newPassword": "رمز عبور جدید",
+      "newPasswordPlaceholder": "رمز عبور جدید",
+      "resetPassword": "بازنشانی رمز عبور",
+      "title": "رمز عبور"
+    },
+    "toolbar": {
+      "description": "تجربه کاربری تمیز و کارآمد",
+      "getStarted": "شروع کنید",
+      "publicProfile": "پروفایل عمومی"
+    }
+  },
+  "accountSettingsSidebar": {
+    "advancedSettingsAddress": {
+      "address": "آدرس",
+      "addressPlaceholder": "Avinguda Imaginària, 789",
+      "city": "شهر",
+      "cityPlaceholder": "بارسلونا",
+      "country": "کشور",
+      "option2": "گزینه 2",
+      "option3": "گزینه 3",
+      "postcode": "کد پستی",
+      "postcodePlaceholder": "08012",
+      "saveChanges": "ذخیره تغییرات",
+      "select": "انتخاب",
+      "spain": "اسپانیا",
+      "state": "استان",
+      "statePlaceholder": "استان",
+      "title": "آدرس"
+    },
+    "advancedSettingsAppearance": {
+      "active": "فعال",
+      "dark": "تیره",
+      "light": "روشن",
+      "saveChanges": "ذخیره تغییرات",
+      "system": "سیستم",
+      "themeMode": "حالت تم",
+      "themeModeDescription": "تم رابط کاربری خود را انتخاب یا سفارشی کنید",
+      "title": "ظاهر",
+      "transparentSidebar": "نوار کناری شفاف",
+      "transparentSidebarDescription": "نوار کناری شفاف را برای رابط زیبا تغییر دهید. برای شفافیت روشن یا برای پس‌زمینه جامد خاموش کنید."
+    },
+    "advancedSettingsNotifications": {
+      "allNewMessages": "همه پیام‌های جدید (توصیه شده)",
+      "allNewMessagesAndStatuses": "همه پیام‌ها و وضعیت‌های جدید",
+      "autoSubscribeTasks": "به طور خودکار به وظایفی که ایجاد می‌کنید مشترک شوید",
+      "desktopNotifications": "اعلان‌های دسکتاپ",
+      "directMentions": "ذکر مستقیم @",
+      "disabled": "غیرفعال",
+      "email": "ایمیل",
+      "emailDescription": "ترجیحات ایمیل خود را تنظیم کنید.",
+      "emailNotifications": "اعلان‌های ایمیل",
+      "saveChanges": "ذخیره تغییرات",
+      "slack": "اسلک",
+      "slackDescription": "در اسلک به‌روز بمانید.",
+      "subscriptions": "اشتراک‌ها",
+      "title": "اعلان‌ها",
+      "unreadMessagesAndStatuses": "پیام‌ها و وضعیت‌های خوانده نشده"
+    },
+    "advancedSettingsPreferences": {
+      "americanEnglish": "انگلیسی آمریکایی",
+      "attributes": "ویژگی‌ها",
+      "currency": "واحد پول",
+      "easternTime": "GMT -5:00 - زمان شرقی (آمریکا و کانادا)",
+      "emailVisibility": "قابلیت مشاهده ایمیل",
+      "fullscreen": "تمام صفحه",
+      "language": "زبان",
+      "modal": "مودال",
+      "openTasksAs": "باز کردن وظایف به عنوان...",
+      "option2": "گزینه 2",
+      "option3": "گزینه 3",
+      "saveChanges": "ذخیره تغییرات",
+      "select": "انتخاب",
+      "showLinkedTaskNames": "نمایش نام‌های وظایف مرتبط",
+      "showLinkedTaskNamesDescription": "نام‌های وظایف را کنار شناسه‌ها برای وظایف پروژه مرتبط نمایش دهید.",
+      "showListNames": "نمایش نام‌های لیست",
+      "showListNamesDescription": "نام را کنار هر آیکون ببینید",
+      "timeZone": "منطقه زمانی",
+      "title": "ترجیحات",
+      "usd": "دلار آمریکا (USD)",
+      "visible": "قابل مشاهده"
+    },
+    "authEmail": {
+      "active": "فعال",
+      "description": "ایمیل خود را وارد کنید، آن را به عنوان اصلی برای به‌روزرسانی‌های اولویت‌دار تعیین کنید. برای سفارشی‌سازی ترجیحات ارتباطی خود به راحتی تغییر دهید",
+      "email": "ایمیل",
+      "primary": "اصلی",
+      "saveChanges": "ذخیره تغییرات",
+      "title": "ایمیل"
+    },
+    "authPassword": {
+      "confirmNewPassword": "تأیید رمز عبور جدید",
+      "confirmNewPasswordPlaceholder": "تأیید رمز عبور جدید",
+      "currentPassword": "رمز عبور فعلی",
+      "currentPasswordPlaceholder": "رمز عبور فعلی شما",
+      "newPassword": "رمز عبور جدید",
+      "newPasswordPlaceholder": "رمز عبور جدید",
+      "resetPassword": "بازنشانی رمز عبور",
+      "title": "رمز عبور"
+    },
+    "authSingleSignOn": {
+      "clientId": "شناسه کلاینت",
+      "clientSecret": "رمز مخفی کلاینت",
+      "configureGoogleAuth": "2. پیکربندی احراز هویت گوگل",
+      "copy": "کپی",
+      "customLoginUrl": "URL ورود سفارشی",
+      "description": "احراز هویت ورود یکپارچه (SSO) دسترسی در چندین پلتفرم را ساده‌سازی می‌کند. کاربران یک بار وارد می‌شوند و بدون تکرار اعتبارنامه‌ها به سیستم‌های مختلف دسترسی پیدا می‌کنند.",
+      "noteCustomUrl": "3. یادداشت URL سفارشی برای احراز هویت SSO گوگل",
+      "saveChanges": "ذخیره تغییرات",
+      "selectIntegrationType": "1. انتخاب نوع یکپارچه‌سازی SSO",
+      "title": "ورود یکپارچه (SSO)"
+    },
+    "authSocialSignIn": {
+      "description": "دسترسی آسان در انتظار است! با حساب اجتماعی مورد نظر خود به راحتی متصل شوید.",
+      "moreOptions": "گزینه‌های بیشتر ورود اجتماعی",
+      "saveChanges": "ذخیره تغییرات",
+      "signInWithApple": "ورود با اپل",
+      "signInWithFacebook": "ورود با فیس‌بوک",
+      "signInWithMicrosoft": "ورود با مایکروسافت",
+      "title": "ورود اجتماعی"
+    },
+    "authTwoFactor": {
+      "authenticatorApp": "اپلیکیشن احراز هویت (TOTP)",
+      "authenticatorAppDescription": "محافظت را با اپلیکیشن احراز هویت برای احراز هویت دو مرحله‌ای افزایش دهید.",
+      "enterPassword": "وارد کردن رمز عبور",
+      "password": "رمز عبور",
+      "passwordDescription": "رمز عبور خود را برای راه‌اندازی احراز هویت دو مرحله‌ای وارد کنید",
+      "setup": "راه‌اندازی",
+      "textMessage": "پیام متنی (SMS)",
+      "textMessageDescription": "کدهای فوری برای تأیید امن حساب.",
+      "title": "احراز هویت دو مرحله‌ای (2FA)"
+    },
+    "basicSettings": {
+      "availability": "در دسترس بودن",
+      "availabilityDateTime": "تاریخ و زمان در دسترس بودن",
+      "availableToHire": "در دسترس برای استخدام",
+      "birthDate": "تاریخ تولد",
+      "company": "شرکت",
+      "dismissalTime": "زمان اخراج",
+      "enterPhone": "وارد کردن تلفن",
+      "name": "نام",
+      "option2": "گزینه 2",
+      "phoneNumber": "شماره تلفن",
+      "photo": "عکس",
+      "photoDescription": "تصویر JPEG، PNG با ابعاد 150x150 پیکسل",
+      "pickDate": "انتخاب تاریخ",
+      "pickDateLabel": "انتخاب تاریخ",
+      "pickDateTime": "انتخاب تاریخ و زمان",
+      "public": "عمومی",
+      "saveChanges": "ذخیره تغییرات",
+      "select": "انتخاب",
+      "title": "تنظیمات پایه",
+      "visibility": "قابلیت مشاهده"
+    },
+    "deleteAccount": {
+      "confirmDeleting": "حذف حساب را تأیید کنید",
+      "continueText": "ما را بررسی کنید اگر هنوز می‌خواهید ادامه دهید.",
+      "deactivateInstead": "به جای آن غیرفعال کنید",
+      "deleteAccount": "حذف حساب",
+      "description": "متأسفیم که شما را ترک می‌کنید. حذف حساب را در زیر تأیید کنید. داده‌های شما به طور دائمی حذف خواهند شد. از اینکه بخشی از جامعه ما بودید متشکریم. لطفاً",
+      "setupGuidelines": "راهنمای راه‌اندازی",
+      "title": "حذف حساب"
+    },
+    "externalServicesIntegrations": {
+      "equacoin": "Equacoin",
+      "equacoinDescription": "تراکنش‌های ارز دیجیتال را به صورت امن و کارآمد ساده‌سازی کنید.",
+      "equacoinEmail": "equacoin@cryptoemail.com",
+      "evernote": "Evernote",
+      "evernoteDescription": "تراکنش‌های ارز دیجیتال را به صورت امن و کارآمد ساده‌سازی کنید.",
+      "evernoteEmail": "evernote@noteexample.com",
+      "googleWebdev": "گوگل web.dev",
+      "googleWebdevDescription": "برای همکاری پیشرفته در توسعه وب یکپارچه کنید.",
+      "googleWebdevEmail": "webdev@webdevmail.com",
+      "inferno": "Inferno",
+      "infernoDescription": "یکپارچه‌سازی قوی ایمیل برای مدیریت داده.",
+      "infernoEmail": "inferno@dataexample.com",
+      "jira": "Jira",
+      "jiraDescription": "مدیریت پروژه را ساده‌سازی کنید، همکاری را افزایش دهید.",
+      "jiraEmail": "jira@projectmail.com",
+      "saveChanges": "ذخیره تغییرات",
+      "title": "یکپارچه‌سازی‌ها"
+    },
+    "externalServicesManageApi": {
+      "apiKey": "کلید API",
+      "apiKeyDescription": "این کلید API فقط می‌تواند به",
+      "daysLeft": "16 روز باقی مانده",
+      "docs": "مستندات",
+      "pause": "توقف",
+      "renewPlan": "تمدید طرح",
+      "secureAccessDescription": "دسترسی امن با کلید API منحصر به فرد برای عملکرد پیشرفته.",
+      "title": "مدیریت API",
+      "unlockPotential": "پتانسیل کامل برنامه خود را با API ما باز کنید، دروازه امنی که یکپارچه‌سازی بی‌درنگ را تسهیل می‌کند و به توسعه‌دهندگان قدرت ایجاد تجربیات نوآورانه و پویا را به راحتی می‌دهد.",
+      "userAccess": "دسترسی کاربر"
+    },
+    "menu": {
+      "address": "آدرس",
+      "advancedSettings": "تنظیمات پیشرفته",
+      "appearance": "ظاهر",
+      "authentication": "احراز هویت",
+      "basicSettings": "تنظیمات پایه",
+      "deleteAccount": "حذف حساب",
+      "email": "ایمیل",
+      "externalServices": "سرویس‌های خارجی",
+      "integrations": "یکپارچه‌سازی‌ها",
+      "manageApi": "مدیریت API",
+      "notifications": "اعلان‌ها",
+      "password": "رمز عبور",
+      "preferences": "ترجیحات",
+      "singleSignOn": "ورود یکپارچه (SSO)",
+      "socialSignIn": "ورود اجتماعی",
+      "twoFactorAuth": "احراز هویت دو مرحله‌ای (2FA)"
+    },
+    "toolbar": {
+      "description": "دسترسی شهودی به شخصی‌سازی عمیق",
+      "getStarted": "شروع کنید",
+      "publicProfile": "پروفایل عمومی"
+    }
+  },
+  "accountUserProfile": {
+    "basicSettings": {
+      "email": "ایمیل",
+      "password": "رمز عبور",
+      "passwordLastChanged": "رمز عبور 2 ماه پیش تغییر کرد",
+      "publicProfile": "پروفایل عمومی",
+      "recreate": "بازسازی",
+      "referralLink": "لینک معرفی",
+      "setup": "تنظیم",
+      "signInWith": "ورود با",
+      "socialProfiles": "پروفایل‌های اجتماعی",
+      "teamAccount": "حساب تیمی",
+      "title": "تنظیمات پایه",
+      "toBeSet": "تنظیم نشده",
+      "twoFA": "احراز هویت دو مرحله‌ای"
+    },
+    "calendarAccounts": {
+      "addNew": "افزودن جدید",
+      "connections": "اتصالات",
+      "title": "حساب‌های تقویم"
+    },
+    "communityBadges": {
+      "expertContributor": "نشان مشارکت‌کننده متخصص",
+      "impactRecognition": "تشخیص تأثیر",
+      "innovationTrailblazer": "پیشگام نوآوری",
+      "performanceHonor": "افتخار عملکرد",
+      "title": "نشان‌ها"
+    },
+    "connections": {
+      "jointLinks": "لینک‌های مشترک",
+      "name": "نام",
+      "status": "وضعیت",
+      "title": "اتصالات",
+      "viewMore": "مشاهده 64 مورد بیشتر"
+    },
+    "myFiles": "فایل‌های من",
+    "personalInfo": {
+      "add": "افزودن",
+      "address": "آدرس",
+      "availability": "در دسترس بودن",
+      "availableNow": "الان در دسترس",
+      "birthday": "تاریخ تولد",
+      "gender": "جنسیت",
+      "male": "مرد",
+      "name": "نام",
+      "noAddressYet": "شما هنوز آدرسی ندارید",
+      "photo": "عکس",
+      "photoDescription": "تصویر JPEG، PNG با ابعاد 150x150 پیکسل",
+      "title": "اطلاعات شخصی"
+    },
+    "startNow": {
+      "button": "شروع کنید",
+      "description": "تخفیف‌های طراحی شده برای مطابقت با ترجیحات شما را کشف کنید.",
+      "title": "معاملات شخصی‌سازی شده برای رضایت شخصی"
+    },
+    "toolbar": {
+      "accountSettings": "تنظیمات حساب",
+      "description": "مرکز اصلی برای شخصی‌سازی",
+      "publicProfile": "پروفایل عمومی"
+    },
+    "work": {
+      "about": "درباره",
+      "aboutDescription": "ما برای مشارکت‌ها، پست‌های مهمان و موارد دیگر آماده‌ایم. به ما بپیوندید تا بینش‌های خود را به اشتراک بگذارید و مخاطبان خود را رشد دهید.",
+      "availability": "در دسترس بودن",
+      "availableNow": "الان در دسترس",
+      "fluent": "مسلط",
+      "hourlyRate": "نرخ ساعتی",
+      "hoursPerWeek": "32 ساعت در هفته",
+      "language": "زبان",
+      "skills": "مهارت‌ها",
+      "title": "کار"
+    }
+  }
+}

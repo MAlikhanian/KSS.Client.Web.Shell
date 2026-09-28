@@ -1,0 +1,373 @@
+{
+  "accountSecurity": {
+    "trustedDevices": {
+      "active": "فعال",
+      "manageTrustedDevices": "مدیریت دستگاه‌های مورد اعتماد",
+      "title": "دستگاه‌های مورد اعتماد"
+    }
+  },
+  "accountSecurityAllowedIpAddresses": {
+    "columns": {
+      "ipAddress": "آدرس IP",
+      "label": "برچسب",
+      "lastSession": "آخرین جلسه",
+      "method": "روش",
+      "methodTooltip": "تایید هویت کاربری که سعی می‌کند به یک منبع دسترسی پیدا کند",
+      "status": "وضعیت"
+    },
+    "filters": "فیلترها",
+    "searchPlaceholder": "جستجوی آدرس‌های IP...",
+    "status": "وضعیت",
+    "toolbar": {
+      "addIpAddress": "افزودن آدرس IP",
+      "columns": "ستون‌ها",
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "ipAllowlistEnabled": "فهرست مجاز IP فعال است",
+      "securityOverview": "نمای کلی امنیتی"
+    }
+  },
+  "accountSecurityBackupAndRecovery": {
+    "backup": {
+      "columns": {
+        "details": "جزئیات",
+        "when": "زمان"
+      },
+      "media": "{{count}} رسانه",
+      "pages": "{{count}} صفحه",
+      "preview": "پیش‌نمایش",
+      "restore": "بازیابی",
+      "searchPlaceholder": "جستجوی پشتیبان‌ها...",
+      "toolbar": {
+        "cloudSync": "همگام‌سازی ابری",
+        "columns": "ستون‌ها"
+      }
+    },
+    "backupSettings": {
+      "automaticBackup": {
+        "description": "محافظت از داده برنامه‌ریزی شده",
+        "title": "پشتیبان‌گیری خودکار"
+      },
+      "backupFrequency": {
+        "description": "انتخاب پشتیبان ترجیحی",
+        "title": "فرکانس پشتیبان‌گیری"
+      },
+      "daily": "روزانه",
+      "manualBackup": {
+        "description": "پشتیبان‌گیری در صورت نیاز",
+        "title": "پشتیبان‌گیری دستی"
+      },
+      "monthly": "ماهانه",
+      "select": "انتخاب",
+      "start": "شروع",
+      "title": "تنظیمات پشتیبان‌گیری",
+      "weekly": "هفتگی",
+      "yearly": "سالانه"
+    },
+    "highlightedPosts": {
+      "restorationAssurance": {
+        "summary": "برای غیرمنتظره با برنامه‌های پشتیبان پیشگیرانه آماده شوید. به منابع گسترده ما برای ایجاد یک پروتکل بازیابی قابل اعتماد دسترسی پیدا کنید که تداوم و آرامش خاطر را تضمین می‌کند.",
+        "title": "اطمینان از بازیابی: منابع پشتیبان پیشگیرانه"
+      },
+      "securingDataIntegrity": {
+        "summary": "داده‌های خود را با راه‌حل‌های بازیابی پشتیبان مقاوم ما محافظت کنید. راهنماهای دقیق و استراتژی‌های متخصص نقشه راه را برای محافظت قوی از داده و بازیابی سریع ارائه می‌دهند.",
+        "title": "تأمین یکپارچگی داده: سیستم‌های بازیابی پشتیبان"
+      }
+    },
+    "toolbar": {
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "orderHistory": "تاریخچه سفارش"
+    }
+  },
+  "accountSecurityCurrentSessions": {
+    "actions": {
+      "action": "عمل",
+      "copyId": "کپی شناسه",
+      "delete": "حذف"
+    },
+    "browser": "مرورگر",
+    "columns": {
+      "browser": "مرورگر",
+      "ipAddress": "آدرس IP",
+      "location": "موقعیت",
+      "person": "شخص"
+    },
+    "filters": "فیلترها",
+    "location": "موقعیت",
+    "searchPlaceholder": "جستجوی جلسات...",
+    "sessionIdCopied": "شناسه جلسه با موفقیت کپی شد: {{id}}",
+    "toolbar": {
+      "activityLog": "لاگ فعالیت",
+      "columns": "ستون‌ها",
+      "description": "دستگاه‌های مجاز برای دسترسی به گزارش",
+      "onlyActiveUsers": "فقط کاربران فعال"
+    }
+  },
+  "accountSecurityDeviceManagement": {
+    "columns": {
+      "added": "افزوده شده",
+      "addedTooltip": "زمان بر اساس منطقه زمانی محلی شما است.",
+      "device": "دستگاه",
+      "ipAddress": "آدرس IP",
+      "lastSession": "آخرین جلسه",
+      "location": "موقعیت"
+    },
+    "filter": "فیلتر...",
+    "searchPlaceholder": "جستجوی دستگاه‌ها...",
+    "toolbar": {
+      "addDevice": "افزودن دستگاه",
+      "authorizedDevices": "دستگاه‌های مجاز برای دسترسی به گزارش",
+      "columns": "ستون‌ها",
+      "securityOverview": "نمای کلی امنیتی",
+      "unlinkAllDevices": "لغو پیوند همه دستگاه‌ها"
+    }
+  },
+  "accountSecurityGetStarted": {
+    "options": {
+      "allowedIpAddresses": {
+        "desc": "مشخص کردن و محدود کردن دسترسی از طریق فیلتر کردن آدرس IP مجاز.",
+        "title": "آدرس‌های IP مجاز"
+      },
+      "backupRecovery": {
+        "desc": "راه‌حل‌های پشتیبان‌گیری ایمن و کارآمد با گزینه‌های بازیابی قابل اعتماد.",
+        "title": "پشتیبان‌گیری و بازیابی"
+      },
+      "loginSessions": {
+        "desc": "ردیابی و مدیریت جلسات فعال کاربر برای اهداف امنیتی.",
+        "title": "جلسات ورود"
+      },
+      "overview": {
+        "desc": "نمای گسترده‌ای از ویژگی‌ها و سیاست‌های امنیتی جامع ما.",
+        "title": "نمای کلی"
+      },
+      "privacySettings": {
+        "desc": "سفارشی‌سازی حریم خصوصی خود با تنظیمات و ترجیحات کنترل شده توسط کاربر.",
+        "title": "تنظیمات حریم خصوصی"
+      },
+      "securityLog": {
+        "desc": "سوابق دقیق رویدادها و فعالیت‌های امنیتی برای نظارت.",
+        "title": "لاگ امنیتی"
+      },
+      "trustedDevices": {
+        "desc": "شناسایی و مجاز کردن دستگاه‌ها برای امنیت بیشتر حساب.",
+        "title": "دستگاه‌های مورد اعتماد"
+      }
+    },
+    "toolbar": {
+      "issuesNeedAttention": "{{count}} مشکل نیاز به توجه شما دارد",
+      "securityLog": "لاگ امنیتی"
+    }
+  },
+  "accountSecurityLog": {
+    "columns": {
+      "actionTaken": "اقدام انجام شده",
+      "destinationIp": "IP مقصد",
+      "eventType": "نوع رویداد",
+      "severity": "شدت",
+      "sourceIp": "IP مبدأ",
+      "timestamp": "زمان‌برچسب"
+    },
+    "filters": "فیلترها",
+    "searchPlaceholder": "جستجوی لاگ‌ها...",
+    "severity": "شدت",
+    "toolbar": {
+      "authorizedDevices": "دستگاه‌های مجاز برای دسترسی به گزارش",
+      "columns": "ستون‌ها",
+      "pushAlerts": "هشدارهای پوش",
+      "securityOverview": "نمای کلی امنیتی",
+      "unlinkAllDevices": "لغو پیوند همه دستگاه‌ها"
+    }
+  },
+  "accountSecurityOverview": {
+    "authentification": {
+      "password": "رمز عبور",
+      "passwordLastChanged": "رمز عبور آخرین بار 2 ماه پیش تغییر کرد",
+      "setup": "راه‌اندازی",
+      "signInWith": "ورود با",
+      "title": "احراز هویت",
+      "toBeSet": "باید تنظیم شود",
+      "twoFA": "2FA"
+    },
+    "featuresHighlight": {
+      "description": "فضای زندگی خود را با آموزش ما به زیبایی تغییر دهید",
+      "features": {
+        "budgetFriendly": "مقرون به صرفه",
+        "freshLook": "ظاهر تازه",
+        "strongPasswords": "رمزهای عبور قوی",
+        "twoFactorAuthentication": "احراز هویت دو مرحله‌ای"
+      },
+      "reviewSecurityTips": "بررسی نکات امنیتی",
+      "title": "نکات امنیتی شخصی ضروری برای ایمنی بیشتر"
+    },
+    "generalSettings": {
+      "allowPublicProfile": {
+        "description": "فعال کردن کاربران برای ایجاد و نمایش یک پروفایل عمومی.",
+        "title": "اجازه پروفایل عمومی"
+      },
+      "allowUseLocation": {
+        "description": "فعال کردن ویژگی برای استفاده و اشتراک‌گذاری موقعیت کاربر.",
+        "title": "اجازه استفاده از موقعیت"
+      },
+      "allowUseLocation2": {
+        "description": "فعال کردن ویژگی برای استفاده و اشتراک‌گذاری موقعیت کاربر.",
+        "title": "اجازه استفاده از موقعیت"
+      },
+      "beta": "بتا",
+      "disableAll": "غیرفعال کردن همه",
+      "enableAll": "فعال کردن همه",
+      "preventMembersInviting": {
+        "description": "محدود کردن اعضا از ارسال دعوت به اعضای بالقوه جدید.",
+        "title": "جلوگیری از دعوت دیگران توسط اعضا"
+      },
+      "preventThirdPartyIntegrations": {
+        "description": "ممنوع کردن نصب برنامه‌ها یا یکپارچه‌سازی‌های خارجی توسط اعضا.",
+        "title": "جلوگیری از نصب یکپارچه‌سازی‌های شخص ثالث توسط اعضا"
+      },
+      "privateVulnerabilityReporting": {
+        "description": "کانال محرمانه برای گزارش آسیب‌پذیری‌های سیستم.",
+        "title": "گزارش آسیب‌پذیری خصوصی"
+      },
+      "pro": "حرفه‌ای",
+      "pushProtection": {
+        "description": "فعال کردن کاربران برای ایجاد و نمایش یک پروفایل عمومی.",
+        "title": "محافظت پوش برای خود"
+      },
+      "setup": "راه‌اندازی"
+    },
+    "highlightedPosts": {
+      "enhancingSecurityKnowledge": {
+        "summary": "کاوش منابع جامع برای تقویت درک امنیتی از طریق راهنماهای دقیق، نکات متخصص و مستندات.",
+        "title": "تقویت دانش امنیتی: راهنماها، نکات و مستندات"
+      },
+      "masteringSecurityProtocols": {
+        "summary": "غوطه‌ور شدن در قلمرو امنیت با مواد یادگیری تخصصی، راهنمایی متخصص و نکات عملی برای پیاده‌سازی.",
+        "title": "تسلط بر پروتکل‌های امنیتی: یادگیری از طریق راهنمایی متخصص"
+      },
+      "navigatingDigitalSecurity": {
+        "summary": "شروع یک سفر روشنگری امنیت دیجیتال با مجموعه گسترده ما از راهنماهای آموزشی و مشاوره عملی.",
+        "title": "ناوبری امنیت دیجیتال: یک سفر یادگیری جامع"
+      }
+    },
+    "loginSessions": {
+      "connections": "{{count}} اتصال",
+      "tableHeaders": {
+        "location": "موقعیت",
+        "name": "نام",
+        "recentActivity": "فعالیت اخیر"
+      },
+      "title": "جلسات ورود",
+      "viewMore": "مشاهده {{count}} مورد بیشتر"
+    },
+    "productInsight": {
+      "activeSessions": "جلسات فعال"
+    },
+    "quickSettings": {
+      "enforceTwoStepVerification": {
+        "description": "افزودن یک لایه اضافی امنیتی با احراز هویت دو مرحله‌ای.",
+        "title": "اجبار احراز هویت دو مرحله‌ای"
+      },
+      "logoutEveryone": {
+        "button": "خروج همه",
+        "description": "فوراً همه کاربران را از همه دستگاه‌ها خارج کنید.",
+        "title": "خروج همه"
+      }
+    },
+    "toolbar": {
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "securityHistory": "تاریخچه امنیتی"
+    }
+  },
+  "accountSecurityPrivacySettings": {
+    "blockList": {
+      "add": "افزودن",
+      "blockNewUser": "مسدود کردن کاربر جدید",
+      "commits": "{{count}} کامیت",
+      "description": "کاربران در فهرست مسدود قادر به ارسال درخواست چت یا پیام به شما نیستند.",
+      "title": "فهرست مسدود"
+    },
+    "highlightedPosts": {
+      "fortifyingPrivacyControls": {
+        "summary": "چارچوب حریم خصوصی خود را با تنظیمات قابل سفارشی‌سازی تقویت کنید. درک و اعمال کنترل‌های قوی با راهنماهای جامع ما برای محافظت از داده‌های اعضا.",
+        "title": "تقویت کنترل‌های حریم خصوصی: سفارشی‌سازی و راهنماها"
+      },
+      "navigatingPrivacyPreferences": {
+        "summary": "کنترل تنظیمات حریم خصوصی خود را با ابزارهای پیکربندی ایمن ما به دست بگیرید. منابع دقیق و بینش‌های متخصص اطمینان می‌دهند که ترجیحات شما برای حداکثر محافظت تنظیم شده‌اند.",
+        "title": "ناوبری ترجیحات حریم خصوصی: ابزارهای پیکربندی ایمن"
+      }
+    },
+    "manageData": {
+      "dataRetention": {
+        "description": "گزارش‌ها فقط برای شما قابل مشاهده خواهد بود.",
+        "title": "هیچ کس"
+      },
+      "delete": "حذف",
+      "deleteData": {
+        "description": "ایجاد یک لینک عمومی برای گزارش شما.",
+        "title": "افراد با لینک"
+      },
+      "downloadData": {
+        "description": "دعوت افراد انتخاب شده از طریق ایمیل.",
+        "title": "فقط افراد دعوت شده"
+      },
+      "start": "شروع",
+      "title": "مدیریت داده‌های شما"
+    },
+    "privacySettings": {
+      "adPersonalizationSettings": {
+        "description": "سفارشی‌سازی نحوه هدف‌گیری تبلیغات به علایق شما.",
+        "title": "تنظیمات شخصی‌سازی تبلیغات"
+      },
+      "allowPublicProfile": {
+        "description": "فعال کردن کاربران برای ایجاد و نمایش یک پروفایل عمومی.",
+        "title": "اجازه پروفایل عمومی"
+      },
+      "allowUseLocation": {
+        "description": "فعال کردن ویژگی برای استفاده و اشتراک‌گذاری موقعیت کاربر.",
+        "title": "اجازه استفاده از موقعیت"
+      },
+      "beta": "بتا",
+      "disableAll": "غیرفعال کردن همه",
+      "enableAll": "فعال کردن همه",
+      "enableLocationBasedServices": {
+        "description": "اجازه دهید برنامه به موقعیت شما دسترسی داشته باشد و از آن برای محتوای شخصی‌سازی شده استفاده کند.",
+        "title": "فعال کردن سرویس‌های مبتنی بر موقعیت"
+      },
+      "manageReadReceipts": {
+        "description": "فعال یا غیرفعال کردن رسیدهای خوانده شده برای پیام‌های خصوصی.",
+        "title": "مدیریت رسیدهای خوانده شده برای پیام‌ها"
+      },
+      "privateVulnerabilityReporting": {
+        "description": "کانال محرمانه برای گزارش آسیب‌پذیری‌های سیستم.",
+        "title": "گزارش آسیب‌پذیری خصوصی"
+      },
+      "pro": "حرفه‌ای",
+      "setup": "راه‌اندازی",
+      "showUpInSearchResults": {
+        "description": "قابلیت مشاهده خود را با انتخاب اینکه آیا در نتایج جستجو ظاهر می‌شوید کنترل کنید.",
+        "title": "نمایش در نتایج جستجو"
+      }
+    },
+    "reportSettings": {
+      "everyone": {
+        "description": "گزارش‌ها فقط برای همه قابل مشاهده خواهد بود.",
+        "title": "همه"
+      },
+      "noOne": {
+        "description": "گزارش‌ها فقط برای شما قابل مشاهده خواهد بود.",
+        "title": "هیچ کس"
+      },
+      "onlyInvitedPeople": {
+        "description": "دعوت افراد انتخاب شده از طریق ایمیل.",
+        "title": "فقط افراد دعوت شده"
+      },
+      "peopleWithLink": {
+        "description": "ایجاد یک لینک عمومی برای گزارش شما.",
+        "title": "افراد با لینک"
+      },
+      "title": "تنظیمات اشتراک‌گذاری گزارش"
+    },
+    "toolbar": {
+      "description": "مرکز اصلی برای سفارشی‌سازی شخصی",
+      "orderHistory": "تاریخچه سفارش"
+    }
+  }
+}

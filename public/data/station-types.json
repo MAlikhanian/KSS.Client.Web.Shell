@@ -1,0 +1,32 @@
+[
+  {
+    "id": "equity_trading",
+    "name": "معاملات سهام",
+    "code": "EQ",
+    "isActive": true
+  },
+  {
+    "id": "derivatives_trading",
+    "name": "معاملات مشتقه",
+    "code": "DER",
+    "isActive": true
+  },
+  {
+    "id": "commodity_trading",
+    "name": "معاملات کالا",
+    "code": "COM",
+    "isActive": true
+  },
+  {
+    "id": "currency_trading",
+    "name": "معاملات ارز",
+    "code": "FX",
+    "isActive": true
+  },
+  {
+    "id": "bond_trading",
+    "name": "معاملات اوراق قرضه",
+    "code": "BOND",
+    "isActive": true
+  }
+]

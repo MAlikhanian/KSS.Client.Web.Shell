@@ -1,0 +1,90 @@
+{
+  "accountNotifications": {
+    "channels": {
+      "items": {
+        "desktop": {
+          "description": "Enable notifications for real-time desktop alerts.",
+          "title": "Desctop"
+        },
+        "email": {
+          "title": "Email"
+        },
+        "mobile": {
+          "title": "Mobile"
+        },
+        "slack": {
+          "connectSlack": "Connect Slack",
+          "description": "Receive instant alerts for messages and updates directly in Slack.",
+          "title": "Slack"
+        }
+      },
+      "teamWideAlerts": "Team-Wide Alerts",
+      "title": "Notification Channels"
+    },
+    "doNotDisturb": {
+      "description": "Activate 'Do Not Disturb' to silence all notifications and focus without interruptions during specified hours or tasks.",
+      "learnMore": "Learn more",
+      "pauseNotifications": "Pause Notifications",
+      "title": "Do Not Disturb"
+    },
+    "engage": {
+      "contactSupport": "Contact Support",
+      "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+      "title": "Contact Support"
+    },
+    "highlightedPosts": {
+      "item1": {
+        "summary": "Tailor your alert preferences with our streamlined setup. Stay informed with notifications that matter to you most.",
+        "title": "Streamlined Alerts Setup: Custom Notification Preferences"
+      },
+      "item2": {
+        "summary": "Ensure timely communication with our instant notification tools. Customize alerts to stay ahead in real-time collaboration.",
+        "title": "Effective Communication: Instant Notification Tools"
+      },
+      "item3": {
+        "summary": "Control how you receive updates with our smart alert system. Personalize notifications for a more efficient workflow.",
+        "title": "Personalized Updates: Smart Alert System"
+      }
+    },
+    "otherNotifications": {
+      "items": {
+        "budgetWarning": {
+          "description": "Get notified if nearing budget limit.",
+          "title": "Budget Warning"
+        },
+        "collaborationRequest": {
+          "description": "Invite to collaborate on a new document.",
+          "title": "Collaboration Request"
+        },
+        "feedbackAlert": {
+          "description": "When a client submits new feedback.",
+          "title": "Feedback Alert"
+        },
+        "invoiceAlert": {
+          "description": "Alert for new and unpaid invoices.",
+          "title": "Invoice Alert",
+          "viewInvoices": "View Invoices"
+        },
+        "meetingReminder": {
+          "description": "Reminder of scheduled meetings for the day.",
+          "showMeetings": "Show Meetings",
+          "title": "Meeting Reminder"
+        },
+        "statusChange": {
+          "description": "Notifies changes in project or task status.",
+          "title": "Status Change"
+        },
+        "taskAlert": {
+          "description": "Notification when a task is assigned to you.",
+          "title": "Task Alert"
+        }
+      },
+      "teamWideAlerts": "Team-Wide Alerts",
+      "title": "Other Notifications"
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "privacySettings": "Privacy Settings"
+    }
+  }
+}

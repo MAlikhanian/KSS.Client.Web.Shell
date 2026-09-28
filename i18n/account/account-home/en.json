@@ -1,0 +1,592 @@
+{
+  "accountCompanyProfile": {
+    "accountSettings": {
+      "email": "Email",
+      "password": "Password",
+      "passwordLastChanged": "Password last changed 2 months ago",
+      "recreate": "Re-create",
+      "referralLink": "Referral Link",
+      "setup": "Setup",
+      "signInWith": "Sign-in with",
+      "socialProfiles": "Social Profiles",
+      "teamAccount": "Team Account",
+      "title": "Account Settings",
+      "toBeSet": "To be set"
+    },
+    "branding": {
+      "brandColor": "Brand Color",
+      "brandingTitle": "Branding",
+      "clickOrDragDrop": "Click or Drag & Drop",
+      "companyLogo": "Company Logo",
+      "comprehensiveImageIdentity": "Comprehensive Image Identity Design",
+      "detailedRiskAssessment": "Detailed Risk Assessment & Compliance Verification",
+      "electronicMessageCommunication": "Electronic Message Communication",
+      "emails": "Emails",
+      "emblematicCorporateIdentity": "Emblematic Corporate Identity Symbol",
+      "fileFormats": "SVG,PNG, JPG (max. 800x400)",
+      "publish": "Publish",
+      "saveChanges": "Save Changes",
+      "securityQuestionaries": "Security Questionaries",
+      "signaturePalette": "Signature Palette Branding Element",
+      "supplierPerformance": "Supplier Performance & Reliability Evaluations",
+      "title": "Branding",
+      "vendorReports": "Vendor Reports"
+    },
+    "dataImport": {
+      "continueWithGoogle": "Continue with Google",
+      "description": "Define aspirations, outline the path. Set a goal to transform dreams into measurable achievements.",
+      "title": "Data import from Google Analytics"
+    },
+    "generalInfo": {
+      "add": "Add",
+      "companyName": "Company Name",
+      "missingDetails": "Missing Details",
+      "phoneNumber": "Phone number",
+      "publicProfile": "Public Profile",
+      "registrationNumber": "Registration number",
+      "remoteCompanyId": "Remote Company ID",
+      "title": "General Info",
+      "vatNumber": "VAT number"
+    },
+    "highlightedPosts": {
+      "comprehensiveGuide": {
+        "summary": "A detailed walkthrough to help you understand and use our digital platform for maximum efficiency.",
+        "title": "Comprehensive Guide to Navigating Our Digital Platform"
+      },
+      "stayUpdated": {
+        "summary": "Keep abreast of the newest enhancements and features on our platform to enhance your user experience.",
+        "title": "Stay Updated with Platform's Latest Features and Improvements"
+      },
+      "userGuidelines": {
+        "summary": "Understand the importance of safety and respect in our work environment through our user guidelines.",
+        "title": "User Guidelines for a Safe and Respectful Workspace"
+      }
+    },
+    "members": {
+      "connections": "connections",
+      "disabled": "Disabled",
+      "enabled": "Enabled",
+      "enforce2FA": "Enforce 2FA",
+      "joined": "Joined",
+      "name": "Name",
+      "role": "Role",
+      "title": "Members",
+      "twoFA": "2FA",
+      "viewMore": "View 64 more"
+    },
+    "toolbar": {
+      "billing": "Billing",
+      "description": "Central Hub for Personal Customization",
+      "publicProfile": "Public Profile"
+    }
+  },
+  "accountGetStarted": {
+    "activity": {
+      "description": "Central Hub for Personal Customization.",
+      "title": "Activity"
+    },
+    "apiKeys": {
+      "description": "Secure and manage Your API Keys effectively and efficiently.",
+      "title": "API Keys"
+    },
+    "appearance": {
+      "description": "Transforming your online presence with flawless appearance.",
+      "title": "Appearance"
+    },
+    "billingPayments": {
+      "description": "Simplify payments today with secure, user-friendly transaction processes.",
+      "title": "Billing & Payments"
+    },
+    "brand": {
+      "description": "Trending brand designs, identities, and logos.",
+      "title": "Brand"
+    },
+    "devices": {
+      "description": "Stay ahead with the latest devices and innovations news",
+      "title": "Devices"
+    },
+    "integrations": {
+      "description": "Enhance Workflows with Advanced Integrations.",
+      "title": "Integrations"
+    },
+    "loginSecurity": {
+      "description": "Safeguarding your information with strong authentication measures.",
+      "title": "Login & Security"
+    },
+    "membersTeamsRoles": {
+      "description": "Efficient management of members, teams, and roles.",
+      "title": "Members, Teams & Roles"
+    },
+    "moreAccountOptions": "More Account Options",
+    "notifications": {
+      "description": "Keep updated with important notices and event reminders.",
+      "title": "Notifications"
+    },
+    "personalInfo": {
+      "description": "We're open to partnerships, guest posts, promo banners and more.",
+      "title": "Personal info"
+    },
+    "personalInfoLink": "Personal Info"
+  },
+  "accountSettingsEnterprise": {
+    "account": {
+      "fields": {
+        "add": "Add",
+        "availability": "Availability",
+        "availableNow": "Available now",
+        "email": "Email",
+        "name": "Name",
+        "password": "Password",
+        "passwordLastChanged": "Password last changed 2 months ago",
+        "photo": "Photo",
+        "photoDescription": "150x150px JPEG, PNG Image",
+        "recreate": "Re-create",
+        "referralLink": "Referral Link",
+        "signInWith": "Sign-in with",
+        "socialProfiles": "Social Profiles",
+        "teamAccount": "Team Account",
+        "toBeSet": "To be set"
+      },
+      "publicProfile": "Public Profile",
+      "title": "Account"
+    },
+    "authTwoFactor": {
+      "items": {
+        "authenticatorApp": {
+          "description": "Elevate protection with an authenticator app for two-factor authentication.",
+          "title": "Authenticator App (TOTP)"
+        },
+        "textMessage": {
+          "description": "Instant codes for secure account verification.",
+          "title": "Text Message (SMS)"
+        }
+      },
+      "title": "Two-Factor authentication(2FA)"
+    },
+    "companyDocuments": {
+      "addFiles": "Add files",
+      "browseFiles": "browse files",
+      "dropFilesHere": "Drop files here or",
+      "error": "Error",
+      "files": "Files ({{count}})",
+      "maxFileSize": "Maximum file size: {{size}} • Maximum files: {{count}}",
+      "removeAll": "Remove all",
+      "tableHeaders": {
+        "actions": "Actions",
+        "name": "Name",
+        "size": "Size",
+        "type": "Type"
+      },
+      "title": "Company Documents",
+      "uploadError": "File upload error(s)"
+    },
+    "connections": {
+      "connectionsCount": "{{count}} connections",
+      "noConnections": "No connections",
+      "none": "none",
+      "tableHeaders": {
+        "jointLinks": "Joint Links",
+        "name": "Name",
+        "status": "Status"
+      },
+      "title": "Connections",
+      "viewMore": "View 64 more"
+    },
+    "paymentHistory": {
+      "tableHeaders": {
+        "amount": "Amount",
+        "date": "Date",
+        "type": "Type"
+      },
+      "title": "Payment History",
+      "types": {
+        "annualMaintenance": "Annual Maintenance",
+        "productPurchase": "Product Purchase",
+        "subscriptionFee": "Subscription Fee",
+        "transactionFee": "Transaction Fee"
+      },
+      "viewAllPayments": "View all Payments"
+    },
+    "setGoal": {
+      "addGoal": "Add a Goal",
+      "currentStatus": "Pursuing opportunities, earning zero. Growth beyond monetary measures.",
+      "description": "Define aspirations, outline the path. Set a goal to transform dreams into measurable achievements.",
+      "title": "Set a Goal"
+    },
+    "toolbar": {
+      "description": "Tailored Tools for Business Scalability",
+      "myProfile": "My profile",
+      "publicProfile": "Public Profile"
+    },
+    "upgrade": {
+      "daysLeft": "16 days left",
+      "description": "Elevate business information for a standout profile. Utilize premium features, ensuring success with enhanced details.\nUpgrade now for heightened visibility and broader impact.",
+      "skip": "Skip",
+      "start": "Start",
+      "title": "Upgrade your business info"
+    },
+    "yourCurrentPlan": {
+      "goToBilling": "Go to Billing",
+      "items": {
+        "apiIntegration": {
+          "link": "Get API Key",
+          "summary": "Integrate your systems with our robust API capabilities.",
+          "title": "API Integration"
+        },
+        "dataEncryption": {
+          "link": "Setup Encryption",
+          "summary": "End-to-end encryption, protecting info from unauthorized access",
+          "title": "Data Encryption"
+        },
+        "devOpsIntegration": {
+          "link": "DevOps Features",
+          "summary": "Achieve faster releases, continuous integration & deployment",
+          "title": "DevOps Integration"
+        }
+      },
+      "premiumPlan": {
+        "changePlan": "Change Plan",
+        "description": "Access premium perks through our exclusive Premium Plan",
+        "title": "Premium Plan"
+      },
+      "title": "Your Current Plan"
+    }
+  },
+  "accountSettingsPlain": {
+    "basicSettings": {
+      "fields": {
+        "address": "Address",
+        "availabilityDateTime": "Availability Date & Time",
+        "birthDate": "Birth Date",
+        "city": "City",
+        "country": "Country",
+        "dismissalTime": "Dismissal Time",
+        "email": "Email",
+        "name": "Name",
+        "option2": "Option 2",
+        "option3": "Option 3",
+        "phoneNumber": "Phone number",
+        "phoneNumberPlaceholder": "Phone number",
+        "photo": "Photo",
+        "photoDescription": "150x150px JPEG, PNG Image",
+        "pickDate": "Pick a date",
+        "pickDateTime": "Pick a date and time",
+        "postcode": "Postcode",
+        "select": "Select",
+        "state": "State",
+        "statePlaceholder": "State"
+      },
+      "publicProfile": "Public Profile",
+      "saveChanges": "Save Changes",
+      "title": "General Settings"
+    },
+    "filesUpload": {
+      "clearAll": "Clear all",
+      "completed": "Completed: {{count}}",
+      "dragAndDrop": "Drag and drop files here or click to browse",
+      "failed": "Failed: {{count}}",
+      "selectFiles": "Select files",
+      "supportMultipleFiles": "Support for multiple file types up to {{size}} each",
+      "title": "Files Upload",
+      "uploadError": "File upload error(s)",
+      "uploadFailed": "Upload failed. Please try again.",
+      "uploadProgress": "Upload Progress",
+      "uploadYourFiles": "Upload your files",
+      "uploading": "Uploading: {{count}}"
+    },
+    "password": {
+      "confirmNewPassword": "Confirm New Password",
+      "confirmNewPasswordPlaceholder": "Confirm new password",
+      "currentPassword": "Current Password",
+      "currentPasswordPlaceholder": "Your current password",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "New password",
+      "resetPassword": "Reset Password",
+      "title": "Password"
+    },
+    "toolbar": {
+      "description": "Clean, Efficient User Experience",
+      "getStarted": "Get Started",
+      "publicProfile": "Public Profile"
+    }
+  },
+  "accountSettingsSidebar": {
+    "advancedSettingsAddress": {
+      "address": "Address",
+      "addressPlaceholder": "Avinguda Imaginària, 789",
+      "city": "City",
+      "cityPlaceholder": "Barcelona",
+      "country": "Country",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "postcode": "Postcode",
+      "postcodePlaceholder": "08012",
+      "saveChanges": "Save Changes",
+      "select": "Select",
+      "spain": "Spain",
+      "state": "State",
+      "statePlaceholder": "State",
+      "title": "Address"
+    },
+    "advancedSettingsAppearance": {
+      "active": "Active",
+      "dark": "Dark",
+      "light": "Light",
+      "saveChanges": "Save Changes",
+      "system": "Sistem",
+      "themeMode": "Theme mode",
+      "themeModeDescription": "Select or customize your ui theme",
+      "title": "Appearance",
+      "transparentSidebar": "Transparent sidebar",
+      "transparentSidebarDescription": "Toggle the transparent sidebar for a sleek interface.Switch it on for transparency or off for a solid background."
+    },
+    "advancedSettingsNotifications": {
+      "allNewMessages": "All new messages (Recommended)",
+      "allNewMessagesAndStatuses": "All new messages and statuses",
+      "autoSubscribeTasks": "Automatically subscribe to tasks you create",
+      "desktopNotifications": "Desktop notifications",
+      "directMentions": "Direct @mentions",
+      "disabled": "Disabled",
+      "email": "Email",
+      "emailDescription": "Tailor Your Email Preferences.",
+      "emailNotifications": "Email notifications",
+      "saveChanges": "Save Changes",
+      "slack": "Slack",
+      "slackDescription": "Stay Updated on Slack.",
+      "subscriptions": "Subscriptions",
+      "title": "Notifications",
+      "unreadMessagesAndStatuses": "AUnread messages and statuses"
+    },
+    "advancedSettingsPreferences": {
+      "americanEnglish": "American English",
+      "attributes": "Attributes",
+      "currency": "Currency",
+      "easternTime": "GMT -5:00 - Eastern Time(US & Canada)",
+      "emailVisibility": "Email visibility",
+      "fullscreen": "Fullscreen",
+      "language": "Language",
+      "modal": "Modal",
+      "openTasksAs": "Open tasks as...",
+      "option2": "Option 2",
+      "option3": "Option 3",
+      "saveChanges": "Save Changes",
+      "select": "Select",
+      "showLinkedTaskNames": "Show linked task names",
+      "showLinkedTaskNamesDescription": "Show task names next to ids for linked project tasks.",
+      "showListNames": "Show list names",
+      "showListNamesDescription": "See the name next to each icon",
+      "timeZone": "Time zone",
+      "title": "Preferences",
+      "usd": "United States Dollar (USD)",
+      "visible": "Visible"
+    },
+    "authEmail": {
+      "active": "Active",
+      "description": "Input your email, designate as primary for priority updates. Toggle to seamlessly customize your communication preferences",
+      "email": "Email",
+      "primary": "Primary",
+      "saveChanges": "Save Changes",
+      "title": "Email"
+    },
+    "authPassword": {
+      "confirmNewPassword": "Confirm New Password",
+      "confirmNewPasswordPlaceholder": "Confirm new password",
+      "currentPassword": "Current Password",
+      "currentPasswordPlaceholder": "Your current password",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "New password",
+      "resetPassword": "Reset Password",
+      "title": "Password"
+    },
+    "authSingleSignOn": {
+      "clientId": "Client ID",
+      "clientSecret": "Client Secret",
+      "configureGoogleAuth": "2. Configure Google authentication",
+      "copy": "Copy",
+      "customLoginUrl": "Custom Login UTL",
+      "description": "Single Sign-On (SSO) authentication streamlines access across multiple platforms. Users log in once, gaining seamless entry to various systems without repetitive credentials.",
+      "noteCustomUrl": "3. Note down custom URL for Google SSO authentication",
+      "saveChanges": "Save Changes",
+      "selectIntegrationType": "1. Select SSO integration Type",
+      "title": "Single Sign On(SSO)"
+    },
+    "authSocialSignIn": {
+      "description": "Effortless access awaits! Connect seamlessly with your preferred social account.",
+      "moreOptions": "More Social Sign in options",
+      "saveChanges": "Save Changes",
+      "signInWithApple": "Sign in with Apple",
+      "signInWithFacebook": "Sign in with Facebook",
+      "signInWithMicrosoft": "Sign in with Microsoft",
+      "title": "Social Sign in"
+    },
+    "authTwoFactor": {
+      "authenticatorApp": "Authenticator App (TOTP)",
+      "authenticatorAppDescription": "Elevate protection with an authenticator app for two-factor authentication.",
+      "enterPassword": "Enter password",
+      "password": "Password",
+      "passwordDescription": "Enter your password to setup Two-Factor authentication",
+      "setup": "Setup",
+      "textMessage": "Text Message (SMS)",
+      "textMessageDescription": "Instant codes for secure account verification.",
+      "title": "Two-Factor authentication(2FA)"
+    },
+    "basicSettings": {
+      "availability": "Avaibality",
+      "availabilityDateTime": "Availability Date & Time",
+      "availableToHire": "Available to hire",
+      "birthDate": "Birth Date",
+      "company": "Company",
+      "dismissalTime": "Dismissal Time",
+      "enterPhone": "Enter phone",
+      "name": "Name",
+      "option2": "Option 2",
+      "phoneNumber": "Phone number",
+      "photo": "Photo",
+      "photoDescription": "150x150px JPEG, PNG Image",
+      "pickDate": "Pick a date",
+      "pickDateLabel": "Pick a date",
+      "pickDateTime": "Pick a date and time",
+      "public": "Public",
+      "saveChanges": "Save Changes",
+      "select": "Select",
+      "title": "Basic Settings",
+      "visibility": "Visibility"
+    },
+    "deleteAccount": {
+      "confirmDeleting": "Confirm deleting account",
+      "continueText": "if you still wish continue.",
+      "deactivateInstead": "Deactivate Instead",
+      "deleteAccount": "Delete Account",
+      "description": "We regret to see you leave. Confirm account deletion below. Your data will be permanently removed. Thank you for being part of our community. Please check our",
+      "setupGuidelines": "Setup Guidelines",
+      "title": "Delete Account"
+    },
+    "externalServicesIntegrations": {
+      "equacoin": "Equacoin",
+      "equacoinDescription": "Streamline cryptocurrency transactions securely and efficiently.",
+      "equacoinEmail": "equacoin@cryptoemail.com",
+      "evernote": "Evernote",
+      "evernoteDescription": "Streamline cryptocurrency transactions securely and efficiently.",
+      "evernoteEmail": "evernote@noteexample.com",
+      "googleWebdev": "Google web.dev",
+      "googleWebdevDescription": "Integrate for enhanced collaboration in web development.",
+      "googleWebdevEmail": "webdev@webdevmail.com",
+      "inferno": "Inferno",
+      "infernoDescription": "Robust email integration for data management.",
+      "infernoEmail": "inferno@dataexample.com",
+      "jira": "Jira",
+      "jiraDescription": "Streamline project management, enhance collaboration.",
+      "jiraEmail": "jira@projectmail.com",
+      "saveChanges": "Save Changes",
+      "title": "Integrations"
+    },
+    "externalServicesManageApi": {
+      "apiKey": "API Key",
+      "apiKeyDescription": "This API key can only access",
+      "daysLeft": "16 days left",
+      "docs": "Docs",
+      "pause": "Pause",
+      "renewPlan": "Renew Plan",
+      "secureAccessDescription": "Secure access with a unique API key for enhanced functionality.",
+      "title": "Manage API",
+      "unlockPotential": "Unlock the full potential of your application with our API, a secure gateway facilitating seamless integration, empowering developers to create innovative and dynamic experiences effortlessly.",
+      "userAccess": "User Access"
+    },
+    "menu": {
+      "address": "Address",
+      "advancedSettings": "Advanced Settings",
+      "appearance": "Appearance",
+      "authentication": "Authentication",
+      "basicSettings": "Basic Settings",
+      "deleteAccount": "Delete Account",
+      "email": "Email",
+      "externalServices": "External Services",
+      "integrations": "Integrations",
+      "manageApi": "Manage API",
+      "notifications": "Notifications",
+      "password": "Password",
+      "preferences": "Preferences",
+      "singleSignOn": "Single Sign On(SSO)",
+      "socialSignIn": "Social Sign in",
+      "twoFactorAuth": "Two-Factor auth(2FA)"
+    },
+    "toolbar": {
+      "description": "Intuitive Access to In-Depth Customization",
+      "getStarted": "Get Started",
+      "publicProfile": "Public Profile"
+    }
+  },
+  "accountUserProfile": {
+    "basicSettings": {
+      "email": "Email",
+      "password": "Password",
+      "passwordLastChanged": "Password last changed 2 months ago",
+      "publicProfile": "Public Profile",
+      "recreate": "Re-create",
+      "referralLink": "Referral Link",
+      "setup": "Setup",
+      "signInWith": "Sign-in with",
+      "socialProfiles": "Social Profiles",
+      "teamAccount": "Team Account",
+      "title": "Basic Settings",
+      "toBeSet": "To be set",
+      "twoFA": "2FA"
+    },
+    "calendarAccounts": {
+      "addNew": "Add New",
+      "connections": "connections",
+      "title": "Calendar Accounts"
+    },
+    "communityBadges": {
+      "expertContributor": "Expert Contributor Badge",
+      "impactRecognition": "Impact Recognition",
+      "innovationTrailblazer": "Innovation Trailblazer",
+      "performanceHonor": "Performance Honor",
+      "title": "Badges"
+    },
+    "connections": {
+      "jointLinks": "Joint Links",
+      "name": "Name",
+      "status": "Status",
+      "title": "Connections",
+      "viewMore": "View 64 more"
+    },
+    "myFiles": "My Files",
+    "personalInfo": {
+      "add": "Add",
+      "address": "Address",
+      "availability": "Availability",
+      "availableNow": "Available now",
+      "birthday": "Birthday",
+      "gender": "Gender",
+      "male": "Male",
+      "name": "Name",
+      "noAddressYet": "You have no an address yet",
+      "photo": "Photo",
+      "photoDescription": "150x150px JPEG, PNG Image",
+      "title": "Personal Info"
+    },
+    "startNow": {
+      "button": "Start Now",
+      "description": "Discover promotions crafted to match your preferences.",
+      "title": "Individually Tailored Deals for Personal Satisfaction"
+    },
+    "toolbar": {
+      "accountSettings": "Account Settings",
+      "description": "Central Hub for Personal Customization",
+      "publicProfile": "Public Profile"
+    },
+    "work": {
+      "about": "About",
+      "aboutDescription": "We're open to partnerships, guest posts, and more. Join us to share your insights and grow your audience.",
+      "availability": "Availability",
+      "availableNow": "Available now",
+      "fluent": "Fluent",
+      "hourlyRate": "Hourly Rate",
+      "hoursPerWeek": "32 hours a week",
+      "language": "Language",
+      "skills": "Skills",
+      "title": "Work"
+    }
+  }
+}

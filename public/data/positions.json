@@ -1,0 +1,92 @@
+[
+  {
+    "id": "ceo",
+    "name": "مدیرعامل",
+    "code": "CEO",
+    "isActive": true
+  },
+  {
+    "id": "deputy_ceo",
+    "name": "معاون مدیرعامل",
+    "code": "DCEO",
+    "isActive": true
+  },
+  {
+    "id": "financial_manager",
+    "name": "مدیر مالی",
+    "code": "FM",
+    "isActive": true
+  },
+  {
+    "id": "operations_manager",
+    "name": "مدیر عملیات",
+    "code": "OM",
+    "isActive": true
+  },
+  {
+    "id": "trading_manager",
+    "name": "مدیر معاملات",
+    "code": "TM",
+    "isActive": true
+  },
+  {
+    "id": "compliance_manager",
+    "name": "مدیر نظارت",
+    "code": "CM",
+    "isActive": true
+  },
+  {
+    "id": "risk_manager",
+    "name": "مدیر ریسک",
+    "code": "RM",
+    "isActive": true
+  },
+  {
+    "id": "it_manager",
+    "name": "مدیر فناوری اطلاعات",
+    "code": "ITM",
+    "isActive": true
+  },
+  {
+    "id": "hr_manager",
+    "name": "مدیر منابع انسانی",
+    "code": "HRM",
+    "isActive": true
+  },
+  {
+    "id": "trader",
+    "name": "معامله گر",
+    "code": "TRD",
+    "isActive": true
+  },
+  {
+    "id": "analyst",
+    "name": "تحلیلگر",
+    "code": "ANL",
+    "isActive": true
+  },
+  {
+    "id": "compliance_officer",
+    "name": "کارشناس نظارت",
+    "code": "CO",
+    "isActive": true
+  },
+  {
+    "id": "accountant",
+    "name": "حسابدار",
+    "code": "ACC",
+    "isActive": true
+  },
+  {
+    "id": "clerk",
+    "name": "کارمند",
+    "code": "CLK",
+    "isActive": true
+  },
+  {
+    "id": "other",
+    "name": "سایر",
+    "code": "OTHER",
+    "isActive": true
+  }
+]

@@ -1,0 +1,417 @@
+{
+  "users": {
+    "title": "کاربران",
+    "description": "مدیریت کاربران.",
+    "breadcrumb": {
+      "userManagement": "مدیریت کاربران"
+    },
+    "profile": {
+      "fullName": "نام کامل:",
+      "notAvailable": "در دسترس نیست",
+      "emailAddress": "آدرس ایمیل:",
+      "verified": "تایید شده",
+      "notVerified": "تایید نشده",
+      "role": "نقش:",
+      "system": "سیستم",
+      "status": "وضعیت:",
+      "trashed": "حذف شده",
+      "lastSignIn": "آخرین ورود:",
+      "never": "هرگز",
+      "editUserDetails": "ویرایش جزئیات کاربر"
+    },
+    "hero": {
+      "userId": "شناسه کاربر:",
+      "clickToCopy": "کلیک برای کپی"
+    },
+    "dangerZone": {
+      "title": "منطقه خطر",
+      "deleteUserAccount": "حذف حساب کاربری",
+      "deleteDescription": "این عمل به طور دائم کاربر و تمام داده‌های مرتبط را حذف می‌کند. این عمل قابل بازگشت نیست.",
+      "deleteUser": "حذف کاربر",
+      "restoreAccount": "بازیابی حساب",
+      "restoreUserAccount": "بازیابی حساب کاربری",
+      "restoreDescription": "این حساب در حال حاضر حذف شده است. بازیابی حساب، کاربر و تمام داده‌های مرتبط را دوباره فعال می‌کند.",
+      "restoreUser": "بازیابی کاربر"
+    },
+    "layout": {
+      "title": "کاربر",
+      "home": "خانه",
+      "userManagement": "مدیریت کاربران",
+      "users": "کاربران",
+      "backToUsers": "بازگشت به کاربران",
+      "profile": "پروفایل",
+      "activityLogs": "گزارش فعالیت"
+    },
+    "addDialog": {
+      "title": "افزودن کاربر",
+      "name": "نام",
+      "namePlaceholder": "نام را وارد کنید",
+      "email": "ایمیل",
+      "emailPlaceholder": "ایمیل کاربر را وارد کنید",
+      "role": "نقش",
+      "rolePlaceholder": "نقش را انتخاب کنید",
+      "addUser": "افزودن کاربر",
+      "successMessage": "کاربر با موفقیت افزوده شد"
+    },
+    "editDialog": {
+      "title": "ویرایش جزئیات کاربر",
+      "name": "نام",
+      "namePlaceholder": "نام کاربر را وارد کنید",
+      "role": "نقش",
+      "rolePlaceholder": "نقش را انتخاب کنید",
+      "status": "وضعیت",
+      "statusPlaceholder": "وضعیت را انتخاب کنید",
+      "cancel": "لغو",
+      "saveChanges": "ذخیره تغییرات",
+      "successMessage": "کاربر با موفقیت به‌روزرسانی شد"
+    },
+    "table": {
+      "columns": {
+        "user": "کاربر",
+        "name": "نام",
+        "role": "نقش",
+        "status": "وضعیت",
+        "joined": "عضویت",
+        "lastSignIn": "آخرین ورود"
+      },
+      "search": {
+        "placeholder": "جستجوی کاربران"
+      },
+      "filters": {
+        "role": {
+          "placeholder": "فیلتر بر اساس نقش",
+          "allRoles": "همه نقش‌ها"
+        },
+        "status": {
+          "placeholder": "فیلتر بر اساس وضعیت",
+          "allUsers": "همه کاربران"
+        }
+      },
+      "actions": {
+        "addUser": "افزودن کاربر"
+      },
+      "status": {
+        "active": "فعال",
+        "inactive": "غیرفعال",
+        "blocked": "مسدود شده",
+        "trashed": "حذف شده",
+        "unknown": "نامشخص"
+      }
+    }
+  },
+  "roles": {
+    "title": "نقش‌ها",
+    "description": "مدیریت نقش‌های کاربران.",
+    "breadcrumb": {
+      "userManagement": "مدیریت کاربران"
+    },
+    "table": {
+      "columns": {
+        "role": "نقش",
+        "slug": "شناسه",
+        "permissions": "مجوزها",
+        "actions": "عملیات"
+      },
+      "search": {
+        "placeholder": "جستجوی کاربران"
+      },
+      "actions": {
+        "addRole": "افزودن نقش"
+      },
+      "badges": {
+        "system": "سیستمی",
+        "default": "پیش‌فرض",
+        "more": "{{count}} مورد بیشتر"
+      },
+      "dropdown": {
+        "editRole": "ویرایش نقش",
+        "setAsDefault": "تنظیم به عنوان پیش‌فرض",
+        "deleteRole": "حذف نقش"
+      }
+    },
+    "dialogs": {
+      "edit": {
+        "title": {
+          "add": "افزودن نقش",
+          "edit": "ویرایش نقش"
+        },
+        "fields": {
+          "roleName": "نام نقش",
+          "roleNamePlaceholder": "نام نقش را وارد کنید",
+          "slug": "شناسه",
+          "slugPlaceholder": "مثال: users:delete",
+          "description": "توضیحات",
+          "descriptionPlaceholder": "توضیحات اختیاری",
+          "permissions": "مجوزها",
+          "noPermissions": "هیچ مجوزی اختصاص داده نشده است.",
+          "addPermissions": "افزودن مجوزها",
+          "searchPermissions": "جستجوی مجوزها...",
+          "noPermissionsFound": "هیچ مجوزی یافت نشد."
+        },
+        "buttons": {
+          "updateRole": "به‌روزرسانی نقش",
+          "createRole": "ایجاد نقش"
+        },
+        "messages": {
+          "roleUpdated": "نقش با موفقیت به‌روزرسانی شد",
+          "roleAdded": "نقش با موفقیت افزوده شد"
+        }
+      },
+      "delete": {
+        "title": "تأیید حذف",
+        "description": "آیا مطمئن هستید که می‌خواهید نقش {{name}} را حذف کنید؟",
+        "buttons": {
+          "delete": "حذف"
+        },
+        "messages": {
+          "roleDeleted": "نقش با موفقیت حذف شد"
+        }
+      },
+      "default": {
+        "title": "تغییر نقش پیش‌فرض به {{name}} ؟",
+        "description": "کاربران جدید به طور پیش‌فرض نقش {{name}} را دریافت خواهند کرد.",
+        "buttons": {
+          "updateDefaultRole": "به‌روزرسانی نقش پیش‌فرض"
+        },
+        "messages": {
+          "defaultRoleSet": "نقش پیش‌فرض با موفقیت تنظیم شد."
+        }
+      }
+    }
+  },
+  "permissions": {
+    "title": "مجوزها",
+    "description": "مدیریت مجوزهای کاربران.",
+    "breadcrumb": {
+      "userManagement": "مدیریت کاربران"
+    },
+    "table": {
+      "columns": {
+        "permission": "مجوز",
+        "slug": "شناسه",
+        "description": "توضیحات",
+        "createdAt": "تاریخ ایجاد",
+        "actions": "عملیات"
+      },
+      "search": {
+        "placeholder": "جستجوی مجوزها"
+      },
+      "filters": {
+        "role": {
+          "placeholder": "فیلتر بر اساس نقش",
+          "allRoles": "همه نقش‌ها"
+        }
+      },
+      "actions": {
+        "addPermission": "افزودن مجوز",
+        "deletePermissions": "حذف {{count}} مجوز"
+      },
+      "dropdown": {
+        "editPermission": "ویرایش مجوز",
+        "deletePermission": "حذف مجوز"
+      }
+    },
+    "dialogs": {
+      "edit": {
+        "title": {
+          "add": "افزودن مجوز",
+          "edit": "ویرایش مجوز"
+        },
+        "fields": {
+          "name": "نام",
+          "namePlaceholder": "نام را وارد کنید",
+          "slug": "شناسه",
+          "slugPlaceholder": "مثال: users:delete",
+          "slugDescription": "یک کلید منحصر به فرد برای مجوز، پس از ایجاد قابل ویرایش نیست.",
+          "description": "توضیحات",
+          "descriptionPlaceholder": "توضیحات را وارد کنید"
+        },
+        "buttons": {
+          "submit": "ارسال"
+        },
+        "messages": {
+          "permissionUpdated": "مجوز با موفقیت به‌روزرسانی شد",
+          "permissionAdded": "مجوز با موفقیت افزوده شد"
+        }
+      },
+      "delete": {
+        "title": "تأیید حذف",
+        "description": "آیا مطمئن هستید که می‌خواهید این مجوز را حذف کنید؟",
+        "buttons": {
+          "delete": "حذف"
+        },
+        "messages": {
+          "permissionDeleted": "مجوز با موفقیت حذف شد"
+        }
+      },
+      "groupDelete": {
+        "title": "تأیید حذف",
+        "description": "آیا مطمئن هستید که می‌خواهید مجوزهای انتخاب شده را حذف کنید؟",
+        "buttons": {
+          "delete": "حذف"
+        },
+        "messages": {
+          "permissionsDeleted": "مجوزها با موفقیت حذف شدند."
+        }
+      }
+    }
+  },
+  "account": {
+    "title": "حساب کاربری",
+    "nav": {
+      "profile": "پروفایل",
+      "security": "امنیت",
+      "logs": "لاگ‌ها"
+    },
+    "profile": {
+      "title": "پروفایل",
+      "description": "مدیریت اطلاعات پروفایل",
+      "fields": {
+        "profileAvatar": "آواتار پروفایل",
+        "attachImage": "افزودن تصویر",
+        "remove": "حذف",
+        "name": "نام",
+        "namePlaceholder": "نام خود را وارد کنید"
+      },
+      "avatarDescription": "ما از PNG، JPEG و GIF زیر 1 مگابایت پشتیبانی می‌کنیم.",
+      "buttons": {
+        "reset": "بازنشانی",
+        "saveProfile": "ذخیره پروفایل"
+      },
+      "messages": {
+        "accountUpdated": "حساب کاربری با موفقیت به‌روزرسانی شد"
+      }
+    },
+    "security": {
+      "email": {
+        "title": "ایمیل",
+        "description": "آدرس‌های اصلی شما که برای ورود به Shoplit استفاده می‌شود. برای اعلان‌های مرتبط با حساب کاربری استفاده خواهد شد.",
+        "verified": "تأیید شده",
+        "changeEmail": "تغییر ایمیل"
+      },
+      "password": {
+        "title": "رمز عبور",
+        "description": "برای به‌روزرسانی رمز عبور حساب کاربری خود، روی دکمه زیر کلیک کنید و دستورالعمل‌ها را دنبال کنید.",
+        "changePassword": "تغییر رمز عبور"
+      },
+      "deleteAccount": {
+        "title": "حذف حساب کاربری",
+        "description": "حساب کاربری شخصی شما و تمام محتویات آن را به طور دائمی از پلتفرم Shoplit حذف کنید. این عمل قابل بازگشت نیست، بنابراین لطفاً با احتیاط ادامه دهید.",
+        "deleteAccount": "حذف حساب کاربری"
+      }
+    }
+  },
+  "settings": {
+    "title": "تنظیمات",
+    "nav": {
+      "general": "عمومی",
+      "notifications": "اعلان‌ها",
+      "social": "شبکه‌های اجتماعی"
+    },
+    "general": {
+      "title": "تنظیمات عمومی",
+      "fields": {
+        "companyLogo": "لوگوی شرکت",
+        "attachImage": "افزودن تصویر",
+        "remove": "حذف",
+        "logoDescription": "ما از PNG، JPEG و GIF زیر 1 مگابایت پشتیبانی می‌کنیم.",
+        "shopName": "نام فروشگاه",
+        "shopNamePlaceholder": "نام شرکت را وارد کنید",
+        "shopStatus": "وضعیت فروشگاه",
+        "shopStatusDescription": "سوئیچ را برای فعال یا غیرفعال کردن وضعیت فعال فروشگاه تغییر دهید.",
+        "address": "آدرس",
+        "addressPlaceholder": "آدرس فروشگاه را وارد کنید",
+        "addressDescription": "آدرس کامل فروشگاه را برای مراجعه مشتری وارد کنید.",
+        "language": "زبان",
+        "languagePlaceholder": "انتخاب زبان",
+        "websiteURL": "آدرس وب‌سایت",
+        "websiteURLPlaceholder": "آدرس وب‌سایت را وارد کنید",
+        "supportEmail": "ایمیل پشتیبانی",
+        "supportEmailPlaceholder": "ایمیل پشتیبانی را وارد کنید",
+        "supportPhone": "تلفن پشتیبانی",
+        "supportPhonePlaceholder": "تلفن پشتیبانی را وارد کنید",
+        "currency": "واحد پول",
+        "currencyPlaceholder": "انتخاب واحد پول",
+        "currencyDescription": "واحد پول مورد استفاده برای تراکنش‌ها در فروشگاه خود را انتخاب کنید.",
+        "currencyFormat": "فرمت واحد پول",
+        "currencyFormatPlaceholder": "انتخاب فرمت واحد پول",
+        "currencyFormatDescription": "نحوه نمایش واحد پول را انتخاب کنید (مثلاً نماد قبل یا بعد از مقدار).",
+        "timezone": "منطقه زمانی"
+      },
+      "buttons": {
+        "reset": "بازنشانی",
+        "saveSettings": "ذخیره تنظیمات"
+      },
+      "messages": {
+        "settingsUpdated": "تنظیمات با موفقیت به‌روزرسانی شد",
+        "formHasErrors": "فرم شما خطا دارد. لطفاً قبل از ارسال آن‌ها را برطرف کنید!"
+      }
+    },
+    "notifications": {
+      "title": "تنظیمات اعلان‌ها",
+      "tableHeaders": {
+        "notification": "اعلان",
+        "users": "کاربران",
+        "email": "ایمیل",
+        "web": "وب"
+      },
+      "types": {
+        "stockAlerts": {
+          "label": "هشدارهای موجودی",
+          "description": "زمانی که موجودی به آستانه می‌رسد اطلاع دهید."
+        },
+        "newOrders": {
+          "label": "سفارش‌های جدید",
+          "description": "زمانی که سفارش‌های جدید دریافت می‌شود اطلاع دهید."
+        },
+        "orderStatusUpdates": {
+          "label": "به‌روزرسانی وضعیت سفارش",
+          "description": "زمانی که وضعیت سفارش به‌روزرسانی می‌شود اطلاع دهید."
+        },
+        "paymentFailures": {
+          "label": "خرابی‌های پرداخت",
+          "description": "زمانی که خرابی پرداخت رخ می‌دهد اطلاع دهید."
+        },
+        "systemErrors": {
+          "label": "خطاهای سیستم",
+          "description": "زمانی که خطاهای سیستم رخ می‌دهد اطلاع دهید."
+        }
+      },
+      "searchRolesPlaceholder": "جستجوی نقش‌ها...",
+      "noRolesFound": "هیچ نقشی یافت نشد.",
+      "notSet": "تنظیم نشده",
+      "buttons": {
+        "reset": "بازنشانی",
+        "saveSettings": "ذخیره تنظیمات"
+      },
+      "messages": {
+        "settingsUpdated": "تنظیمات با موفقیت به‌روزرسانی شد"
+      }
+    },
+    "social": {
+      "title": "تنظیمات شبکه‌های اجتماعی",
+      "fields": {
+        "facebook": "فیس‌بوک",
+        "facebookPlaceholder": "آدرس فیس‌بوک را وارد کنید",
+        "twitter": "توییتر",
+        "twitterPlaceholder": "آدرس توییتر را وارد کنید",
+        "instagram": "اینستاگرام",
+        "instagramPlaceholder": "آدرس اینستاگرام را وارد کنید",
+        "linkedIn": "لینکدین",
+        "linkedInPlaceholder": "آدرس لینکدین را وارد کنید",
+        "pinterest": "پینترست",
+        "pinterestPlaceholder": "آدرس پینترست را وارد کنید",
+        "youtube": "یوتیوب",
+        "youtubePlaceholder": "آدرس یوتیوب را وارد کنید"
+      },
+      "buttons": {
+        "reset": "بازنشانی",
+        "saveSettings": "ذخیره تنظیمات"
+      },
+      "messages": {
+        "settingsUpdated": "تنظیمات شبکه‌های اجتماعی با موفقیت به‌روزرسانی شد",
+        "formHasErrors": "فرم شما خطا دارد. لطفاً قبل از ارسال آن‌ها را برطرف کنید!"
+      }
+    }
+  }
+}

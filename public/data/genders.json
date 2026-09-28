@@ -1,0 +1,14 @@
+[
+  {
+    "id": "male",
+    "name": "مرد",
+    "code": "M",
+    "isActive": true
+  },
+  {
+    "id": "female",
+    "name": "زن",
+    "code": "F",
+    "isActive": true
+  }
+]
