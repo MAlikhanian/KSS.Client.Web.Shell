@@ -325,6 +325,15 @@ export const MENU_SIDEBAR: MenuConfig = [
     permissions: ['Dms.Read'],
   },
   {
+    // Gated on Fleet.Read by permission only (no role condition: roles and
+    // permissions are AND-ed, so a role would narrow it further). Until the
+    // permission exists in Auth nobody holds it, so the entry stays hidden.
+    title: 'Fleet',
+    icon: Network,
+    path: '/fleet',
+    permissions: ['Fleet.Read'],
+  },
+  {
     title: 'General Meeting',
     icon: Gavel,
     // Permission-gated via KSS.Service.SEBA_ERP_Members Meeting/Election RBAC.
