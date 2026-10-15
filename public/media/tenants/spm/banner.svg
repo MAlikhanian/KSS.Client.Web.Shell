@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1200" viewBox="0 0 1600 1200"
+     preserveAspectRatio="xMidYMid slice" role="img" aria-label="SPM placeholder banner">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#g)"/>
+  <path d="M -200 0 L -60 600 L -200 1200 L -290 1200 L -150 600 L -290 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 30 0 L 170 600 L 30 1200 L -60 1200 L 80 600 L -60 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 260 0 L 400 600 L 260 1200 L 170 1200 L 310 600 L 170 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 490 0 L 630 600 L 490 1200 L 400 1200 L 540 600 L 400 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 720 0 L 860 600 L 720 1200 L 630 1200 L 770 600 L 630 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 950 0 L 1090 600 L 950 1200 L 860 1200 L 1000 600 L 860 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 1180 0 L 1320 600 L 1180 1200 L 1090 1200 L 1230 600 L 1090 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 1410 0 L 1550 600 L 1410 1200 L 1320 1200 L 1460 600 L 1320 0 Z" fill="#ffffff" opacity="0.09"/><path d="M 1640 0 L 1780 600 L 1640 1200 L 1550 1200 L 1690 600 L 1550 0 Z" fill="#ffffff" opacity="0.09"/>
+  <text x="800" y="600" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="190" font-weight="700"
+        fill="#ffffff" text-anchor="middle" letter-spacing="4">SPM</text>
+  <text x="800" y="678" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="42"
+        fill="#ffffff" opacity="0.78" text-anchor="middle">spmoffice.ir</text>
+  <rect x="560" y="740" width="480" height="60" rx="30" fill="#ffffff" opacity="0.16"/>
+  <text x="800" y="781" font-family="Segoe UI, Tahoma, Arial, sans-serif" font-size="26" letter-spacing="9"
+        fill="#ffffff" opacity="0.92" text-anchor="middle">PLACEHOLDER</text>
+</svg>

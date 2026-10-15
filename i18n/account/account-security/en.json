@@ -1,0 +1,373 @@
+{
+  "accountSecurity": {
+    "trustedDevices": {
+      "active": "Active",
+      "manageTrustedDevices": "Manage Trusted Devices",
+      "title": "Trusted Devices"
+    }
+  },
+  "accountSecurityAllowedIpAddresses": {
+    "columns": {
+      "ipAddress": "IP Address",
+      "label": "Label",
+      "lastSession": "Last Session",
+      "method": "Method",
+      "methodTooltip": "Verify the identity of a user trying to access a resource",
+      "status": "Status"
+    },
+    "filters": "Filters",
+    "searchPlaceholder": "Search IP Addresses...",
+    "status": "Status",
+    "toolbar": {
+      "addIpAddress": "Add IP Address",
+      "columns": "Columns",
+      "description": "Central Hub for Personal Customization",
+      "ipAllowlistEnabled": "IP Allowlist Enabled",
+      "securityOverview": "Security Overview"
+    }
+  },
+  "accountSecurityBackupAndRecovery": {
+    "backup": {
+      "columns": {
+        "details": "Details",
+        "when": "When"
+      },
+      "media": "{{count}} media",
+      "pages": "{{count}} page",
+      "preview": "Preview",
+      "restore": "Restore",
+      "searchPlaceholder": "Search Backups...",
+      "toolbar": {
+        "cloudSync": "Cloud Sync",
+        "columns": "Columns"
+      }
+    },
+    "backupSettings": {
+      "automaticBackup": {
+        "description": "Scheduled Data Protection",
+        "title": "Automatic Backup"
+      },
+      "backupFrequency": {
+        "description": "Select Preferred Backup",
+        "title": "Backup Frequency"
+      },
+      "daily": "Daily",
+      "manualBackup": {
+        "description": "Backup When Needed",
+        "title": "Manual Backup"
+      },
+      "monthly": "Monthly",
+      "select": "Select",
+      "start": "Start",
+      "title": "Backup Settings",
+      "weekly": "Weekly",
+      "yearly": "Yearly"
+    },
+    "highlightedPosts": {
+      "restorationAssurance": {
+        "summary": "Prepare for the unexpected with proactive backup plans. Access our extensive resources for establishing a reliable recovery protocol, ensuring continuity and peace of mind.",
+        "title": "Restoration Assurance: Proactive Backup Resources"
+      },
+      "securingDataIntegrity": {
+        "summary": "Safeguard your data with our resilient backup recovery solutions. Detailed guides and expert strategies provide the roadmap to robust data protection and swift recovery.",
+        "title": "Securing Data Integrity: Backup Recovery Systems"
+      }
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "orderHistory": "Order History"
+    }
+  },
+  "accountSecurityCurrentSessions": {
+    "actions": {
+      "action": "Action",
+      "copyId": "Copy ID",
+      "delete": "Delete"
+    },
+    "browser": "Browser",
+    "columns": {
+      "browser": "Browser",
+      "ipAddress": "IP Address",
+      "location": "Location",
+      "person": "Person"
+    },
+    "filters": "Filters",
+    "location": "Location",
+    "searchPlaceholder": "Search Sessions...",
+    "sessionIdCopied": "Session ID successfully copied: {{id}}",
+    "toolbar": {
+      "activityLog": "Activity Log",
+      "columns": "Columns",
+      "description": "Authorized Devices for Report Access",
+      "onlyActiveUsers": "Only Active Users"
+    }
+  },
+  "accountSecurityDeviceManagement": {
+    "columns": {
+      "added": "Added",
+      "addedTooltip": "Time is based on your local timezone.",
+      "device": "Device",
+      "ipAddress": "IP Address",
+      "lastSession": "Last Session",
+      "location": "Location"
+    },
+    "filter": "Filter...",
+    "searchPlaceholder": "Search Devices...",
+    "toolbar": {
+      "addDevice": "Add Device",
+      "authorizedDevices": "Authorized Devices for Report Access",
+      "columns": "Columns",
+      "securityOverview": "Security Overview",
+      "unlinkAllDevices": "Unlink All Devices"
+    }
+  },
+  "accountSecurityGetStarted": {
+    "options": {
+      "allowedIpAddresses": {
+        "desc": "Specify and Restrict Access Through Authorized IP Address Filtering.",
+        "title": "Allowed IP Addresses"
+      },
+      "backupRecovery": {
+        "desc": "Secure and Efficient Backup Solutions with Reliable Recovery Options.",
+        "title": "Backup & Recovery"
+      },
+      "loginSessions": {
+        "desc": "Track and Manage Active User Sessions for Security Purposes.",
+        "title": "Login Sessions"
+      },
+      "overview": {
+        "desc": "A Broad Perspective on Our Comprehensive Security Features and Policies.",
+        "title": "Overview"
+      },
+      "privacySettings": {
+        "desc": "Customize Your Privacy with User-Controlled Settings and Preferences.",
+        "title": "Privacy Settings"
+      },
+      "securityLog": {
+        "desc": "Detailed Records of Security Events and Activities for Monitoring.",
+        "title": "Security Log"
+      },
+      "trustedDevices": {
+        "desc": "Identify and Authorize Devices for Enhanced Account Security.",
+        "title": "Trusted Devices"
+      }
+    },
+    "toolbar": {
+      "issuesNeedAttention": "{{count}} issues need your attention",
+      "securityLog": "Security Log"
+    }
+  },
+  "accountSecurityLog": {
+    "columns": {
+      "actionTaken": "Action Taken",
+      "destinationIp": "Destination IP",
+      "eventType": "Event Type",
+      "severity": "Severity",
+      "sourceIp": "Source IP",
+      "timestamp": "Timestamp"
+    },
+    "filters": "Filters",
+    "searchPlaceholder": "Search Logs...",
+    "severity": "Severity",
+    "toolbar": {
+      "authorizedDevices": "Authorized Devices for Report Access",
+      "columns": "Columns",
+      "pushAlerts": "Push Alerts",
+      "securityOverview": "Security Overview",
+      "unlinkAllDevices": "Unlink All Devices"
+    }
+  },
+  "accountSecurityOverview": {
+    "authentification": {
+      "password": "Password",
+      "passwordLastChanged": "Password last changed 2 months ago",
+      "setup": "Setup",
+      "signInWith": "Sign-in with",
+      "title": "Authentication",
+      "toBeSet": "To be set",
+      "twoFA": "2FA"
+    },
+    "featuresHighlight": {
+      "description": "Transform your living space beautifully with our Restyle Your Space: Soft Goods Makeover Ideas tutorial",
+      "features": {
+        "budgetFriendly": "Budget-Friendly",
+        "freshLook": "Fresh Look",
+        "strongPasswords": "Strong Passwords",
+        "twoFactorAuthentication": "Two-Factor Authentication"
+      },
+      "reviewSecurityTips": "Review Security Tips",
+      "title": "Essential Personal Security Tips for Enhanced Safety"
+    },
+    "generalSettings": {
+      "allowPublicProfile": {
+        "description": "Enable users to create and display a profile publicly.",
+        "title": "Allow public profile"
+      },
+      "allowUseLocation": {
+        "description": "Enable feature to use and share the user's location.",
+        "title": "Allow use location"
+      },
+      "allowUseLocation2": {
+        "description": "Enable feature to use and share the user's location.",
+        "title": "Allow use location"
+      },
+      "beta": "Beta",
+      "disableAll": "Disable all",
+      "enableAll": "Enable all",
+      "preventMembersInviting": {
+        "description": "Restrict members from sending invites to new potential members.",
+        "title": "Prevent members from inviting others"
+      },
+      "preventThirdPartyIntegrations": {
+        "description": "Prohibit the installation of external apps or integrations by members..",
+        "title": "Prevent members from installing third-party integrations"
+      },
+      "privateVulnerabilityReporting": {
+        "description": "Confidential channel for reporting system vulnerabilities.",
+        "title": "Private vulnerability reporting"
+      },
+      "pro": "Pro",
+      "pushProtection": {
+        "description": "Enable users to create and display a profile publicly.",
+        "title": "Push protection for yourself"
+      },
+      "setup": "Setup"
+    },
+    "highlightedPosts": {
+      "enhancingSecurityKnowledge": {
+        "summary": "Explore comprehensive resources to strengthen security understanding through detailed guides, expert tips, and documentation.",
+        "title": "Enhancing Security Knowledge: Guides, Tips, and Documentation"
+      },
+      "masteringSecurityProtocols": {
+        "summary": "Delve into the realm of security with specialized learning materials, expert guidance, and practical tips for implementation.",
+        "title": "Mastering Security Protocols: Learning Through Expert Guidance"
+      },
+      "navigatingDigitalSecurity": {
+        "summary": "Embark on a journey of digital security enlightenment with our extensive collection of educational guides and practical advice..",
+        "title": "Navigating Digital Security: A Comprehensive Learning Journey"
+      }
+    },
+    "loginSessions": {
+      "connections": "{{count}} connections",
+      "tableHeaders": {
+        "location": "Location",
+        "name": "Name",
+        "recentActivity": "Recent activity"
+      },
+      "title": "Login Sessions",
+      "viewMore": "View {{count}} more"
+    },
+    "productInsight": {
+      "activeSessions": "Active Sessions"
+    },
+    "quickSettings": {
+      "enforceTwoStepVerification": {
+        "description": "Add an extra layer of security with two-step verification.",
+        "title": "Enforce two-step verification"
+      },
+      "logoutEveryone": {
+        "button": "Logout everyone",
+        "description": "Instantly sign out all users from all devices.",
+        "title": "Logout everyone"
+      }
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "securityHistory": "Security History"
+    }
+  },
+  "accountSecurityPrivacySettings": {
+    "blockList": {
+      "add": "Add",
+      "blockNewUser": "Block new user",
+      "commits": "{{count}} commit",
+      "description": "Users on the block list are unable to send chat requests or messages to you.",
+      "title": "Block List"
+    },
+    "highlightedPosts": {
+      "fortifyingPrivacyControls": {
+        "summary": "Enhance your privacy framework with customizable settings. Understand and apply robust controls with our comprehensive guidelines to protect member data.",
+        "title": "Fortifying Privacy Controls: Customization and Guidelines"
+      },
+      "navigatingPrivacyPreferences": {
+        "summary": "Take command of your privacy settings with our secure configuration tools. Detailed resources and expert insights ensure your preferences are set for maximum protection.",
+        "title": "Navigating Privacy Preferences: Secure Configuration Tools"
+      }
+    },
+    "manageData": {
+      "dataRetention": {
+        "description": "Reports will be visible only for you.",
+        "title": "No one"
+      },
+      "delete": "Delete",
+      "deleteData": {
+        "description": "Create a pubic link for your report.",
+        "title": "People with the link"
+      },
+      "downloadData": {
+        "description": "Invite selected people via email.",
+        "title": "Ony invited People"
+      },
+      "start": "Start",
+      "title": "Manage your Data"
+    },
+    "privacySettings": {
+      "adPersonalizationSettings": {
+        "description": "Customize how ads are targeted to your interests.",
+        "title": "Ad Personalization Settings"
+      },
+      "allowPublicProfile": {
+        "description": "Enable users to create and display a profile publicly.",
+        "title": "Allow public profile"
+      },
+      "allowUseLocation": {
+        "description": "Enable feature to use and share the user's location.",
+        "title": "Allow use location"
+      },
+      "beta": "Beta",
+      "disableAll": "Disable all",
+      "enableAll": "Enable all",
+      "enableLocationBasedServices": {
+        "description": "Allow the app to access and use your location for personalized content.",
+        "title": "Enable Location-Based Services"
+      },
+      "manageReadReceipts": {
+        "description": "Enable or disable read receipts for private messages.",
+        "title": "Manage Read Receipts for Messages"
+      },
+      "privateVulnerabilityReporting": {
+        "description": "Confidential channel for reporting system vulnerabilities.",
+        "title": "Private vulnerability reporting"
+      },
+      "pro": "Pro",
+      "setup": "Setup",
+      "showUpInSearchResults": {
+        "description": "Control your visibility by choosing if you appear in search results.",
+        "title": "Show up in search results"
+      }
+    },
+    "reportSettings": {
+      "everyone": {
+        "description": "Reports will be visible only for everyone.",
+        "title": "Everyone"
+      },
+      "noOne": {
+        "description": "Reports will be visible only for you.",
+        "title": "No one"
+      },
+      "onlyInvitedPeople": {
+        "description": "Invite selected people via email.",
+        "title": "Ony invited People"
+      },
+      "peopleWithLink": {
+        "description": "Create a pubic link for your report.",
+        "title": "People with the link"
+      },
+      "title": "Report Sharing Settings"
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "orderHistory": "Order History"
+    }
+  }
+}

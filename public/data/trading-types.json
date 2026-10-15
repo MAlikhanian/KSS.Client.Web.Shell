@@ -1,0 +1,32 @@
+[
+  {
+    "id": "securities_and_bonds_regular",
+    "name": "اوراق بهادار و اوراق مشارکت/عادی",
+    "code": "SBR",
+    "isActive": true
+  },
+  {
+    "id": "securities_and_bonds_online_group",
+    "name": "اوراق بهادار و اوراق مشارکت/ برخط گروهی",
+    "code": "SBG",
+    "isActive": true
+  },
+  {
+    "id": "physical_commodity",
+    "name": "فیزیکی کالا",
+    "code": "PHC",
+    "isActive": true
+  },
+  {
+    "id": "commodity_futures",
+    "name": "آتی کالا",
+    "code": "CFU",
+    "isActive": true
+  },
+  {
+    "id": "energy",
+    "name": "انرژی",
+    "code": "ENG",
+    "isActive": true
+  }
+]

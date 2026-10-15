@@ -1,0 +1,38 @@
+[
+  {
+    "id": "fund_units_issuance_cancellation",
+    "name": "پذیرش درخواست های صدور و ابطال واحدهای صندوق سرمایه گذاری",
+    "code": "FUI",
+    "isActive": true
+  },
+  {
+    "id": "securities_futures_orders",
+    "name": "پذیرش سفارش معاملات آتی اوراق بهادار",
+    "code": "SFO",
+    "isActive": true
+  },
+  {
+    "id": "commodity_futures_orders",
+    "name": "پذیرش سفارش معاملات آتی کالا",
+    "code": "CFO",
+    "isActive": true
+  },
+  {
+    "id": "energy_exchange_orders",
+    "name": "پذیرش سفارش در بورس انرژی",
+    "code": "EEO",
+    "isActive": true
+  },
+  {
+    "id": "commodity_exchange_orders",
+    "name": "پذیرش سفارش در بورس کالا",
+    "code": "CEO",
+    "isActive": true
+  },
+  {
+    "id": "securities_exchange_orders",
+    "name": "پذیرش سفارش در بورس اوراق بهادار و فرابورس",
+    "code": "SEO",
+    "isActive": true
+  }
+]

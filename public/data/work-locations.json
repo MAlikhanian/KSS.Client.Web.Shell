@@ -1,0 +1,32 @@
+[
+  {
+    "id": "hall",
+    "name": "تالار",
+    "code": "HALL",
+    "isActive": true
+  },
+  {
+    "id": "office",
+    "name": "دفتر",
+    "code": "OFF",
+    "isActive": true
+  },
+  {
+    "id": "branch",
+    "name": "شعبه",
+    "code": "BR",
+    "isActive": true
+  },
+  {
+    "id": "agency",
+    "name": "نمایندگی",
+    "code": "AG",
+    "isActive": true
+  },
+  {
+    "id": "head_office",
+    "name": "دفتر مرکزی",
+    "code": "HO",
+    "isActive": true
+  }
+]

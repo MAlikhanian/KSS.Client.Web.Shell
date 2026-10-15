@@ -1,0 +1,65 @@
+{
+  "accountAppearance": {
+    "accessibility": {
+      "autoplayVideos": {
+        "description": "Choose preferences for automatic video playback.",
+        "title": "Autoplay videos"
+      },
+      "desktopLinks": {
+        "description": "Links open in the desktop app for convenience.",
+        "title": "Open links in Desktop"
+      },
+      "focus": "Focus",
+      "highContrast": {
+        "description": "Improve readability with high-contrast interface colors.",
+        "title": "High color contrast"
+      },
+      "select": "Select",
+      "shortcutsModifier": {
+        "description": "Enable modifier keys for quick keyboard shortcuts.",
+        "title": "Shortcuts require modifier"
+      },
+      "sound": "Sound",
+      "systemPreferences": "System preferences",
+      "title": "Accessibility"
+    },
+    "disableBranding": {
+      "description": "Remove any ktstudio.io branding and media. I.e. powered by ktstudio.io",
+      "pro": "Pro",
+      "title": "Disable default Branding",
+      "update": "Update",
+      "viewPlans": "View Plans"
+    },
+    "highlightedPosts": {
+      "adaptiveShortcuts": {
+        "summary": "Integrate modifier keys for activating shortcuts to streamline your navigation and enhance productivity without disrupting your typing flow.",
+        "title": "Enhancing Usability: Adaptive Shortcut Controls"
+      },
+      "autoplayVideos": {
+        "summary": "Customize your video engagement experience with user-centric autoplay settings that align with your system preferences or manual selection for a tailored approach.",
+        "title": "Media Handling: Autoplay Videos Customization Options"
+      },
+      "desktopLinks": {
+        "summary": "Enhance your workflow integration by configuring external links to open seamlessly within the desktop application, providing a unified and efficient user experience.",
+        "title": "Navigation Preferences: Desktop App Link Integration Features"
+      },
+      "highContrast": {
+        "summary": "Switch to a high-contrast color scheme to improve on-screen text readability, reduce eye strain, and facilitate better visual ergonomics for long work sessions.",
+        "title": "Visual Accessibility: High Contrast Theme Activation"
+      }
+    },
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "privacySettings": "Privacy Settings"
+    }
+  },
+  "common": {
+    "help": {
+      "contactSupport": {
+        "contactSupport": "Contact Support",
+        "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+        "title": "Contact Support"
+      }
+    }
+  }
+}

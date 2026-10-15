@@ -1,0 +1,123 @@
+[
+  {
+    "id": "TEH",
+    "name": "تهران",
+    "nameEn": "Tehran",
+    "countryId": "IR"
+  },
+  {
+    "id": "ISF",
+    "name": "اصفهان",
+    "nameEn": "Isfahan",
+    "countryId": "IR"
+  },
+  {
+    "id": "FAR",
+    "name": "فارس",
+    "nameEn": "Fars",
+    "countryId": "IR"
+  },
+  {
+    "id": "KHO",
+    "name": "خوزستان",
+    "nameEn": "Khuzestan",
+    "countryId": "IR"
+  },
+  {
+    "id": "KHR",
+    "name": "خراسان رضوی",
+    "nameEn": "Khorasan Razavi",
+    "countryId": "IR"
+  },
+  {
+    "id": "MAZ",
+    "name": "مازندران",
+    "nameEn": "Mazandaran",
+    "countryId": "IR"
+  },
+  {
+    "id": "AZE",
+    "name": "آذربایجان شرقی",
+    "nameEn": "East Azerbaijan",
+    "countryId": "IR"
+  },
+  {
+    "id": "KER",
+    "name": "کرمان",
+    "nameEn": "Kerman",
+    "countryId": "IR"
+  },
+  {
+    "id": "GIL",
+    "name": "گیلان",
+    "nameEn": "Gilan",
+    "countryId": "IR"
+  },
+  {
+    "id": "ALB",
+    "name": "البرز",
+    "nameEn": "Alborz",
+    "countryId": "IR"
+  },
+  {
+    "id": "MAR",
+    "name": "مرکزی",
+    "nameEn": "Markazi",
+    "countryId": "IR"
+  },
+  {
+    "id": "QOM",
+    "name": "قم",
+    "nameEn": "Qom",
+    "countryId": "IR"
+  },
+  {
+    "id": "QAZ",
+    "name": "قزوین",
+    "nameEn": "Qazvin",
+    "countryId": "IR"
+  },
+  {
+    "id": "GOL",
+    "name": "گلستان",
+    "nameEn": "Golestan",
+    "countryId": "IR"
+  },
+  {
+    "id": "KUR",
+    "name": "کردستان",
+    "nameEn": "Kurdistan",
+    "countryId": "IR"
+  },
+  {
+    "id": "HAM",
+    "name": "همدان",
+    "nameEn": "Hamadan",
+    "countryId": "IR"
+  },
+  {
+    "id": "LOR",
+    "name": "لرستان",
+    "nameEn": "Lorestan",
+    "countryId": "IR"
+  },
+  {
+    "id": "SEM",
+    "name": "سمنان",
+    "nameEn": "Semnan",
+    "countryId": "IR"
+  },
+  {
+    "id": "YAZ",
+    "name": "یزد",
+    "nameEn": "Yazd",
+    "countryId": "IR"
+  },
+  {
+    "id": "KER2",
+    "name": "کرمانشاه",
+    "nameEn": "Kermanshah",
+    "countryId": "IR"
+  }
+]
+

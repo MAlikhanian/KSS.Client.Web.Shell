@@ -1,0 +1,57 @@
+{
+  "pageTitle": "Access Administration",
+  "pageDescription": "Add, edit and delete permissions, roles and role-permission assignments",
+
+  "tabPermissions": "Permissions",
+  "tabRoles": "Roles",
+  "tabRolePermissions": "Role Permissions",
+
+  "permission": "Permission",
+  "permissions": "Permissions",
+  "addPermission": "Add Permission",
+  "editPermission": "Edit Permission",
+  "deletePermission": "Delete Permission",
+  "code": "Code",
+  "name": "Name",
+  "description": "Description",
+  "group": "Group",
+  "isActive": "Active",
+
+  "role": "Role",
+  "roles": "Roles",
+  "addRole": "Add Role",
+  "editRole": "Edit Role",
+  "deleteRole": "Delete Role",
+  "selectRole": "Select Role",
+
+  "rolePermissions": "Role Permissions",
+  "saveRolePermissions": "Save Role Permissions",
+  "noRoleSelected": "Please select a role",
+  "permissionsAssigned": "Permissions saved",
+
+  "save": "Save",
+  "cancel": "Cancel",
+  "delete": "Delete",
+  "edit": "Edit",
+  "add": "Add",
+  "confirm": "Confirm",
+  "confirmDelete": "Are you sure you want to delete? This action cannot be undone.",
+
+  "created": "Created",
+  "updated": "Updated",
+  "deleted": "Deleted",
+  "nameRequired": "Name is required",
+
+  "module": "Module",
+  "modules": "Modules",
+  "allModules": "All modules",
+  "selectModule": "Select module",
+  "resource": "Resource",
+  "resources": "Resources",
+  "allResources": "All resources",
+  "selectResource": "Select resource",
+  "globalRole": "Global role",
+  "includeGlobalRoles": "Include global roles",
+  "moduleRequired": "Module is required",
+  "resourceRequired": "Resource is required"
+}

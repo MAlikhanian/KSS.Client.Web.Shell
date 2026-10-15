@@ -1,0 +1,62 @@
+[
+  {
+    "id": "accounting",
+    "name": "حسابداری",
+    "code": "ACC",
+    "isActive": true
+  },
+  {
+    "id": "financial_management",
+    "name": "مدیریت مالی",
+    "code": "FM",
+    "isActive": true
+  },
+  {
+    "id": "economics",
+    "name": "اقتصاد",
+    "code": "ECON",
+    "isActive": true
+  },
+  {
+    "id": "technical_engineering",
+    "name": "فنی مهندسی",
+    "code": "TE",
+    "isActive": true
+  },
+  {
+    "id": "computer_engineering",
+    "name": "مهندسی کامپیوتر",
+    "code": "CE",
+    "isActive": true
+  },
+  {
+    "id": "financial_engineering",
+    "name": "مهندسی مالی",
+    "code": "FE",
+    "isActive": true
+  },
+  {
+    "id": "law",
+    "name": "حقوق",
+    "code": "LAW",
+    "isActive": true
+  },
+  {
+    "id": "banking",
+    "name": "بانکداری",
+    "code": "BANK",
+    "isActive": true
+  },
+  {
+    "id": "other_management",
+    "name": "سایر مدیریت ها",
+    "code": "OM",
+    "isActive": true
+  },
+  {
+    "id": "other_fields",
+    "name": "سایر رشته ها",
+    "code": "OF",
+    "isActive": true
+  }
+]

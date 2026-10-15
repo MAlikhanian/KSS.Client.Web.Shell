@@ -1,0 +1,14 @@
+[
+  {
+    "id": "individual",
+    "name": "حقیقی",
+    "code": "IND",
+    "isActive": true
+  },
+  {
+    "id": "legal_entity",
+    "name": "حقوقی",
+    "code": "LEG",
+    "isActive": true
+  }
+]

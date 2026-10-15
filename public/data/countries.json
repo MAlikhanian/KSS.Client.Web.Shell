@@ -1,0 +1,53 @@
+[
+  {
+    "id": "IR",
+    "name": "ایران",
+    "nameEn": "Iran"
+  },
+  {
+    "id": "US",
+    "name": "ایالات متحده آمریکا",
+    "nameEn": "United States"
+  },
+  {
+    "id": "GB",
+    "name": "بریتانیا",
+    "nameEn": "United Kingdom"
+  },
+  {
+    "id": "DE",
+    "name": "آلمان",
+    "nameEn": "Germany"
+  },
+  {
+    "id": "FR",
+    "name": "فرانسه",
+    "nameEn": "France"
+  },
+  {
+    "id": "TR",
+    "name": "ترکیه",
+    "nameEn": "Turkey"
+  },
+  {
+    "id": "AE",
+    "name": "امارات متحده عربی",
+    "nameEn": "United Arab Emirates"
+  },
+  {
+    "id": "CN",
+    "name": "چین",
+    "nameEn": "China"
+  },
+  {
+    "id": "JP",
+    "name": "ژاپن",
+    "nameEn": "Japan"
+  },
+  {
+    "id": "KR",
+    "name": "کره جنوبی",
+    "nameEn": "South Korea"
+  }
+]
+

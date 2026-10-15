@@ -1,0 +1,22 @@
+=== API ENDPOINTS ===
+
+BROKERAGES (instituteType=9):
+https://cfi.rbcapi.ir/institutes?offset=1&limit=1000&lng=fa&instituteType=9
+https://cfi.rbcapi.ir/institutes/1?offset=0&limit=1000&lng=fa
+https://cfi.rbcapi.ir/institutes/1/branches?offset=1&limit=1000&lng=fa
+https://cfi.rbcapi.ir/institutes/1/licenses?offset=1&limit=1000&lng=fa
+https://cfi.rbcapi.ir/institutes/1/pillars?offset=1&limit=1000&lng=fa
+https://cfi.rbcapi.ir/institutes/1/onlineTechnicalApprovals?offset=1&limit=1000&lng=fa
+
+INVESTMENT FUNDS (instituteType=6):
+https://cfi.rbcapi.ir/institutes?offset=1&limit=1000&lng=fa&instituteType=6
+
+=== FETCH SCRIPTS ===
+
+To fetch brokerage data (with full details, branches, licenses, etc.):
+  node deployment/fetch-brokerages-full.js
+
+To fetch investment funds data:
+  node deployment/fetch-investment-funds-full.js
+
+Output files are saved to: public/data/

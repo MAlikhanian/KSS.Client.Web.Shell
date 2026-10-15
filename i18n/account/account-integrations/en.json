@@ -1,0 +1,49 @@
+{
+  "accountIntegrations": {
+    "integrations": {
+      "items": {
+        "duolingo": {
+          "description": "Interactive exercises for fun, effective language learning.",
+          "name": "Duolingo"
+        },
+        "evernote": {
+          "description": "Organizes personal and professional documents, ideas, tasks.",
+          "name": "Evernote"
+        },
+        "gitlab": {
+          "description": "DevOps platform for code control, project management, CI/CD.",
+          "name": "Gitlab"
+        },
+        "googleAnalytics": {
+          "description": "Insights into website traffic and marketing effectiveness.",
+          "name": "Google Analytics"
+        },
+        "googleWebdev": {
+          "description": "Tools for building quality web experiences, focusing on performance.",
+          "name": "Google webdev"
+        },
+        "inferno": {
+          "description": "Ensures healthcare app compatibility with FHIR standards.",
+          "name": "Inferno"
+        },
+        "invision": {
+          "description": "Digital design platform for prototyping and design workflow.",
+          "name": "Invision"
+        },
+        "jira": {
+          "description": "Project management for agile teams, tracking issues and tasks.",
+          "name": "Jira"
+        }
+      }
+    },
+    "starter": {
+      "startNow": "Start Now",
+      "subTitle": "Explore New Integration: Expand Your Toolkit with Cutting-Edge,\nUser-Friendly Solutions Tailored for Efficient and Innovative\nProject Management.",
+      "title": "Add New Integration"
+    },
+    "toolbar": {
+      "addNewIntegration": "Add New Integration",
+      "description": "Enhance Workflows with Advanced Integrations."
+    }
+  }
+}

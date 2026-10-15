@@ -1,0 +1,63 @@
+{
+  "accountApiKeys": {
+    "apiIntegrations": {
+      "columns": {
+        "apiKey": "API Key",
+        "dailyCalls": "Daily Calls",
+        "integration": "Integration",
+        "status": "Status"
+      },
+      "filterPlaceholder": "Filter...",
+      "title": "API Integrations",
+      "toolbar": {
+        "addNew": "Add New",
+        "columns": "Columns",
+        "pauseAll": "Pause all"
+      }
+    },
+    "engage": {
+      "contactSupport": "Contact Support",
+      "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+      "title": "Contact Support"
+    },
+    "highlightedPosts": {
+      "item1": {
+        "summary": "Easily integrate and manage your APIs with our suite of configuration tools. Gain access to extensive instructions, expert support, and in-depth documentation to keep your API interactions efficient and up-to-date..",
+        "title": "Streamlined Alerts Setup: Custom Notification Preferences"
+      },
+      "item2": {
+        "summary": "Leverage the full potential of your APIs with our advanced expansion tools. We provide all the necessary resources for easy setup, information exchange, and maintaining high-performance API connectivity.",
+        "title": "Enhancing Connectivity: Tools for API Expansion"
+      },
+      "item3": {
+        "summary": "Organize your API data more with our detailed interface solutions. From quick setup guides to management, our tools are designed to streamline every step of your API data organization.",
+        "title": "Organizing Team Data: Efficient Roster Solutions"
+      }
+    },
+    "projectApiKeys": {
+      "clientDocs": "Client Docs",
+      "title": "Project API keys"
+    },
+    "publicApiKey": "Public API Key",
+    "toolbar": {
+      "description": "Central Hub for Personal Customization",
+      "privacySettings": "Privacy Settings"
+    },
+    "webhooks": {
+      "allEvents": "All Events",
+      "customHeaders": "Custom Headers",
+      "description": "Set up Webhooks to trigger actions on external services in real-time. Stay informed on updates and changes to ensure seamless integration.",
+      "enterUrl": "Enter URL",
+      "eventType": "Event Type",
+      "pipeWebhook": "Pipe Webhook",
+      "pluginWebhooks": "Plugin Webhooks",
+      "pushWebhooks": "Push Webhooks",
+      "saveChanges": "Save Changes",
+      "select": "Select",
+      "title": "Webhooks",
+      "useCustomHeader": "Use Custom Header",
+      "webhookName": "Webhook Name",
+      "webhookUrl": "Webhook URL"
+    }
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "banner": {
+    "title": "Secure Dashboard Access",
+    "description": {
+      "line1": "A robust authentication gateway ensuring",
+      "line2": "secure",
+      "line2Bold": "efficient user access",
+      "line3": "to the Metronic Dashboard interface."
+    }
+  },
+  "signin": {
+    "title": "Sign in to System",
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter your email",
+      "required": "Email is required.",
+      "invalid": "Please enter a valid email address."
+    },
+    "userName": {
+      "label": "Username",
+      "placeholder": "Enter your username",
+      "required": "Username is required."
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter your password",
+      "required": "Password is required.",
+      "minLength": "Password must be at least 6 characters long."
+    },
+    "rememberMe": "Remember me",
+    "forgotPassword": "Forgot password?",
+    "signinButton": "Sign in",
+    "noAccount": "Don't have an account?",
+    "signupLink": "Sign up",
+    "errors": {
+      "generic": "An unexpected error occurred. Please try again.",
+      "invalidCredentials": "Invalid username or password.",
+      "accountLocked": "Account is locked. Please contact support.",
+      "networkError": "Network error. Please check your connection.",
+      "missingCredentials": "Please enter both username and password.",
+      "authenticationFailed": "Authentication failed. Please try again.",
+      "invalidUsernameOrPassword": "Invalid username or password.",
+      "accountInactive": "Account is inactive. Please contact support.",
+      "captchaRequired": "Please wait for the captcha verification to complete.",
+      "captchaInvalid": "Captcha verification failed. Please try again.",
+      "captchaCheckBox": "Confirm you are not a robot"
+    }
+  },
+  "signup": {
+    "title": "Sign Up to SEBA",
+    "googleSignup": "Sign up with Google",
+    "or": "or",
+    "firstName": {
+      "label": "First name",
+      "placeholder": "Your first name",
+      "required": "First name is required.",
+      "minLength": "First name must be at least 2 characters long."
+    },
+    "lastName": {
+      "label": "Last name",
+      "placeholder": "Your last name",
+      "required": "Last name is required.",
+      "minLength": "Last name must be at least 2 characters long."
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Your email",
+      "required": "Email is required.",
+      "invalid": "Please enter a valid email address."
+    },
+    "userName": {
+      "label": "National code",
+      "placeholder": "Enter your national code",
+      "required": "National code is required.",
+      "invalid": "National code must be exactly 10 digits."
+    },
+    "phone": {
+      "label": "Phone number",
+      "placeholder": "e.g. 09120000001",
+      "required": "Phone number is required."
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Your password",
+      "required": "Password is required.",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "passwordConfirmation": {
+      "label": "Confirm Password",
+      "placeholder": "Confirm your password",
+      "required": "Password confirmation is required.",
+      "mismatch": "Passwords do not match.",
+      "showPassword": "Show password confirmation",
+      "hidePassword": "Hide password confirmation"
+    },
+    "acceptTerms": {
+      "text": "I agree to the",
+      "required": "You must accept the terms and conditions."
+    },
+    "privacyPolicy": "Privacy Policy",
+    "continueButton": "Continue",
+    "alreadyHaveAccount": "Already have an account?",
+    "signinLink": "Sign In",
+    "successMessage": "You have successfully signed up! You can sign in now.",
+    "errors": {
+      "generic": "An unexpected error occurred. Please try again.",
+      "emailExists": "Email is already registered.",
+      "usernameExists": "National code is already registered.",
+      "phoneExists": "Phone number is already registered.",
+      "validationFailed": "Invalid input. Please check your data and try again.",
+      "captchaRequired": "Please wait for the captcha verification to complete.",
+      "captchaInvalid": "Captcha verification failed. Please try again.",
+      "captchaCheckBox": "Confirm you are not a robot",
+      "registrationFailed": "Registration failed. Please try again later.",
+      "alreadyExists": "This account already exists."
+    }
+  }
+}

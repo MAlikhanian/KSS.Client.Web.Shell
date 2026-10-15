@@ -1,0 +1,396 @@
+{
+  "accountMembersImportMembers": {
+    "engage": {
+      "contactSupport": "Contact Support",
+      "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+      "title": "Contact Support"
+    },
+    "highlightedPosts": {
+      "item1": {
+        "summary": "Dive into seamless member onboarding with our robust import tools. Leverage detailed walkthroughs, practical resources, and support to simplify the process.",
+        "title": "Streamlining Member Integration: Import Tools and Resources"
+      },
+      "item2": {
+        "summary": "Manage your community efficiently with our bulk member import feature. Find step-by-step instructions, helpful tips, and best practices for a smooth update.",
+        "title": "Simplifying Roster Management: Bulk Upload Features"
+      },
+      "item3": {
+        "summary": "Initiate a hassle-free member import with our guided tools. Access comprehensive tutorials, insightful advice, and technical documentation for effortless setup.",
+        "title": "Effortless Member Enrollment: Importation and Setup"
+      }
+    },
+    "import": {
+      "chooseFile": "Choose File",
+      "customWelcomeMessage": "Custom welcome message",
+      "fileDescription": "Use the 'Choose file' button to locate and upload the CSV file that contains the user data.",
+      "importMember": "Import Member",
+      "options": {
+        "createNewUsers": {
+          "description": "Select this option to create new user accounts for individuals whose details are included in the import data but who do not have an existing account in the system.",
+          "label": "Create new users"
+        },
+        "includeExternalIds": {
+          "description": "By including external IDs in the import results, administrators can more easily reconcile and track user records across different systems and databases.",
+          "label": "Include external IDs in import results"
+        },
+        "sendEmailNotification": {
+          "description": "This option ensures users are promptly notified via email in the event of a password change, enhancing security and keeping users informed of their account status.",
+          "label": "Send email notification on password change"
+        },
+        "updateExistingUsers": {
+          "description": "When checked, the system will update the information for users already in the database with any new or altered details provided in the import file.",
+          "label": "Update existing users"
+        }
+      },
+      "selectCsvFile": "Select CSV File",
+      "sendWelcomeEmail": "Send welcome email to new users",
+      "title": "Start Import",
+      "warning": "Warning",
+      "warningMessage": "An email will be sent to all users created unless the welcome message is disabled in settings. Ensure the correct communication preferences are set.",
+      "welcomeMessagePlaceholder": "Your welcome message here"
+    },
+    "toolbar": {
+      "description": "Overview of all team members and roles.",
+      "goToTeams": "Go to Teams"
+    }
+  },
+  "accountMembersMembersStarter": {
+    "starter": {
+      "addNewMember": "Add New Member",
+      "subTitle": "A streamlined process to welcome and integrate new members into the team, ensuring a smooth and efficient start.",
+      "title": "New Member Onboarding and Registration"
+    },
+    "toolbar": {
+      "description": "Overview of all team members and roles.",
+      "invitePeople": "Invite People",
+      "inviteWithLink": "Invite with Link"
+    }
+  },
+  "accountMembersPermissionsCheck": {
+    "engage": {
+      "contactSupport": "Contact Support",
+      "description": "Need assistance? Contact our support team for prompt, personalized help your queries & concerns.",
+      "title": "Contact Support"
+    },
+    "highlightedPosts": {
+      "item1": {
+        "summary": "Empower your team with dynamic role assignment capabilities. Utilize our intuitive tools to assign and manage user permissions effectively. Explore resources and best practices to maximize team efficiency.",
+        "title": "Optimizing Team Coordination: Role Assignment Tools"
+      },
+      "item2": {
+        "summary": "Tailor user experiences with customizable permission settings. Our detailed guides and resources provide streamlined processes for managing access levels. Ensure secure and precise control over your workspace's functionalities.",
+        "title": "Refining Access Control: Permissions Customization"
+      },
+      "item3": {
+        "summary": "Fortify your workspace with enhanced permission controls. Our advanced settings allow for granular access management, ensuring each team member has the appropriate level of access. Benefit from our comprehensive security protocols and guidance.",
+        "title": "Enhanced Security Management: Granular Permission Settings"
+      }
+    },
+    "members": {
+      "title": "Role Members"
+    },
+    "permissionsCheck": {
+      "modules": {
+        "billingManagement": "Billing Management",
+        "dataExport": "Data Export",
+        "insightsAccess": "Insights Access",
+        "integrationSetup": "Integration Setup",
+        "mapCreation": "Map Creation",
+        "merchantList": "Merchant List",
+        "securitySettings": "Security Settings",
+        "userRoles": "User Roles",
+        "workspaceSettings": "Workspace Settings"
+      },
+      "newPermission": "New Permission",
+      "projectManager": "Project Manager",
+      "restoreDefaults": "Restore Defaults",
+      "rolePermissions": "Role Permissions",
+      "saveChanges": "Save Changes",
+      "tableHeaders": {
+        "configure": "Configure",
+        "modify": "Modify",
+        "module": "Module",
+        "publish": "Publish",
+        "view": "View"
+      }
+    },
+    "toolbar": {
+      "description": "Overview of all team members and roles.",
+      "viewRoles": "View Roles"
+    }
+  },
+  "accountMembersPermissionsToggle": {
+    "members": {
+      "actions": {
+        "copyId": "Copy ID",
+        "delete": "Delete",
+        "edit": "Edit"
+      },
+      "columns": {
+        "location": "Location",
+        "member": "Member",
+        "recentActivity": "Recent Activity",
+        "status": "Status"
+      },
+      "memberIdCopied": "Member ID successfully copied: {{id}}",
+      "searchPlaceholder": "Search Teams...",
+      "tasks": "tasks",
+      "title": "Team Members",
+      "toolbar": {
+        "activeUsers": "Active Users",
+        "columns": "Columns"
+      }
+    },
+    "permissionsToggle": {
+      "items": {
+        "billingManagement": {
+          "description": "Users are authorized to review, update subscriptions.",
+          "title": "Billing Management"
+        },
+        "dataExport": {
+          "description": "Allow extraction of workspace data for analysis.",
+          "title": "Data Export"
+        },
+        "insightsAccess": {
+          "description": "View workspace analytics and performance data.",
+          "title": "Insights Access"
+        },
+        "integrationSetup": {
+          "description": "Manage user integrations and associated tags.",
+          "title": "Integration Setup"
+        },
+        "mapCreation": {
+          "description": "Initiate new mapping projects within workspace.",
+          "title": "Map Creation"
+        },
+        "merchantList": {
+          "description": "Update and manage merchant associations.",
+          "title": "Merchant List"
+        },
+        "permissionsControl": {
+          "description": "Grant or revoke user access and tags.",
+          "title": "Permissions Control"
+        },
+        "securitySettings": {
+          "description": "Adjust workspace security protocols and measures.",
+          "title": "Security Settings"
+        },
+        "userRoles": {
+          "description": "Update roles and permissions for map users.",
+          "title": "User Roles"
+        },
+        "workspaceSettings": {
+          "description": "Users may view and update the settings of the workspace.",
+          "title": "Workspace Settings"
+        }
+      },
+      "newPermission": "New Permission",
+      "projectManager": "Project Manager",
+      "rolePermissionsFor": "Role Permissions for"
+    },
+    "toolbar": {
+      "description": "Overview of all team members and roles.",
+      "viewRoles": "View Roles"
+    }
+  },
+  "accountMembersRoles": {
+    "addNewRole": {
+      "subTitle": "Ignite Professional Adventures",
+      "title": "Add New Role"
+    },
+    "roles": {
+      "administrator": {
+        "description": "Manages system settings and user access, ensures system stability.",
+        "subTitle": "Default role",
+        "team": "{{count}} person",
+        "title": "Administrator"
+      },
+      "customerSupport": {
+        "description": "Provides assistance and resolves customer inquiries and issues.",
+        "subTitle": "Default role",
+        "team": "{{count}} people",
+        "title": "Customer Support"
+      },
+      "hrManager": {
+        "description": "Manages human resources, recruitment, and employee relations.",
+        "subTitle": "Default role",
+        "team": "{{count}} person",
+        "title": "HR Manager"
+      },
+      "projectManager": {
+        "description": "Oversees projects, ensures they're on time and within budget.",
+        "subTitle": "Default role",
+        "team": "{{count}} people",
+        "title": "Project Manager"
+      },
+      "remoteDesigner": {
+        "description": "Creates visual designs remotely for various projects.",
+        "subTitle": "Remote role",
+        "team": "{{count}} people",
+        "title": "Remote Designer"
+      },
+      "remoteDeveloper": {
+        "description": "Provides assistance and resolves customer inquiries and issues.",
+        "subTitle": "Remote role",
+        "team": "{{count}} people",
+        "title": "Remote Developer"
+      },
+      "viewer": {
+        "description": "Can view data but doesn't have editing privileges.",
+        "subTitle": "Default role",
+        "team": "{{count}} people",
+        "title": "Viewer"
+      }
+    },
+    "toolbar": {
+      "description": "Overview of all team members and roles.",
+      "newRole": "New Role"
+    }
+  },
+  "accountMembersTeamInfo": {
+    "connectedProfiles": {
+      "connectProfile": "Connect Profile",
+      "tasks": "tasks",
+      "title": "{{count}} Profiles Connected"
+    },
+    "engage": {
+      "description": "Visit our Help Center for detailed assistance on billing, payments, and subscriptions.",
+      "goToHelpCenter": "Go to Help Center",
+      "title": "Questions ?"
+    },
+    "highlightedPosts": {
+      "item1": {
+        "summary": "Centralize your team information with our management tools. Access detailed instructions, expert advice, and technical documentation to maintain an up-to-date team directory.",
+        "title": "Centralizing Team Profiles: Management and Directory Tools"
+      },
+      "item2": {
+        "summary": "Craft a unified team environment by compiling profiles in one place. Utilize our resources for easy information gathering and profile management.",
+        "title": "Building a Cohesive Team: Resources for Profile Compilation"
+      },
+      "item3": {
+        "summary": "Organize your team details with our efficient roster solutions. From quick imports to detailed management, our resources guide you through every step.",
+        "title": "Organizing Team Data: Efficient Roster Solutions"
+      }
+    },
+    "members": {
+      "actions": {
+        "copyId": "Copy ID",
+        "delete": "Delete",
+        "edit": "Edit"
+      },
+      "columns": {
+        "location": "Location",
+        "member": "Member",
+        "recentActivity": "Recent Activity",
+        "status": "Status"
+      },
+      "filters": "Filters",
+      "memberIdCopied": "Member ID successfully copied: {{id}}",
+      "searchPlaceholder": "Search Members...",
+      "status": "Status",
+      "tasks": "tasks",
+      "toolbar": {
+        "activeUsers": "Active Users",
+        "columns": "Columns"
+      }
+    },
+    "seats": {
+      "addSeats": "Add Seats",
+      "description": "Additional seats have been added, yet availability remains limited – secure yours quickly today.",
+      "learnMore": "Learn more",
+      "seats": "Seats",
+      "title": "Seats"
+    },
+    "teamInfo": {
+      "description": "Description",
+      "public": "Public",
+      "skills": "Skills",
+      "teamName": "Team Name",
+      "thumbnail": "Thumbnail",
+      "thumbnailDescription": "150x150px JPEG, PNG Image",
+      "title": "Team Info",
+      "viewAs": "View as",
+      "visibleToAll": "Visible to all"
+    },
+    "toolbar": {
+      "description": "Efficient team organization with real-time updates",
+      "roles": "Roles"
+    }
+  },
+  "accountMembersTeamMembers": {
+    "invitePeople": {
+      "addMore": "Add more",
+      "admin": "Admin",
+      "designer": "Designer",
+      "editor": "Editor",
+      "email": "Email",
+      "invitePeople": "Invite People",
+      "member": "Member",
+      "role": "Role",
+      "select": "Select",
+      "title": "Invite People"
+    },
+    "inviteWithLink": {
+      "description": "Click below to RSVP for our exclusive event. Limited spaces available, so don't miss out. Reserve your spot now with this special invitation link!",
+      "invitePeople": "Invite People",
+      "link": "Link",
+      "resetLink": "Reset Link",
+      "title": "Invite with Link"
+    },
+    "members": {
+      "actions": {
+        "copyId": "Copy ID",
+        "delete": "Delete",
+        "edit": "Edit"
+      },
+      "columns": {
+        "location": "location",
+        "member": "Member",
+        "recentActivity": "Recent Activity",
+        "roles": "Roles",
+        "status": "Status"
+      },
+      "filters": "Filters",
+      "memberIdCopied": "Member ID successfully copied: {{id}}",
+      "searchPlaceholder": "Search Members...",
+      "status": "Status",
+      "tasks": "tasks",
+      "toolbar": {
+        "activeUsers": "Active Users",
+        "addNew": "Add New",
+        "columns": "Columns"
+      }
+    },
+    "toolbar": {
+      "addMember": "Add Member",
+      "description": "Overview of all team members and roles.",
+      "importMembers": "Import Members"
+    }
+  },
+  "accountMembersTeamStarter": {
+    "starter": {
+      "createNewTeam": "Create New Team",
+      "subTitle": "Enhance team formation and management with easy-to-use tools for communication, task organization, and progress tracking, all in one place.",
+      "title": "Swift Setup for New Teams"
+    },
+    "toolbar": {
+      "description": "Efficient team organization with real-time updates",
+      "plans": "Plans"
+    }
+  },
+  "accountMembersTeams": {
+    "columns": {
+      "lastModified": "Last Modified",
+      "members": "Members",
+      "rating": "Rating",
+      "team": "Team"
+    },
+    "searchPlaceholder": "Search Teams...",
+    "toolbar": {
+      "addNewTeam": "Add New Team",
+      "columns": "Columns",
+      "description": "efficient team organization with real-time updates",
+      "onlyActiveGroups": "Only Active Groups"
+    }
+  }
+}

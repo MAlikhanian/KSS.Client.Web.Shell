@@ -1,0 +1,629 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kss-client-web
+  labels:
+    name: kss-client-web
+    app: kss-client-web
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kss-client-web
+  namespace: kss-client-web
+  labels:
+    app: kss-client-web
+    version: v1.0.0
+  annotations:
+    keel.sh/policy: force
+    keel.sh/match-tag: "true"
+    keel.sh/trigger: poll
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: kss-client-web
+  template:
+    metadata:
+      labels:
+        app: kss-client-web
+        version: v1.0.0
+    spec:
+      imagePullSecrets:
+      - name: docker-secret
+      containers:
+      - name: kss-client-web
+        image: docker-hosted.sebaoffice.ir/kss-client-web:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        env:
+        - name: NODE_ENV
+          value: "production"
+        - name: PORT
+          value: "3000"
+        - name: HOSTNAME
+          value: "0.0.0.0"
+        - name: TZ
+          value: "UTC"
+        # Raise Node's HTTP header buffer (default 16 KB) so the NextAuth
+        # session cookie (~25 KB after JWE-encoding all permission claims)
+        # doesn't trip "HTTP 431 / 502 Bad Gateway" on the auth callback.
+        - name: NODE_OPTIONS
+          value: "--max-http-header-size=131072"
+        # Database Configuration
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: database-url
+        - name: DIRECT_URL
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: direct-url
+        # NextAuth Configuration
+        - name: NEXTAUTH_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: nextauth-secret
+        - name: NEXTAUTH_URL
+          value: "https://erp.seba.ir"
+        # Application Configuration
+        - name: NEXT_PUBLIC_APP_NAME
+          value: "KSS Client Web"
+        - name: NEXT_PUBLIC_API_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: api-url
+        # Microservice API base URLs
+        - name: AUTH_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: auth-api-base-url
+        - name: PERSON_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: person-api-base-url
+        - name: IMPORT_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: import-api-base-url
+        - name: COMMON_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: common-api-base-url
+        - name: COMPANY_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: company-api-base-url
+        - name: ERP_MEMBERS_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: erp-members-api-base-url
+        - name: REPORT_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: report-api-base-url
+        - name: CREDIT_RATING_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: credit-rating-api-base-url
+        - name: MARKET_DATA_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: market-data-api-base-url
+        - name: PORTFOLIO_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: portfolio-api-base-url
+        - name: FILE_ORCHESTRATOR_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: file-orchestrator-api-base-url
+        - name: CAPTCHA_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: captcha-api-base-url
+        - name: CASHADVANCE_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: cash-advance-api-base-url
+        - name: PROJECT_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: project-api-base-url
+        - name: MPF_REPORT_API_BASE_URL
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: mpf-report-api-base-url
+        # Multi-zone routing. middleware.ts reads this per request and rewrites
+        # /<segment>/* to the app that owns it, server-side — so the browser
+        # only ever sees erp.seba.ir. Read from the environment, NOT from
+        # source: adding a domain is a config change and rebuilds nothing.
+        #
+        # Removing a key is the rollback — the Shell still carries its own copy
+        # of each domain and takes the route straight back, no rebuild, no
+        # revert commit. Do NOT delete Shell/app/(protected)/mpf for that reason.
+        - name: ZONES
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: zones
+        # Per-tenant branding. app/layout.tsx resolves the request Host against
+        # this map and serves that tenant's logo, favicon and sign-in banner.
+        # Read from the environment, NOT from source: adding a tenant is a
+        # config change and rebuilds nothing.
+        #
+        # Unlike ZONES this key cannot take a route down. A host with no entry,
+        # or a malformed value, falls back to the stock artwork — see
+        # lib/tenants.ts. Removing a key is the rollback.
+        - name: TENANTS
+          valueFrom:
+            configMapKeyRef:
+              name: kss-client-web-config
+              key: tenants
+        # Cloudflare Turnstile (server-side verify)
+        - name: TURNSTILE_SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: turnstile-secret-key
+              optional: true
+        # Email Configuration
+        - name: SMTP_HOST
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: smtp-host
+              optional: true
+        - name: SMTP_PORT
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: smtp-port
+              optional: true
+        - name: SMTP_USER
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: smtp-user
+              optional: true
+        - name: SMTP_PASS
+          valueFrom:
+            secretKeyRef:
+              name: kss-client-web-secrets
+              key: smtp-pass
+              optional: true
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "250m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+            scheme: HTTP
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 15
+          failureThreshold: 5
+        readinessProbe:
+          httpGet:
+            path: /api/health
+            port: 3000
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 15
+          timeoutSeconds: 10
+          failureThreshold: 5
+        volumeMounts:
+        - name: uploads-volume
+          mountPath: /app/uploads
+        - name: logs-volume
+          mountPath: /app/logs
+        securityContext:
+          allowPrivilegeEscalation: false
+          runAsNonRoot: true
+          runAsUser: 1001
+          runAsGroup: 1001
+          capabilities:
+            drop:
+            - ALL
+      volumes:
+      - name: uploads-volume
+        persistentVolumeClaim:
+          claimName: kss-client-web-uploads-pvc
+      - name: logs-volume
+        persistentVolumeClaim:
+          claimName: kss-client-web-logs-pvc
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kss-client-web-service
+  namespace: kss-client-web
+  labels:
+    app: kss-client-web
+  annotations:
+    haproxy.org/cookie-persistence: "client-web-session"
+spec:
+  selector:
+    app: kss-client-web
+  ports:
+  - name: http
+    port: 80
+    targetPort: 3000
+    protocol: TCP
+  type: ClusterIP
+  sessionAffinity: None
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kss-client-web-uploads-pvc
+  namespace: kss-client-web
+spec:
+  storageClassName: ceph-filesystem
+  accessModes: [ "ReadWriteMany" ]
+  resources:
+    requests:
+      storage: 5Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: kss-client-web-logs-pvc
+  namespace: kss-client-web
+spec:
+  storageClassName: ceph-filesystem
+  accessModes: [ "ReadWriteMany" ]
+  resources:
+    requests:
+      storage: 2Gi
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kss-client-web-config
+  namespace: kss-client-web
+data:
+  api-url: "https://erp.seba.ir/api"
+  captcha-api-base-url: "https://captcha.api.sebaoffice.ir"
+  auth-api-base-url: "https://auth.api.sebaoffice.ir"
+  common-api-base-url: "https://common.api.sebaoffice.ir"
+  person-api-base-url: "https://person.api.sebaoffice.ir"
+  company-api-base-url: "https://company.api.sebaoffice.ir"
+  erp-members-api-base-url: "https://seba.erp.members.api.sebaoffice.ir"
+  report-api-base-url: "https://seba.erp.members.report.api.sebaoffice.ir"
+  credit-rating-api-base-url: "https://seba.erp.creditrating.api.sebaoffice.ir"
+  market-data-api-base-url: "https://marketdata.api.sebaoffice.ir"
+  portfolio-api-base-url: "https://portfolio.api.sebaoffice.ir"
+  file-orchestrator-api-base-url: "https://fileorchestrator.api.sebaoffice.ir"
+  # Recovered from the live cluster 2026-08-27: this key existed in the running
+  # ConfigMap but not in this file, while IMPORT_API_BASE_URL references it
+  # WITHOUT optional:true. Applying the file without it would have deleted the
+  # key and the next restart would have failed with CreateContainerConfigError.
+  # Note the single "-service" — that is the deployed value, not a typo to fix.
+  import-api-base-url: "http://kss-import-service.kss-import-service.svc.cluster.local"
+  cash-advance-api-base-url: "http://kss-cash-advance-service-service.kss-cash-advance-service.svc.cluster.local"
+  project-api-base-url: "http://kss-project-service-service.kss-project-service.svc.cluster.local"
+  mpf-report-api-base-url: "http://kss-mpf-erp-mabna-report-service-service.kss-mpf-erp-mabna-report-service.svc.cluster.local"
+  # Zone routing table, read by middleware.ts. One entry per domain app that is
+  # deployed separately; the first path segment selects it.
+  #
+  # ⚠ A KEY HERE OVERRIDES THE SHELL'S OWN COPY, UNCONDITIONALLY.
+  #   middleware.ts is `const origin = ZONES[segment]; if (origin) rewrite(...)`.
+  #   It routes on whether the KEY EXISTS, never on whether the zone is up. So
+  #   adding a key for a zone that is not yet deployed breaks that path for every
+  #   user IMMEDIATELY — from this config alone, no image rebuild — even though
+  #   the running Shell still contains the page. And there is no failover: a dead
+  #   zone gives 500, never the local copy.
+  #
+  #   ONLY add a key AFTER that zone answers in-cluster. Order:
+  #     build+push image -> apply zone manifest -> docker-secret -> nextauth-secret
+  #     -> pods Ready -> in-cluster /<seg>/api/health = 200 -> THEN add the key here
+  #
+  # ── LIVE: thirteen zones ───────────────────────────────────────────────────
+  # Every key in the value below is deployed to this cluster and routed here.
+  # ⚠ This header read "three zones" until 2026-09-08 while the value already
+  #   carried twelve. The header is what the next reader acts on, so the count
+  #   moves with the value or it is worse than absent. Count it, do not trust it.
+  # The original three (mpf, spm, cash-advance) were added 2026-08-27.
+  # dms added 2026-09-08 — composed, but FRONTEND AND MOCK DATA ONLY: no backend
+  # service and no database. tier stays "internal" in domains.json for that reason.
+  #
+  # cash-advance was the migration: it was served by the Shell's OWN copy until
+  # this key existed, so adding it moved real users onto the zone.
+  #
+  # spm publishes MOCK data — app/components/spm-api.ts returns fixtures and
+  # KSS.Service.SPM does not exist, so every figure on its 13 screens is
+  # invented. Its menu has no permission gate. Added deliberately, with that
+  # understood — remove this key if that is not wanted.
+  #
+  # ⚠ Adding or removing a key does NOTHING until the Shell pods restart. The
+  #   value is read from this ConfigMap once, at container start:
+  #     kubectl rollout restart deployment/kss-client-web -n kss-client-web
+  #   That applies to ROLLBACK too — it is a minute, not seconds.
+  # ⚠ Never set this with `kubectl set env` — the next apply reverts it.
+  # ⚠ There is no failover: a dead zone gives 500, never the Shell's copy.
+  # ⚠ ZONES is GLOBAL. The Shell fronts erp.seba.ir, members.sebaoffice.ir,
+  #   nerp.sajoffice.ir and erp.mpfoffice.ir. Verify on all four.
+  # ───────────────────────────────────────────────────────────────────────────
+  zones: '{"mpf":"http://kss-client-web-mpf-service.kss-client-web-mpf.svc.cluster.local","spm":"http://kss-client-web-spm-service.kss-client-web-spm.svc.cluster.local","dms":"http://kss-client-web-dms-service.kss-client-web-dms.svc.cluster.local","cash-advance":"http://kss-client-web-cash-advance-service.kss-client-web-cash-advance.svc.cluster.local","person":"http://kss-client-web-person-service.kss-client-web-person.svc.cluster.local","members":"http://kss-client-web-members-service.kss-client-web-members.svc.cluster.local","company":"http://kss-client-web-company-service.kss-client-web-company.svc.cluster.local","system":"http://kss-client-web-system-service.kss-client-web-system.svc.cluster.local","market":"http://kss-client-web-market-service.kss-client-web-market.svc.cluster.local","project":"http://kss-client-web-project-service.kss-client-web-project.svc.cluster.local","general-meeting":"http://kss-client-web-general-meeting-service.kss-client-web-general-meeting.svc.cluster.local","credit-rating":"http://kss-client-web-credit-rating-service.kss-client-web-credit-rating.svc.cluster.local","customer-risk":"http://kss-client-web-customer-risk-service.kss-client-web-customer-risk.svc.cluster.local"}'
+  # ───────────────────────────────────────────────────────────────────────────
+  # TENANTS — per-tenant branding, keyed by hostname (no port).
+  #
+  # Safe to set before the image that reads it ships: an unknown host, a
+  # missing field or a malformed value all fall back to the stock artwork,
+  # so this key cannot break sign-in or take a route down. That is the
+  # difference from zones above, which routes on key EXISTENCE alone.
+  #
+  # ⚠ Same restart rule as zones: read once at container start, so a change
+  #   does nothing until the pods restart.
+  #     kubectl rollout restart deployment/kss-client-web -n kss-client-web
+  # ⚠ Asset paths are ROOT-RELATIVE on purpose — they are served by whichever
+  #   host the visitor is on. Never prefix them with a tenant origin.
+  # ───────────────────────────────────────────────────────────────────────────
+  tenants: '{"erp.seba.ir":{"name":"SEBA","logo":"/media/app/default-logo.svg","logoDark":"/media/app/default-logo-dark.svg","logoMini":"/media/app/mini-logo.svg","favicon":"/favicon.ico","banner":"/media/images/2600x1600/1.png","bannerDark":"/media/images/2600x1600/1-dark.png","companyId":"019f317a-12ba-764f-b19b-e064e36b4be8","footer":{"brand":{"label":"SEBA","href":"https://seba.ir"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"Support","fa":"پشتیبانی","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"License","fa":"مجوز","href":""}]}},"members.sebaoffice.ir":{"name":"SEBA","logo":"/media/app/default-logo.svg","logoDark":"/media/app/default-logo-dark.svg","logoMini":"/media/app/mini-logo.svg","favicon":"/favicon.ico","banner":"/media/images/2600x1600/1.png","bannerDark":"/media/images/2600x1600/1-dark.png","companyId":"019f317a-12ba-764f-b19b-e064e36b4be8","footer":{"brand":{"label":"SEBA","href":"https://seba.ir"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"Support","fa":"پشتیبانی","href":"https://www.seba.ir/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%DA%A9%D8%A7%D9%86%D9%88%D9%86"},{"en":"License","fa":"مجوز","href":""}]}},"nerp.sajoffice.ir":{"name":"SAJ","logo":"/media/tenants/saj/logo.png","logoDark":"/media/tenants/saj/logo.png","logoMini":"/media/tenants/saj/logo.png","favicon":"/media/tenants/saj/favicon.png","banner":"/media/tenants/saj/banner.jpg","bannerDark":"/media/tenants/saj/banner.jpg","companyId":"019f0e6c-9fbc-78cf-9202-fa932a9878f7","footer":{"brand":{"label":"SAJ","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"erp.mpfoffice.ir":{"name":"MPF","logo":"/media/tenants/mpf/logo.svg","logoDark":"/media/tenants/mpf/logo-dark.svg","logoMini":"/media/tenants/mpf/logo-mini.svg","favicon":"/media/tenants/mpf/favicon.svg","banner":"/media/tenants/mpf/banner.svg","bannerDark":"/media/tenants/mpf/banner-dark.svg","companyId":"019f7a3e-1d43-7bcb-a7f3-eb97572e2e02","footer":{"brand":{"label":"MPF","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"spmoffice.ir":{"name":"SPM","logo":"/media/tenants/spm/logo.svg","logoDark":"/media/tenants/spm/logo-dark.svg","logoMini":"/media/tenants/spm/logo-mini.svg","favicon":"/media/tenants/spm/favicon.svg","banner":"/media/tenants/spm/banner.svg","bannerDark":"/media/tenants/spm/banner-dark.svg","companyId":"01a04744-68ae-7aef-b9d0-b5fb31d7a80c","footer":{"brand":{"label":"SPM","href":""},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]}},"mkoffice.ir":{"name":"MK","footer":{"brand":{"label":"مشیران کاریز","href":"https://moshirankariz.com"},"links":[{"en":"Docs","fa":"مستندات","href":""},{"en":"Purchase","fa":"خرید","href":""},{"en":"FAQ","fa":"سوالات متداول","href":""},{"en":"Support","fa":"پشتیبانی","href":""},{"en":"License","fa":"مجوز","href":""}]},"logo":"/media/tenants/mk/logo.png","logoDark":"/media/tenants/mk/logo.png","logoMini":"/media/tenants/mk/logo.png","favicon":"/media/tenants/mk/favicon.ico","banner":"/media/tenants/mk/banner.jpg","bannerDark":"/media/tenants/mk/banner.jpg","companyId":"01a07fb0-e2e7-7822-b14b-3a70278009ef"}}'
+---
+# To update a single secret value in the cluster:
+#   kubectl patch secret kss-client-web-secrets -n kss-client-web \
+#     -p "{\"data\":{\"KEY\":\"$(echo -n 'VALUE' | base64 -w0)\"}}"
+apiVersion: v1
+kind: Secret
+metadata:
+  name: kss-client-web-secrets
+  namespace: kss-client-web
+type: Opaque
+data:
+  database-url: <DATABASE_URL_BASE64>
+  direct-url: <DIRECT_URL_BASE64>
+  nextauth-secret: <NEXTAUTH_SECRET_BASE64>
+  turnstile-secret-key: "<TURNSTILE_SECRET_KEY_BASE64>"
+  smtp-host: "<SMTP_HOST_BASE64>"
+  smtp-port: "<SMTP_PORT_BASE64>"
+  smtp-user: "<SMTP_USER_BASE64>"
+  smtp-pass: "<SMTP_PASS_BASE64>"
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kss-client-web-ingress
+  namespace: kss-client-web
+  annotations:
+    haproxy.org/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    acme.cert-manager.io/http01-edit-in-place: "true"
+    kubernetes.io/ingress.class: haproxy-seba-erp
+    haproxy.org/cookie-persistence: "client-web-session"
+    haproxy.org/timeout-client: "10h"
+    haproxy.org/timeout-server: "10h"
+    haproxy.org/proxy-body-size: "50m"
+    haproxy.org/proxy-read-timeout: "300"
+    haproxy.org/proxy-send-timeout: "300"
+spec:
+  ingressClassName: haproxy-seba-erp
+  tls:
+  - hosts:
+    - erp.seba.ir
+    secretName: kss-client-web-tls
+  - hosts:
+    - members.sebaoffice.ir
+    secretName: kss-client-web-members-tls
+  rules:
+  - host: erp.seba.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+  - host: members.sebaoffice.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+---
+# Additional public entrypoint: nerp.sajoffice.ir — routed through the SEPARATE
+# HAProxy controller (ingress class haproxy-saj-erp @ 10.10.210.30, installed as
+# helm release haproxy-ingress-saj). Independent from the ingress above
+# (haproxy-seba-erp / erp.seba.ir / members.sebaoffice.ir), same app backend.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kss-client-web-ingress-saj
+  namespace: kss-client-web
+  annotations:
+    haproxy.org/ssl-redirect: "true"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    acme.cert-manager.io/http01-edit-in-place: "true"
+    kubernetes.io/ingress.class: haproxy-saj-erp
+    haproxy.org/cookie-persistence: "client-web-session"
+    haproxy.org/timeout-client: "10h"
+    haproxy.org/timeout-server: "10h"
+    haproxy.org/proxy-body-size: "50m"
+    haproxy.org/proxy-read-timeout: "300"
+    haproxy.org/proxy-send-timeout: "300"
+spec:
+  ingressClassName: haproxy-saj-erp
+  tls:
+  - hosts:
+    - nerp.sajoffice.ir
+    secretName: kss-client-web-nerp-tls
+  - hosts:
+    - erp.mpfoffice.ir
+    secretName: kss-client-web-mpf-tls
+  - hosts:
+    - spmoffice.ir
+    secretName: kss-client-web-spm-tls
+  - hosts:
+    - mkoffice.ir
+    secretName: kss-client-web-mk-tls
+  rules:
+  - host: nerp.sajoffice.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+  - host: erp.mpfoffice.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+  - host: spmoffice.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+  # مشیران کاریز — added 2026-09-08. DNS already resolved to the same A record as
+  # the three hosts above before this was added, which is the precondition: the
+  # cluster-issuer here is HTTP-01, so cert-manager cannot issue for a host that
+  # does not already reach this controller.
+  - host: mkoffice.ir
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: kss-client-web-service
+            port:
+              number: 80
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: kss-client-web-hpa
+  namespace: kss-client-web
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kss-client-web
+  minReplicas: 2
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 300
+      policies:
+      - type: Percent
+        value: 10
+        periodSeconds: 60
+    scaleUp:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Percent
+        value: 50
+        periodSeconds: 60
+      - type: Pods
+        value: 2
+        periodSeconds: 60
+      selectPolicy: Max
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: kss-client-web-pdb
+  namespace: kss-client-web
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: kss-client-web
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: kss-client-web-network-policy
+  namespace: kss-client-web
+spec:
+  podSelector:
+    matchLabels:
+      app: kss-client-web
+  policyTypes: [Ingress, Egress]
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: kss-client-web
+    - namespaceSelector:
+        matchLabels:
+          ingress: allow
+    ports:
+    - protocol: TCP
+      port: 3000
+  egress:
+  - to:
+    - ipBlock:
+        cidr: 0.0.0.0/0
+    ports:
+    - { protocol: TCP, port: 5432 }
+    - { protocol: TCP, port: 80 }
+    - { protocol: TCP, port: 443 }
+    - { protocol: TCP, port: 8000 }

@@ -1,0 +1,417 @@
+{
+  "users": {
+    "title": "Users",
+    "description": "Manage users.",
+    "breadcrumb": {
+      "userManagement": "User Management"
+    },
+    "profile": {
+      "fullName": "Full name:",
+      "notAvailable": "Not available",
+      "emailAddress": "Email address:",
+      "verified": "Verified",
+      "notVerified": "Not verified",
+      "role": "Role:",
+      "system": "System",
+      "status": "Status:",
+      "trashed": "Trashed",
+      "lastSignIn": "Last Sign In:",
+      "never": "Never",
+      "editUserDetails": "Edit user details"
+    },
+    "hero": {
+      "userId": "User ID:",
+      "clickToCopy": "Click to copy"
+    },
+    "dangerZone": {
+      "title": "Danger Zone",
+      "deleteUserAccount": "Delete user account",
+      "deleteDescription": "This action will permanently delete the user and all related data. It cannot be undone.",
+      "deleteUser": "Delete user",
+      "restoreAccount": "Restore Account",
+      "restoreUserAccount": "Restore user account",
+      "restoreDescription": "This account is currently trashed. Restoring the account will reactivate the user and all related data.",
+      "restoreUser": "Restore user"
+    },
+    "layout": {
+      "title": "User",
+      "home": "Home",
+      "userManagement": "User Management",
+      "users": "Users",
+      "backToUsers": "Back to users",
+      "profile": "Profile",
+      "activityLogs": "Activity Logs"
+    },
+    "addDialog": {
+      "title": "Add User",
+      "name": "Name",
+      "namePlaceholder": "Enter name",
+      "email": "Email",
+      "emailPlaceholder": "Enter user email",
+      "role": "Role",
+      "rolePlaceholder": "Select a role",
+      "addUser": "Add user",
+      "successMessage": "User added successfully"
+    },
+    "editDialog": {
+      "title": "Edit User Details",
+      "name": "Name",
+      "namePlaceholder": "Enter user name",
+      "role": "Role",
+      "rolePlaceholder": "Select a role",
+      "status": "Status",
+      "statusPlaceholder": "Select a status",
+      "cancel": "Cancel",
+      "saveChanges": "Save Changes",
+      "successMessage": "User updated successfully"
+    },
+    "table": {
+      "columns": {
+        "user": "User",
+        "name": "Name",
+        "role": "Role",
+        "status": "Status",
+        "joined": "Joined",
+        "lastSignIn": "Last Sign In"
+      },
+      "search": {
+        "placeholder": "Search users"
+      },
+      "filters": {
+        "role": {
+          "placeholder": "Filter by role",
+          "allRoles": "All roles"
+        },
+        "status": {
+          "placeholder": "Filter by status",
+          "allUsers": "All users"
+        }
+      },
+      "actions": {
+        "addUser": "Add user"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "blocked": "Blocked",
+        "trashed": "Trashed",
+        "unknown": "Unknown"
+      }
+    }
+  },
+  "roles": {
+    "title": "Roles",
+    "description": "Manage user roles.",
+    "breadcrumb": {
+      "userManagement": "User Management"
+    },
+    "table": {
+      "columns": {
+        "role": "Role",
+        "slug": "Slug",
+        "permissions": "Permissions",
+        "actions": "Actions"
+      },
+      "search": {
+        "placeholder": "Search users"
+      },
+      "actions": {
+        "addRole": "Add Role"
+      },
+      "badges": {
+        "system": "system",
+        "default": "default",
+        "more": "{{count}} more"
+      },
+      "dropdown": {
+        "editRole": "Edit role",
+        "setAsDefault": "Set as default",
+        "deleteRole": "Delete role"
+      }
+    },
+    "dialogs": {
+      "edit": {
+        "title": {
+          "add": "Add Role",
+          "edit": "Edit Role"
+        },
+        "fields": {
+          "roleName": "Role Name",
+          "roleNamePlaceholder": "Enter role name",
+          "slug": "Slug",
+          "slugPlaceholder": "E.g: users:delete",
+          "description": "Description",
+          "descriptionPlaceholder": "Optional description",
+          "permissions": "Permissions",
+          "noPermissions": "No permissions assigned.",
+          "addPermissions": "Add Permissions",
+          "searchPermissions": "Search permissions...",
+          "noPermissionsFound": "No permissions found."
+        },
+        "buttons": {
+          "updateRole": "Update Role",
+          "createRole": "Create Role"
+        },
+        "messages": {
+          "roleUpdated": "Role updated successfully",
+          "roleAdded": "Role added successfully"
+        }
+      },
+      "delete": {
+        "title": "Confirm Delete",
+        "description": "Are you sure you want to delete the role {{name}}?",
+        "buttons": {
+          "delete": "Delete"
+        },
+        "messages": {
+          "roleDeleted": "Role deleted successfully"
+        }
+      },
+      "default": {
+        "title": "Change the default role to {{name}} ?",
+        "description": "New users will be assigned the {{name}} role by default.",
+        "buttons": {
+          "updateDefaultRole": "Update default role"
+        },
+        "messages": {
+          "defaultRoleSet": "Default role set successfully."
+        }
+      }
+    }
+  },
+  "permissions": {
+    "title": "Permissions",
+    "description": "Manage user permissions.",
+    "breadcrumb": {
+      "userManagement": "User Management"
+    },
+    "table": {
+      "columns": {
+        "permission": "Permission",
+        "slug": "Slug",
+        "description": "Description",
+        "createdAt": "Created At",
+        "actions": "Actions"
+      },
+      "search": {
+        "placeholder": "Search permissions"
+      },
+      "filters": {
+        "role": {
+          "placeholder": "Filter by role",
+          "allRoles": "All roles"
+        }
+      },
+      "actions": {
+        "addPermission": "Add Permission",
+        "deletePermissions": "Delete {{count}} permissions"
+      },
+      "dropdown": {
+        "editPermission": "Edit permission",
+        "deletePermission": "Delete permission"
+      }
+    },
+    "dialogs": {
+      "edit": {
+        "title": {
+          "add": "Add Permission",
+          "edit": "Edit Permission"
+        },
+        "fields": {
+          "name": "Name",
+          "namePlaceholder": "Enter name",
+          "slug": "Slug",
+          "slugPlaceholder": "E.g: users:delete",
+          "slugDescription": "A unique key for the permission, cannot be edited after creation.",
+          "description": "Description",
+          "descriptionPlaceholder": "Enter description"
+        },
+        "buttons": {
+          "submit": "Submit"
+        },
+        "messages": {
+          "permissionUpdated": "Permission updated successfully",
+          "permissionAdded": "Permission added successfully"
+        }
+      },
+      "delete": {
+        "title": "Confirm Delete",
+        "description": "Are you sure you want to delete the permission ?",
+        "buttons": {
+          "delete": "Delete"
+        },
+        "messages": {
+          "permissionDeleted": "Permission deleted successfully"
+        }
+      },
+      "groupDelete": {
+        "title": "Confirm Delete",
+        "description": "Are you sure you want to delete selected permissions ?",
+        "buttons": {
+          "delete": "Delete"
+        },
+        "messages": {
+          "permissionsDeleted": "Permissions deleted successfully."
+        }
+      }
+    }
+  },
+  "account": {
+    "title": "Account",
+    "nav": {
+      "profile": "Profile",
+      "security": "Security",
+      "logs": "Logs"
+    },
+    "profile": {
+      "title": "Profile",
+      "description": "Manage profile information",
+      "fields": {
+        "profileAvatar": "Profile Avatar",
+        "attachImage": "Attach Image",
+        "remove": "Remove",
+        "name": "Name",
+        "namePlaceholder": "Enter your name"
+      },
+      "avatarDescription": "We support PNGs, JPEGs, and GIFs under 1MB.",
+      "buttons": {
+        "reset": "Reset",
+        "saveProfile": "Save Profile"
+      },
+      "messages": {
+        "accountUpdated": "Account updated successfully"
+      }
+    },
+    "security": {
+      "email": {
+        "title": "Email",
+        "description": "Your primary addresses used to log in with Shoplit. It will be used for account-related notifications.",
+        "verified": "Verified",
+        "changeEmail": "Change email"
+      },
+      "password": {
+        "title": "Password",
+        "description": "To update your account password, click the button below and follow the instructions.",
+        "changePassword": "Change password"
+      },
+      "deleteAccount": {
+        "title": "Delete Account",
+        "description": "Permanently remove your Personal Account and all of its contents from the Shoplit platform. This action is not reversible, so please continue with caution.",
+        "deleteAccount": "Delete account"
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "nav": {
+      "general": "General",
+      "notifications": "Notifications",
+      "social": "Social"
+    },
+    "general": {
+      "title": "General Settings",
+      "fields": {
+        "companyLogo": "Company Logo",
+        "attachImage": "Attach Image",
+        "remove": "Remove",
+        "logoDescription": "We support PNGs, JPEGs and GIFs under 1MB.",
+        "shopName": "Shop Name",
+        "shopNamePlaceholder": "Enter company name",
+        "shopStatus": "Shop Status",
+        "shopStatusDescription": "Toggle the switch to enable or disable the store's active status.",
+        "address": "Address",
+        "addressPlaceholder": "Enter store address",
+        "addressDescription": "Enter the full address of the store for customer reference.",
+        "language": "Language",
+        "languagePlaceholder": "Select language",
+        "websiteURL": "Website URL",
+        "websiteURLPlaceholder": "Enter website url",
+        "supportEmail": "Support Email",
+        "supportEmailPlaceholder": "Enter support email",
+        "supportPhone": "Support Phone",
+        "supportPhonePlaceholder": "Enter support phone",
+        "currency": "Currency",
+        "currencyPlaceholder": "Select currency",
+        "currencyDescription": "Select the currency used for transactions in your store.",
+        "currencyFormat": "Currency Format",
+        "currencyFormatPlaceholder": "Select currency format",
+        "currencyFormatDescription": "Choose how the currency is displayed (e.g., symbol before or after value).",
+        "timezone": "Timezone"
+      },
+      "buttons": {
+        "reset": "Reset",
+        "saveSettings": "Save Settings"
+      },
+      "messages": {
+        "settingsUpdated": "Settings updated successfully",
+        "formHasErrors": "Your form has errors. Please fix them before submitting!"
+      }
+    },
+    "notifications": {
+      "title": "Notification Settings",
+      "tableHeaders": {
+        "notification": "Notification",
+        "users": "Users",
+        "email": "Email",
+        "web": "Web"
+      },
+      "types": {
+        "stockAlerts": {
+          "label": "Stock Alerts",
+          "description": "Notify when stock reaches the threshold."
+        },
+        "newOrders": {
+          "label": "New Orders",
+          "description": "Notify when new orders are received."
+        },
+        "orderStatusUpdates": {
+          "label": "Order Status Updates",
+          "description": "Notify when an order status is updated."
+        },
+        "paymentFailures": {
+          "label": "Payment Failures",
+          "description": "Notify when a payment failure occurs."
+        },
+        "systemErrors": {
+          "label": "System Errors",
+          "description": "Notify when system errors occur."
+        }
+      },
+      "searchRolesPlaceholder": "Search roles...",
+      "noRolesFound": "No roles found.",
+      "notSet": "Not set",
+      "buttons": {
+        "reset": "Reset",
+        "saveSettings": "Save Settings"
+      },
+      "messages": {
+        "settingsUpdated": "Settings updated successfully"
+      }
+    },
+    "social": {
+      "title": "Social Settings",
+      "fields": {
+        "facebook": "Facebook",
+        "facebookPlaceholder": "Enter Facebook URL",
+        "twitter": "Twitter",
+        "twitterPlaceholder": "Enter Twitter URL",
+        "instagram": "Instagram",
+        "instagramPlaceholder": "Enter Instagram URL",
+        "linkedIn": "LinkedIn",
+        "linkedInPlaceholder": "Enter LinkedIn URL",
+        "pinterest": "Pinterest",
+        "pinterestPlaceholder": "Enter Pinterest URL",
+        "youtube": "YouTube",
+        "youtubePlaceholder": "Enter YouTube URL"
+      },
+      "buttons": {
+        "reset": "Reset",
+        "saveSettings": "Save Settings"
+      },
+      "messages": {
+        "settingsUpdated": "Social settings updated successfully",
+        "formHasErrors": "Your form has errors. Please fix them before submitting!"
+      }
+    }
+  }
+}
