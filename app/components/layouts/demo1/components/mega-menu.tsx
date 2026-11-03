@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { getTranslatedMenuMega } from '@/config/menu.config';
 import { cn } from '@/lib/utils';
 import { useMenu } from '@/hooks/use-menu';
+import { useTenant } from '@/providers/tenant-provider';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -20,6 +21,9 @@ export function MegaMenu() {
   const translatedMegaMenu = getTranslatedMenuMega(t);
   const homeItem = translatedMegaMenu[0];
   const siteItem = translatedMegaMenu[1];
+  // A host may configure its own «سایت» link (TENANTS `site`); every other host keeps the menu's default.
+  const { site } = useTenant();
+  const siteHref = site && site.trim() ? site : siteItem.path;
   const sazeshItem = translatedMegaMenu[2];
   const lmsItem = translatedMegaMenu[3];
 
@@ -51,9 +55,9 @@ export function MegaMenu() {
         <NavigationMenuItem>
           <NavigationMenuLink asChild>
             <ZoneLink
-              href={siteItem.path || '/'}
+              href={siteHref || '/'}
               className={cn(linkClass)}
-              data-active={isActive(siteItem.path) || undefined}
+              data-active={isActive(siteHref) || undefined}
             >
               {siteItem.title}
             </ZoneLink>

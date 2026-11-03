@@ -116,6 +116,12 @@ export type Tenant = {
    * so a tenant that never configures one is unaffected.
    */
   footer?: TenantFooter;
+  /**
+   * Absolute URL the «سایت» (MENU_MEGA "Site") item links to for THIS host.
+   * Omitted/empty -> the item keeps its built-in default (https://seba.ir).
+   * Per-deployment DATA, supplied in TENANTS, exactly like `name`/`logo`.
+   */
+  site?: string;
 };
 
 /** The stock artwork used when a host has no tenant entry. */
@@ -142,6 +148,8 @@ export type TenantAssets = {
   companyId: string | null;
   /** This tenant's footer, or null when the built-in default should render. */
   footer: TenantFooter | null;
+  /** The «سایت» link for this host, or null when the menu's built-in default should be used. */
+  site: string | null;
 };
 
 /**
@@ -162,6 +170,7 @@ export function tenantAssets(tenant?: Tenant | null): TenantAssets {
     branded: Boolean(tenant),
     companyId: tenant?.companyId ?? null,
     footer: tenant?.footer ?? null,
+    site: tenant?.site ?? null,
   };
 }
 
@@ -255,6 +264,7 @@ export function parseTenants(raw: string | undefined = process.env.TENANTS): Rec
       tagline: str(t.tagline),
       companyId: str(t.companyId),
       footer: parseFooter(t.footer),
+      site: str(t.site),
     };
   }
   return out;
