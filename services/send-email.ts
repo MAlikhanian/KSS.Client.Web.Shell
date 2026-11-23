@@ -96,8 +96,52 @@ export async function sendEmail({
 
   try {
     await transporter.sendMail(mailOptions);
-    console.log(`Email sent to ${to}`);
+    console.log(`Email sent to ${maskEmail(to)}`);
   } catch (error) {
-    console.error(`Error sending email: ${error}`);
+    // The error message can carry the recipient address, so only its class and code are logged.
+    console.error(
+      `Error sending email to ${maskEmail(to)}: ${describeEmailError(error)}`,
+    );
+    throw error;
   }
+}
+
+/**
+ * Masks an address for logging: first character, then "***@domain".
+ * A comma-separated list is masked entry by entry.
+ */
+export function maskEmail(address: unknown): string {
+  if (typeof address !== 'string') return '***';
+  return address
+    .split(',')
+    .map((entry) => {
+      const value = entry.trim();
+      const at = value.lastIndexOf('@');
+      if (at < 1) return '***';
+      return `${value[0]}***@${value.slice(at + 1)}`;
+    })
+    .join(', ');
+}
+
+/**
+ * Describes a send failure without its message: error class, plus the
+ * transport code and SMTP response code when they have the expected shape.
+ */
+export function describeEmailError(error: unknown): string {
+  if (!error || typeof error !== 'object') return 'UnknownError';
+  const { name, code, responseCode } = error as {
+    name?: unknown;
+    code?: unknown;
+    responseCode?: unknown;
+  };
+  const parts = [
+    typeof name === 'string' && /^[A-Za-z]{1,64}$/.test(name) ? name : 'Error',
+  ];
+  if (typeof code === 'string' && /^[A-Z0-9_]{1,32}$/.test(code)) {
+    parts.push(`code=${code}`);
+  }
+  if (typeof responseCode === 'number') {
+    parts.push(`responseCode=${responseCode}`);
+  }
+  return parts.join(' ');
 }

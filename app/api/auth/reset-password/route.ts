@@ -1,12 +1,12 @@
 import crypto from 'crypto';
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/prisma';
-import { sendEmail } from '@/services/send-email';
+import { describeEmailError, sendEmail } from '@/services/send-email';
 
 export async function POST(req: NextRequest) {
   try {
     // NOTE: temporarily no captcha — reset flow is being rebuilt with MFA
-    // via KSS.Service.Notification (see project_notification_service_plan).
+    // via KSS.Service.Notification (notification service planned).
     const { email } = await req.json();
 
     // Check if the user exists
@@ -40,20 +40,27 @@ export async function POST(req: NextRequest) {
     // Create reset URL
     const resetUrl = `${process.env.NEXTAUTH_URL}/change-password?token=${token}`;
 
-    // Send password reset email
-    await sendEmail({
-      to: email,
-      subject: 'Password Reset Request',
-      content: {
-        title: `Hello, ${user.name}`,
-        subtitle:
-          'You requested a password reset. Click the below link to reset your password',
-        buttonLabel: 'Reset password',
-        buttonUrl: resetUrl,
-        description:
-          'This link is valid for 1 hour. If you did not request this email you can safely ignore it.',
-      },
-    });
+    // Send password reset email. A send failure must not change the answer:
+    // a different status here would reveal which addresses have an account.
+    try {
+      await sendEmail({
+        to: email,
+        subject: 'Password Reset Request',
+        content: {
+          title: `Hello, ${user.name}`,
+          subtitle:
+            'You requested a password reset. Click the below link to reset your password',
+          buttonLabel: 'Reset password',
+          buttonUrl: resetUrl,
+          description:
+            'This link is valid for 1 hour. If you did not request this email you can safely ignore it.',
+        },
+      });
+    } catch (sendErr: unknown) {
+      console.error(
+        `Password reset email failed: ${describeEmailError(sendErr)}`,
+      );
+    }
 
     return NextResponse.json(
       {
@@ -63,7 +70,8 @@ export async function POST(req: NextRequest) {
       { status: 200 },
     );
   } catch (err: unknown) {
-    console.error('Password reset error:', err);
+    // Logged by class and code only: some errors print the request values.
+    console.error(`Password reset error: ${describeEmailError(err)}`);
     return NextResponse.json(
       { message: 'Failed to process request.' },
       { status: 500 },

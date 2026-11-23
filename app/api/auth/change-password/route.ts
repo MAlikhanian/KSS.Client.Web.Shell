@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import bcrypt from 'bcrypt';
 import prisma from '@/lib/prisma';
-import { sendEmail } from '@/services/send-email';
+import { describeEmailError, sendEmail } from '@/services/send-email';
 import {
   ChangePasswordApiSchemaType,
   getChangePasswordApiSchema,
@@ -57,15 +57,22 @@ export async function POST(req: NextRequest) {
       where: { token },
     });
 
-    // Send the email notification
-    await sendEmail({
-      to: user.email, // Use the resolved email address
-      subject: 'Password Reset Successful',
-      content: {
-        title: `Hello, ${user.name}`,
-        subtitle: 'Your password has been successfully updated.',
-      },
-    });
+    // Send the email notification. The password is already changed, so a
+    // send failure must not turn the answer into a failure.
+    try {
+      await sendEmail({
+        to: user.email, // Use the resolved email address
+        subject: 'Password Reset Successful',
+        content: {
+          title: `Hello, ${user.name}`,
+          subtitle: 'Your password has been successfully updated.',
+        },
+      });
+    } catch (sendErr: unknown) {
+      console.error(
+        `Password change notification failed: ${describeEmailError(sendErr)}`,
+      );
+    }
 
     return NextResponse.json(
       { message: 'Password reset successful.' },
