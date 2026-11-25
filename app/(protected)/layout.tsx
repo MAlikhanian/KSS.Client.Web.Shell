@@ -6,7 +6,7 @@ import { useSession } from 'next-auth/react';
 import { ScreenLoader } from '@/components/common/screen-loader';
 import { TokenExpiryGuard } from '@/components/common/token-expiry-guard';
 import { CurrentCompanyProvider } from '@/providers/current-company-provider';
-import { Demo1Layout } from '../components/layouts/demo1/layout';
+import { Demo1Layout } from '../components/layouts/demo1/demo1-layout';
 
 export default function ProtectedLayout({
   children,
